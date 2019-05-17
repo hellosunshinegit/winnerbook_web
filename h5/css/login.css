@@ -1,0 +1,179 @@
+@charset "utf-8";
+/*==用户登录==*/
+a{
+	text-decoration:none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-user-select: none;
+	-moz-user-focus: normal;
+	-moz-user-select: none;
+}
+.log-logo{
+	display:block;
+	width:95%;
+	height:90px;
+	margin:-11px auto 14px auto;
+}
+.log-logo img{
+	display:block;
+	width:100%;
+	margin:15px auto;
+	padding-top:15px;
+}
+
+.aui-code-box{
+	width:94%;
+	height:auto;
+	overflow:hidden;
+	margin:0 auto;
+	margin-top: 10rem;
+}
+.aui-code-box .aui-code-line {
+	width:100%;
+	height:52px;
+	overflow:hidden;
+	margin:0 auto;
+	border-bottom: 1px solid #D9D9D9;
+	position:relative;
+}
+.aui-code-box .aui-code-line-input {
+	padding:0 0;
+	height: 75px;
+	width: 96%;
+	font-size: 14px;
+	line-height:52px;
+	background: none;
+	border: none;
+	color: #333;
+	padding-left: 1rem;
+}
+.aui-code-box .aui-code-line-clear span a {
+	text-indent: -999px;
+}
+.aui-code-box .aui-code-line .btn-captcha{
+	-webkit-appearance: none;
+	background:#E26A67;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	height: 46px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height:46px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	width:40%;
+	position: absolute;
+	right:0px;
+	bottom:3px;
+}
+.aui-code-box .aui-show {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 5px;
+	top: 12px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.aui-code-box .operate-eye-open {
+	background-size: 20px;
+	background-image: url('data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiDnn6Lph4/lm77moIfkuIvovb0gOiBodHRwOi8vd3d3LnNmb250LmNuLyA8L21ldGFkYXRhPjxnPjxwYXRoIGQ9Ik03MjQuMiwxOTAuNUM2MDguOCwzOTYuNiw0OTQuNSw2MDMuOSwzNzkuMSw4MTAuMWwtMjYuOCw0OC43Yy0zLjMsNS41LTkuMyw4LjctMTUuMyw4LjdjLTkuOCwwLTYxLjgtMzEuNy03My4zLTM4LjNjLTUuNS0zLjMtOC43LTguOC04LjctMTUuM2MwLTguOCwxOC42LTM4LjMsMjQuMS00Ny42QzE3Myw3MTguMiw4My44LDYzNi4yLDIwLjksNTM3LjdDMTMuOCw1MjYuOCwxMCw1MTMuNywxMCw1MDBjMC0xMy4xLDMuOC0yNi44LDEwLjktMzcuN0MxMjkuMiwyOTYsMjk4LjIsMTg1LDUwMCwxODVjMzIuOCwwLDY2LjIsMy4zLDk4LjQsOS4zbDI5LjUtNTNjMy4zLTUuNSw4LjgtOC43LDE1LjMtOC43YzkuOCwwLDYxLjIsMzEuNyw3Mi43LDM4LjNjNS41LDMuMyw4LjgsOC44LDguOCwxNC44QzcyNC44LDE4Ni42LDcyNC44LDE4OS40LDcyNC4yLDE5MC41eiBNMzU2LjIsNjI4QzI5Mi43LDU4MiwyNTUsNTA4LjIsMjU1LDQzMGMwLTQzLjIsMTEuNS04NS45LDMzLjQtMTIzQzIwMywzNTAuNywxMzIsNDE5LjYsODAsNTAwYzU2LjksODgsMTM3LjMsMTYxLjksMjMzLjUsMjA1LjFMMzU2LjIsNjI4eiBNNTAwLDI2My43Yy05MS4zLDAtMTY2LjMsNzQuOS0xNjYuMywxNjYuM2MwLDE0LjIsMTIsMjYuMywyNi4zLDI2LjNjMTQuMiwwLDI2LjMtMTIsMjYuMy0yNi4zYzAtNjIuOSw1MS40LTExMy44LDExMy43LTExMy44YzE0LjIsMCwyNi4zLTEyLDI2LjMtMjYuM0M1MjYuMywyNzUuOCw1MTQuMiwyNjMuNyw1MDAsMjYzLjd6IE05NzkuMSw1MzcuN2MtMTcsMjcuOS0zOC4zLDU0LjctNTkuNiw3OS4zQzgxMi4zLDc0MC4xLDY2NC42LDgxNSw1MDAsODE1bDQwLjUtNzIuMkM2OTkuNiw3MjkuMSw4MzQuNyw2MzIuMyw5MjAsNTAwYy00MC41LTYyLjktOTIuNC0xMTguMS0xNTQuMi0xNjAuOGwzNC41LTYxLjJjNjcuOCw0NS40LDEzNi4yLDExMy44LDE3OC44LDE4NC4zYzcuMSwxMiwxMC45LDIzLjUsMTAuOSwzNy43Qzk5MCw1MTQuMiw5ODYuMiw1MjUuNyw5NzkuMSw1MzcuN3ogTTU4Ny41LDY1OC42bDE1My4xLTI3NC41YzIuNywxNS4zLDQuNCwzMC42LDQuNCw0NS45Qzc0NSw1MzEuNyw2ODIuMSw2MjIuNSw1ODcuNSw2NTguNnoiIHN0eWxlPSJmaWxsOiM4MTgxODEiPjwvcGF0aD48L2c+PC9zdmc+ICA=');
+}
+.aui-code-box .operate-eye-close {
+	background-size: 20px;
+	color:#F60;
+	background-image: url('data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiDnn6Lph4/lm77moIfkuIvovb0gOiBodHRwOi8vd3d3LnNmb250LmNuLyA8L21ldGFkYXRhPjxnPjxwYXRoIGQ9Ik05ODMuOSw0NzkuN2MtOC4xLTEyLjItMTc4LjktMzA1LTQ4My45LTMwNWMtMzA1LDAtNDc1LjgsMjkyLjgtNDgzLjksMzA1cy04LjEsMjguNSwwLDQwLjdzMTc4LjksMzA1LDQ4My45LDMwNWMzMDUsMCw0NzUuOC0yOTIuOCw0ODMuOS0zMDVDOTkyLDUwOC4xLDk5Miw0OTEuOSw5ODMuOSw0NzkuN3ogTTUwMCw3MDMuM2MtMTEzLjksMC0yMDMuMy04OS41LTIwMy4zLTIwMy4zUzM4Ni4xLDI5Ni43LDUwMCwyOTYuN2MxMTMuOSwwLDIwMy4zLDg5LjUsMjAzLjMsMjAzLjNTNjEzLjksNzAzLjMsNTAwLDcwMy4zeiIgc3R5bGU9ImZpbGw6I2ViNGYzOCI+PC9wYXRoPjxwYXRoIGQ9Ik01MDAsMzc4Yy02OS4xLDAtMTIyLDUyLjktMTIyLDEyMnM1Mi45LDEyMiwxMjIsMTIyYzY5LjEsMCwxMjItNTIuOSwxMjItMTIyUzU2OS4xLDM3OCw1MDAsMzc4eiIgc3R5bGU9ImZpbGw6I2ViNGYzOCI+PC9wYXRoPjwvZz48L3N2Zz4gIA==');
+}
+
+.aui-code-box .aui-code-btn{
+	-webkit-appearance: none;
+	background:#F60;
+	border: none;
+	border-radius: 7px;
+	color: #fff;
+	cursor: pointer;
+	height: 2.5rem;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background 0.3s ease-in-out;
+	width: 100%;
+}
+.aui-code-box .aui-flex-links {
+	position: relative;
+	line-height: 40px;
+	margin-top: 14px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0 5px;
+}
+
+.aui-code-box .aui-flex-links > a {
+	position: relative;
+	text-align: left;
+	display: block;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	padding: 0 0px;
+	font-size: 14px;
+	color:#666;
+}
+
+.aui-code-box .aui-flex-links > a:nth-child(2) {
+	text-align: right;
+}
+.aui-login-api{
+	width:94%;
+	height:auto;
+	overflow:hidden;
+	margin:20px auto 0 auto;
+	text-align:center;
+}
+.aui-login-api a{
+	display:inline-block;
+	vertical-align: middle;
+	width:60px;
+	height:60px;
+	margin:5px 5px;
+}
+.aui-login-api a i{
+	display:block;
+	font-size:52px;
+	line-height:60px;
+	color:#E26A67;
+}
+
+.error_info{
+	color: red;
+	font-size: 0.9rem;
+	height: auto;
+	line-height: 2rem;
+	display: block;
+	margin-left: 1rem;
+}
+
+
+/*登录选择企业遮罩*/
+/*遮罩*/
+.shield {width:100%;height:100%;background-color:#000;position:absolute;top:0;left:0;z-index:2;opacity:0.3;filter: alpha(opacity=30);display:none;}
+/*
+.xcConfirm {width:90%; height:10%;background-color:#fff;  margin: auto;position: absolute;z-index:3;top: 0;bottom: 0;left: 0;right: 0;!*display:none;*!}
+*/
+.xcConfirm {display:none;}
+
+
+.agree_button{
+	background-color: #F60;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	color: #FFF;
+	font-size: 0.9rem;
+	float: right;
+	margin-right: 1rem;
+}

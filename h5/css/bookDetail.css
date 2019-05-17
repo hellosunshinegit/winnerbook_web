@@ -1,0 +1,31 @@
+.main_box_tw{
+    height: 98%;
+    background-color: #f6f6f6;
+   /* padding: 0rem 0.6rem;*/
+}
+
+.book_detail{
+    background-color: #fff;
+    padding-bottom: 3rem;
+}
+
+.book_detail .title_span{
+    width: 5rem;
+    float: left;
+}
+
+.book_detail ul{
+    padding: 0;
+    width: 96%;
+    padding-left: 3%;
+}
+
+.book_detail ul li{
+    border-bottom: 1px solid #dad8d8;
+    height: auto;
+    padding: 0.7rem;
+}
+
+.book_detail ul li:last-child{
+    border-bottom: 0px;
+}

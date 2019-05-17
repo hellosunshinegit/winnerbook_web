@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title_bus">企业读书云平台-我的学习报告</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link href="../../../css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../css/report.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="../../../public/config.js"></script>
+    <script type="text/javascript" src="../../../js/tabulous.js"></script><!--tab切换-->
+    <script type="text/javascript" src="report.js"></script>
+    <script type="text/javascript" src="../../../js/echarts-all.js"></script>
+
+</head>
+<body>
+    <div class="header"></div>
+    <div id="tabs">
+        <ul id="labelDiv">
+            <li><a href="#tabs-0" title="" id="label01" onclick="myReportFun()">我的报告</a></li>
+            <li><a href="#tabs-1" title="" id="label02" onclick="busReportFun()">企业报告</a></li>
+            <li><a href="#tabs-2" title="" id="label03" onclick="allReportFun()">全局排名</a></li>
+        </ul>
+        <div id="tabs_container">
+            <div id="tabs-0">
+                正在加载中...
+            </div>
+            <div id="tabs-1">
+                正在加载中...
+            </div>
+            <div id="tabs-2">
+                正在加载中...
+            </div>
+        </div><!--End tabs container-->
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

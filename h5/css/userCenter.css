@@ -1,0 +1,252 @@
+body {
+    background: #f5f5f5;
+}
+
+body,dd,dl,dt,form {
+    margin: 0
+}
+
+body {
+    min-width: 320px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 14px
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+header.Nav {
+    background: #F1F1F3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    font-size: 1.5em;
+    line-height: 2.5;
+    border-bottom: 1px solid #ECECEC;
+    overflow: hidden;
+    font-size: 1.2em;
+    background: #fff
+}
+
+header.Nav a {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    width: 3.5em;
+    text-align: center;
+    display: block
+}
+
+header.Nav a.back {
+    background: url(../images/arr_left.png) no-repeat 1em center;
+    -webkit-background-size: .4em .8em;
+    background-size: .4em .8em
+}
+
+header.Nav span {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    display: block;
+    text-align: center;
+    color: #0f0f0f;
+}
+
+
+dl {
+    background: #fff
+}
+
+dl dt {
+    padding: 1em;
+    background: url(../images/userbg.jpg) no-repeat;
+    -webkit-background-size: 100% 6em;
+    background-size: 100% 6em;
+    height: 6em
+}
+
+dl dt img {
+    width: 4em;
+    height: 4em;
+    float: left;
+    border-radius: 50%
+}
+
+dl dt div {
+    width: 70%;
+    height: 4em;
+    float: left;
+    margin-left: .5em
+}
+
+dl dt div p {
+    margin: .5em 0;
+    padding-left: .5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+dl dt div p a {
+    color: #fff
+}
+
+dl dt div a.info {
+    display: inline-block;
+    border-radius: 1em;
+    line-height: 2em;
+    color: #fff;
+    font-size: .8em;
+    padding: 0 1em 0 3em;
+    vertical-align: top;
+    background: url(../images/icon.png) no-repeat 1.5em center #eb7a41;
+    -webkit-background-size: 13px 13px;
+    background-size: 13px 13px
+}
+
+dl dd {
+    padding: 0 1em
+}
+
+dl dd a {
+    display: block;
+    height: 3em;
+    line-height: 3em;
+    background: url(../images/arr_right.png) no-repeat right center;
+    color: #333;
+    -webkit-background-size: .4em .8em;
+    background-size: .4em .8em
+}
+
+dl dd a span {
+    width: 40%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+dl dd a span:nth-of-type(1) {
+    position: relative;
+    float: left;
+    padding-left: 2em
+}
+
+dl dd a span:nth-of-type(1).charge {
+    background: url(../images/icon1.jpg) no-repeat left center;
+    -webkit-background-size: 18px 13px;
+    background-size: 18px 13px
+}
+
+dl dd a span:nth-of-type(1).member {
+    background: url(../images/icon2.jpg) no-repeat left center;
+    -webkit-background-size: 18px 15px;
+    background-size: 18px 15px
+}
+
+dl dd a span:nth-of-type(1).bookshelf {
+    background: url(../images/icon3.jpg) no-repeat left center;
+    -webkit-background-size: 18px 17px;
+    background-size: 18px 17px
+}
+
+dl dd a span:nth-of-type(1).studentLog {
+    background: url(../images/pen01.jpg) no-repeat left center;
+    -webkit-background-size: 18px 17px;
+    background-size: 18px 17px
+}
+
+dl dd a span:nth-of-type(1).comment {
+    background: url(../images/icon4.jpg) no-repeat left center;
+    -webkit-background-size: 18px 17px;
+    background-size: 18px 17px
+}
+
+dl dd a span:nth-of-type(1).info {
+    background: url(../images/icon5.jpg) no-repeat left center;
+    -webkit-background-size: 18px 13px;
+    background-size: 18px 13px
+}
+
+dl dd a span:nth-of-type(1).author {
+    background: url(../images/icon6.jpg) no-repeat left center;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px
+}
+dl dd a span:nth-of-type(1).agree {
+    background: url(../images/agree_look.png) no-repeat left center;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px
+}
+dl dd a span:nth-of-type(1).feedback {
+    background: url(../images/feedback.png) no-repeat left center;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px
+}
+dl dd a span:nth-of-type(1).report {
+    background: url(../images/chars.png) no-repeat left center;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px
+}
+
+dl dd a span:nth-of-type(1).activity {
+    background: url(../images/activity.png) no-repeat left center;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px
+}
+
+dl dd a span:nth-of-type(1) em {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 1em;
+    background: url(../images/point.jpg) no-repeat;
+    -webkit-background-size: 5px 5px;
+    background-size: 5px 5px
+}
+
+dl dd a span:nth-of-type(2) {
+    float: right;
+    padding-right: 1.2em;
+    color: #aaa;
+    font-size: .8em;
+    text-align: right;
+    position: relative
+}
+
+dl dd:not(:nth-of-type(1)) {
+    border-top: 1px solid #eee
+}
+
+dl:not(:nth-last-of-type(1)) {
+    margin-bottom: 1em
+}
+
+.loginout {
+    padding: 3em 0
+}
+
+.loginout a {
+    margin: 0 auto;
+    width: 90%;
+    display: block;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    background: #e5e5e5;
+    border-radius: .5em;
+    color: #464646
+}
+
+.icon{
+    margin:0.8rem;
+}
+
+.agree_button{
+    background-color: #F60;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: #FFF;
+    font-size: 0.9rem;
+    float: right;
+    margin-right: 1rem;
+}

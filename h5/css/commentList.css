@@ -1,0 +1,169 @@
+/*
+<列表页
+*/
+.aui-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+
+.aui-flex-box {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* 必要布局样式css */
+.aui-flexView {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.aui-scrollView {
+    width: 100%;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+.m-slider {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.aui-flex-box h1 {
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+.aui_title{
+    width: 100%;
+    font-size: 1rem;
+    color: #323232;
+    float: left;
+    margin-top: 0.2rem;
+}
+
+.aui_title .status_css{
+    background-color: #ecf0f1;
+    color: #878d97;
+    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+}
+
+
+.aui-course-list .b-line:after {
+    width: 92%;
+    left: 15px;
+}
+.aui-course-list .aui-flex-box{
+    height: auto;
+}
+
+.aui-course-list{
+    margin-bottom: 5rem;
+}
+
+.aui-flex-box{
+    margin-left:0.5em;
+}
+/*.aui-flex-box span{
+    height: 1.2em;
+    line-height: 1.2em;
+}*/
+
+.aui_source{
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    color: #808080;
+    float: left;
+}
+
+.desc_css{
+    float: left;
+    width: 100%;
+    margin-top: .7em;
+}
+
+.date_css{
+    float: left;
+    margin-top: .3em;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+
+.point{
+    background: url(../images/point.png) no-repeat;
+    width: 1em;
+    float: right;
+    margin-right: 1em;
+}
+
+.nav_bottom{
+    padding: 0.5em;
+}
+
+.input_comment{
+    width: 92%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background-color: #f1f1f1;
+    border: 0;
+    border-radius: 13px;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: block;
+}
+
+/*添加观点*/
+.textarea_css{
+    width: 98%;
+    height: 241px;
+    border: 0;
+    padding-left: 0.5rem;
+}
+.button_div{
+    height: 35px;
+    background-color: #f1f1f1;
+}
+.button_css{
+    float: right;
+    border: 0;
+    height: 35px;
+}
+.close_div{
+    float: right;
+}
+.close_div a{
+    padding: 0.5rem;
+}

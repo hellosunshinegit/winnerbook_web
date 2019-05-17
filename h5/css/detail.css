@@ -1,0 +1,120 @@
+.main_box_tw{
+    height: 98%;
+    /*background-color: #f6f6f6;*/
+    padding: 0.5rem;
+}
+.tw_box_title {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+    /*margin-top: 0.5rem;*/
+}
+.tw_box_title p{
+    text-align: left;
+    display: inline-block;  /*使P的宽度根据文字的宽度伸缩*/
+}
+
+
+.tw_right_font {
+    width: auto;
+    padding: 15px;
+    background: #fff;
+    line-height: 2.3rem;
+    margin-bottom: 3rem;
+}
+.tw_box_ad{
+    font-size: 0.8rem;
+   /* height: 3rem;
+    line-height: 3rem;*/
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    /*padding-top: 1rem;*/
+}
+.article_date{
+    float: right;
+}
+
+.article_tags{
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+
+.article_tags span{
+    background-color: #ecf0f1;
+    color: #878d97;
+    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.activity{
+    color: #F60;
+    font-size: 1.2rem;
+    padding: 0.5em 0 1.7em !important;
+    border-top: 1px solid #F60;
+}
+
+.activity img{
+    height: 1.5rem;
+    vertical-align: sub;
+}
+
+/*
+.nav_bottom{
+    bottom: -4px !important;
+}*/
+
+.activity_detail{
+    padding: 0.5rem;
+    /*border-bottom: 1px solid #dad8d8;*/
+    height: 30px;
+    line-height: 30px;
+}
+
+.activity_detail img{
+    margin: 0rem 0.2rem;
+    vertical-align: sub;
+}
+
+.img_span{
+    float: left;
+    width: 8%;
+}
+
+.activity_detail .info{
+    display: block;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+}
+.activity_detail .info_address{
+    width: 85%;
+    display: block;
+    float: left;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.time_add{
+    padding-top: 0.8rem;
+}
+.click_img{
+    background: url(../images/arr_right_color.png) no-repeat right center;
+    background-size: 8px;
+    display: block;
+    height: 10px;
+    width: 5%;
+    float: left;
+    line-height: 30px;
+    height: 30px;
+}
+
+.divHeight{
+    height: 1px;
+}
+
+.week{
+    color: #808080;
+    padding: 0.5rem!important;
+}

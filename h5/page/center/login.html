@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title id="title_bus">企业读书云平台-登录</title>
+    <link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../css/login.css"/>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../public/config.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="../../js/layer.js"></script>
+    <link rel="stylesheet" href="../../js/layer.css"/>
+</head>
+
+<body>
+<div class="header"></div>
+<div class="log-logo">
+	<img src="../../images/login.jpg">
+</div>
+
+<div class="aui-code-box">
+    <div class="aui-code-line">
+        <input type="text" class="aui-code-line-input" name="username" value="" id="username" autocomplete="off" placeholder="请输入手机号" maxlength="11"/>
+    </div>
+    <div class="aui-code-line aui-code-line-clear" style="margin-bottom:20px;">
+       <i class="aui-show operate-eye-open"></i>
+       <input type="password" name="password" class="aui-code-line-input password" placeholder="请输入密码" id="password" value="" maxlength="6">
+    </div>
+    <span class="error_info" id="error_info"></span>
+    <div class="aui-code-line" style="margin-left: 1rem;">
+        <input type="checkbox" name="is_agree" id="is_agree" value="1" checked style="width: 1.3rem;height: 1.3rem;"><span style="line-height: 1.5rem;margin-left: 0.5rem;">我已同意并遵守此协议</span>
+        <span style="font-size: 0.9rem;text-decoration: underline;" onclick="showAgree()">点击查看</span>
+    </div>
+    <input type="submit" class="aui-code-btn" value="登 录 / 注 册" onclick="webLogin()">
+    <span style="text-align: center;font-size: 0.9rem;display: block;margin-top:1rem;">请用手机号登录，缺省密码为手机号后6位</span>
+      <!--<div class="aui-flex-links">
+          <a href="javascript:;">忘记密码?</a>
+          <a href="http://w1.ttkefu.com/k/linkurl/?t=5D3GGI6" target="_blank">加入我们</a>
+      </div>-->
+    <div id="agree_html" style="display: none;"></div>
+</div>
+
+
+<div class="footer"></div>
+
+ <script type="text/javascript">
+	$('.aui-show').click(function() {
+		let pass_type = $('input.password').attr('type');
+
+		if (pass_type === 'password') {
+			$('input.password').attr('type', 'text');
+			$('.aui-show').removeClass('operate-eye-open').addClass('operate-eye-close');
+		} else {
+			$('input.password').attr('type', 'password');
+			$('.aui-show').removeClass('operate-eye-close').addClass('operate-eye-open');
+		}
+	})
+</script>
+
+
+</body>
+</html>

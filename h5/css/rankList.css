@@ -1,0 +1,73 @@
+/*引入tab，必须去除浏览器样式*/
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+.rank_list{
+    padding-bottom: 8rem;
+}
+
+.rank_list .myRank{
+    padding: 0.5rem 1rem 0.5rem;
+    background: #f5f5f5;
+}
+
+.myRank_title{
+    text-align: center;
+    line-height: 45px;
+    height: 45px;
+    color: #f60;
+    font-size: 1.2rem;
+}
+
+.myRank_title .rank_title{
+    /*font-size: 1.3rem*/
+    color: #b04b4b;
+}
+.myRank_title .rank_order{
+    /*font-size: 1.3rem;*/
+    color: #b04b4b;
+    padding: 0.5rem;
+}
+
+.rank_list .one_li{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #f5f5f5;
+}
+.rank_list .one_li .rank_number{
+    padding: 1rem 1rem 1rem 1.5rem;
+}
+.rank_list .one_li .rank_name{
+    padding: 1rem 1rem 1rem 0.5rem;
+    font-size: 1.1rem;
+}
+.rank_list .one_li .rank_score{
+    float: right;
+    padding: 0rem 2.5rem;
+    font-size: 1.3rem;
+    color: #F60;
+}
+
+.rank_list .one_li .rank_number img{
+    width: 28px;
+    vertical-align: middle;
+}
+
+.rank_list .one_li .nomedal{
+    padding: 1rem 1rem 1rem 2rem;
+}
+.rank_list .one_li .nomedal_name{
+    padding: 1rem 1rem 1rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.rank_list .bus_Rank{
+    padding: 0.2rem 1rem 0.5rem;
+    background: #f5f5f5;
+}
+
+.icolor{
+    color:#b04b4b !important;
+}

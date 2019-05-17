@@ -1,0 +1,55 @@
+/*去除浏览器样式*/
+html, body, div, dl, dt, dd, ol,h1, h2, h3, h4, h5, h6, ul,li,p, blockquote, pre, button, fieldset, form, legend, textarea, th, td,input {
+    /*margin: 0;*/
+    padding: 0;
+}
+
+.sign_up_info{
+
+}
+.sign_up_info ul li{
+    line-height: 55px;
+    height: 55px;
+}
+
+
+.sign_up_info ul li span{
+    width: 40%;
+    padding: 10px;
+    margin-left: 15px;
+    font-size: 1.1rem;
+}
+
+.sign_up_info ul li input{
+    height: 35px;
+    padding: 10px 10px 10px 5px;
+    width: 65%;
+    border:1px solid #b8b8b8;
+    font-size: 0.9rem;
+}
+
+.sign_up_submit{
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    max-width: 600px;
+}
+.sign_up_submit .button{
+    width: 100%;
+    height: 33px;
+    color: #FFF;
+    background-color: #F60;
+    border: 0;
+    border-radius: 5px;
+
+}
+
+.sign_up_title{
+    font-size: 1.1rem;
+    padding: 1.5rem 1rem;
+    color: #F60;
+    text-align: center;
+    display: block;
+}

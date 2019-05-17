@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7202251b-6489-4055-87df-994790e62d1d" name="localhost" url="http://192.168.1.153:8081/winnerbook_web/h5">
+        <fileTransfer port="0" mountedRoot="D:\workspace\winnerbook_web\h5" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
