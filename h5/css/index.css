@@ -413,3 +413,7 @@
     /*text-indent: 2rem;*/
     line-height: 2rem;
 }
+
+.introduce_info_import{
+    font-weight: bold;
+}

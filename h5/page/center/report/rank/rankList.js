@@ -2,15 +2,17 @@
 var pageIndex = 0;
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var title = "";
+var desc = "";
 $(function(){
     $(".header").load("../../../common/header.html",function (result) {
         $("#center_title").html("企业排名");
 
         //设置分享内容
-        var title = "企业排名";
+        title = "企业排名";
         var link = location.href.split('#')[0];
         var imgUrl = "http://ent.winnerbook.cn/mobile/images/rank_share.png";
-        var desc = "企业排名，快来看看你的排名在哪里？";
+        desc = "快来看看你的排名在哪里？";
         setWxConfig(title,link,imgUrl,desc);
     });
     $(".footer").load("../../../common/footer.html",function (result) {
@@ -107,4 +109,9 @@ function getMedal(rankStr,rank) {
         rankStr = "<img src='../../../../images/bronze_medal.png'>";
     }
     return rankStr;
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

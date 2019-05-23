@@ -1,9 +1,13 @@
 /*导入尾部*/
 var busId = RequestUrl(location.search,"busId");
 var userId = RequestUrl(location.search,"userId");
+var title = "";
+var desc = "";
 $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("课程");
+        $("#indexPage").css("display","");
+        $("#historyGo").css("display","none");
     });
     if(getSessionBusId()!=""){
         titleBus("课程");
@@ -39,13 +43,13 @@ function initData(){
             console.log(course);
 
             //设置分享内容
-            var title = course.title;
+            title = course.title;
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
             if(course.bookImg!=""){
                 imgUrl = baseUrl+course.bookImg;
             }
-            var desc = course.recommendReason;
+            desc = course.recommendReason;
             setWxConfig(title,link,imgUrl,desc);
 
 
@@ -156,4 +160,9 @@ function collectFun() {
 function supportFun() {
     layer.open({content: '小媛正在努力开发中,敬请期待!',skin: 'msg',time: 2});
 
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

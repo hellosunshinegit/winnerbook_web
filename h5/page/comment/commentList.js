@@ -1,11 +1,12 @@
 var pageIndex = 0;
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var title = "";
+var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("评论");
-
     });
     if(getSessionBusId()!=""){
         titleBus("评论");
@@ -25,10 +26,10 @@ function initData(index){
             if(result.success){
 
             //设置分享内容
-            var title = $("#title_bus").html();
+            title = $("#title_bus").html();
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
-            var desc = result.data.courseCommentList[0].comment;
+            desc = result.data.courseCommentList[0].comment;
             setWxConfig(title,link,imgUrl,desc);
 
             //拼接视频列表
@@ -125,4 +126,9 @@ function addCommentSubmit() {
             layer.open({content: '评论失败，请联系管理员',skin: 'msg',time: 2});
         }
     });
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

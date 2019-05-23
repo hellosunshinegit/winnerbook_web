@@ -1,4 +1,6 @@
 /*导入尾部*/
+var title = "";
+var desc = "";
 $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("详情页");
@@ -37,7 +39,7 @@ function initData(){
             $("#content").html(info.detail);
 
             //设置分享内容
-            var title = $("#title").html();
+            title = $("#title").html();
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
 
@@ -48,9 +50,14 @@ function initData(){
                     imgUrl = baseUrl+info.img;
                 }
             }
-            var desc = info.detail.replace(/<[^>]+>/g,"");
+            desc = info.detail.replace(/<[^>]+>/g,"");
             setWxConfig(title,link,imgUrl,desc);
         }
 
     });
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

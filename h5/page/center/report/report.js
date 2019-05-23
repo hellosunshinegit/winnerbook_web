@@ -2,6 +2,8 @@
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
 var pageIndex = 0;
+var title = "";
+var desc = "";
 $(function(){
     $(".header").load("../../common/header.html",function (result) {
         $("#center_title").html("我的学习报告");
@@ -10,10 +12,10 @@ $(function(){
             titleBus("我的学习报告");
         }
         //设置分享内容
-        var title = "我的学习报告";
+        title = "我的学习报告";
         var link = location.href.split('#')[0];
         var imgUrl = "http://ent.winnerbook.cn/mobile/images/line_share.png";
-        var desc = "学习报告都图标展示了，赶紧看看自己的排名吧。";
+        desc = "学习报告都图标展示了，赶紧看看自己的排名吧。";
         setWxConfig(title,link,imgUrl,desc);
     });
     $(".footer").load("../../common/footer.html",function (result) {
@@ -285,7 +287,7 @@ function allBusData(pageIndex) {
             //获取当前企业的排名  currentUser currentBus.busName
             $("#currentBus").html("当前企业排名：<span class='rank_title'>"+currentBus.rank+"</span>，分值：<span class='rank_order'>"+currentBus.busScore+"</span>");
 
-            var busRankList = result.data.busRanks.allBusRankList;
+            /*var busRankList = result.data.busRanks.allBusRankList;
 
             var resultStr = "";
             $.each(busRankList,function (index, item) {
@@ -309,7 +311,8 @@ function allBusData(pageIndex) {
             } else {
                 resultStr += "<span class='more_end'>暂无数据...</span>";
             }
-            $("#busRankList").html(resultStr);
+            $("#busRankList").html(resultStr);*/
+            $("#busRankList").html("<img src='"+webUrl+"images/login.jpg' width='100%'>");
         }
     });
 }
@@ -329,4 +332,10 @@ function getMedal(rankStr,rank) {
         rankStr = "<img src='../../../images/bronze_medal.png'>";
     }
     return rankStr;
+}
+
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

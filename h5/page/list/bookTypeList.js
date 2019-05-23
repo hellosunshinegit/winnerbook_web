@@ -4,6 +4,8 @@ var pageIndex_1 = 0;
 var pageIndex_2 = 0;
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var title = "";
+var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
@@ -163,10 +165,10 @@ function busBookList(index) {
             $("#tabs-0").append(bookStr);
 
             //设置分享内容
-            var title = "我的书单";
+            title = "我的书单";
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
-            var desc = bookTypeName;
+            desc = bookTypeName;
             setWxConfig(title,link,imgUrl,desc);
 
         }
@@ -241,14 +243,13 @@ function bookTypeList(labelId,pageIndex,index,type) {
 
 
         //设置分享内容
-        var title = labelNameMap[labelId];
+        title = labelNameMap[labelId];
         var link = location.href.split('#')[0];
         var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
         if(result.data.bookListType.length>0){
             imgUrl = result.data.bookListType[0].typeImg;
         }
-        var desc = bookTypeName;
-        console.log(title,imgUrl);
+        desc = bookTypeName;
         setWxConfig(title,link,imgUrl,desc);
 
     });
@@ -258,4 +259,9 @@ function bookTypeList(labelId,pageIndex,index,type) {
 
 function bookListFun(typeId) {
     window.location.href = webUrl+"page/list/bookList.html?busId="+url_busId+"&userId="+url_userId+"&typeId="+typeId;
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title+"-"+desc);
 }

@@ -1,5 +1,7 @@
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var title = "";
+var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
@@ -40,14 +42,14 @@ function initData(){
 
 
             //设置分享内容
-            var title = info.title;
+            title = info.title;
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
 
             if(info.img!=""){
                imgUrl = baseUrl+getMinImg(info.img);
             }
-            var desc = info.detail.replace(/<[^>]+>/g,"");
+            desc = info.detail.replace(/<[^>]+>/g,"");
             setWxConfig(title,link,imgUrl,desc);
         }
 
@@ -62,4 +64,10 @@ function signUp() {
 //点击查看跳转百度
 function lookMapFun() {
     window.location.href = webUrl+'page/activity/activityMap.html?activityId='+id+'&busId='+url_busId+'&userId='+url_userId;
+}
+
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

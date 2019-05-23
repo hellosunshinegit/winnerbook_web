@@ -1,5 +1,6 @@
 var pageIndex = 0;
-
+var title = "";
+var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
@@ -49,10 +50,10 @@ function initData(index){
 
 
             //设置分享内容
-            var title = "我的评论";
+            title = "我的评论";
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
-            var desc = "我的评论";
+            desc = "我的评论";
             if(commentStr!=""){
                 desc = commentStr;
             }
@@ -68,4 +69,9 @@ function clickMore(){
     $("#more").remove();
     pageIndex = pageIndex+1;
     initData(pageIndex);
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title+"-"+desc);
 }

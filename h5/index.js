@@ -9,7 +9,8 @@ if(sessionUser!=null && url_busId==""){
     url_busId = sessionUserJson.belongBusUserId;
     url_userId = sessionUserJson.userId;
 }
-
+var title = "";
+var desc = "";
 $(function(){
     $(".footer").load("page/common/footer.html");
 
@@ -38,16 +39,16 @@ $(function(){
     //保存
     if(localStorage.getItem("isFirst")==null){
         var videoHtml = "<div class='welcome'>" +
-            "<div class='welcome_title'>欢迎来到总裁读书会</div>" +
-            "<div class='introduce_info'>总裁读书会是国内著名机构、媒体、企业家和社会知名人士共同发起的企业家与商业精英终身学习运动。这里有：</div>" +
-            "<div class='content_des'>1.跟大咖一起读 <br/>2.精品课程<br/> 3.读书交流<br/>...<br/>好看的内容等待您去发掘！</div>" +
+            "<div class='welcome_title'>欢迎来到企业读书云平台</div>" +
+            "<div class='introduce_info'>企业读书云平台是总裁读书会推出的企业版读书学习云平台，旨在通过专业的企业读书服务，为企业提供读书指导和帮助，从<span class='introduce_info_import'>学习计划</span>、<span class='introduce_info_import'>读书书单</span>、<span class='introduce_info_import'>读书展示</span>、<span class='introduce_info_import'>读书互动</span>、<span class='introduce_info_import'>读书感想</span>等多方面促进企业全员阅读，持续提升员工和企业的核心竞争力和科技创新能力！</div>" +
+           /* "<div class='content_des'>1.跟大咖一起读 <br/>2.精品课程<br/> 3.读书交流<br/>...<br/>好看的内容等待您去发掘！</div>" +*/
             "</div>";
         layer_comment = layer.open({
             type: 1
             ,content: videoHtml
             ,anim: 'up'
             ,style: 'position:fixed; bottom:10%; top:25%;left:5%; width: 90%; height: 22em; padding:10px 0; border:none;border-radius: 2rem;'
-            ,time: 3 //3秒后自动关闭
+            ,time: 10 //3秒后自动关闭
         });
         localStorage.setItem("isFirst","1");
     }else{
@@ -67,10 +68,10 @@ $(function(){
     }
 
     //设置分享内容
-    var title = $("#title_bus").html();
+    title = $("#title_bus").html();
     var link = location.href.split('#')[0];
     var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
-    var desc = "企业读书学习的云平台，旨在通过专业的企业读书服务，为企业提供读书指导和帮助，从学习计划、读书书单、读书展示、读书互动、读书感想等多方面促进企业全员阅读，进而推动社会全民阅读风尚！";
+    desc = "企业读书学习的云平台，旨在通过专业的企业读书服务，为企业提供读书指导和帮助，从学习计划、读书书单、读书展示、读书互动、读书感想等多方面促进企业全员阅读，进而推动社会全民阅读风尚！";
     setWxConfig(title,link,imgUrl,desc);
 
 });
@@ -160,4 +161,9 @@ function openUrl(bannerId) {
 //活动列表
 function getActivityList() {
     window.location.href=webUrl+'page/activity/activityList.html?busId='+url_busId+"&userId="+url_userId;
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

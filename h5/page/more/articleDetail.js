@@ -1,4 +1,6 @@
 /*导入尾部*/
+var title = "";
+var desc = "";
 $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("详情页");
@@ -35,15 +37,20 @@ function initData(){
                 $("#article_tags").css("display","");
             }
 
-
             //微信分享
-            var title = $("#title_bus").html();
+            title = $("#title_bus").html();
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
-            var desc = article.articleTitle;
+            desc = article.articleTitle;
             setWxConfig(title,link,imgUrl,desc);
 
         }
 
     });
+}
+
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

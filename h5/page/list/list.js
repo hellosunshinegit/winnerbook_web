@@ -2,6 +2,8 @@
 var pageIndex = 0;
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var titleShare = "";
+var desc = "";
 /*导入尾部*/
 var title = "";
 $(function(){
@@ -105,14 +107,13 @@ function initData(index){
             $("#readBookClubList").append(readBookCludStr);
 
             //设置分享内容
-            var titleShare = title;
+            titleShare = title;
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
             if(result.data.count>0){
                 imgUrl = result.data.list[0].img;
             }
-            var desc = titleStrShare;
-            console.log(titleShare);
+            desc = titleStrShare;
             setWxConfig(titleShare,link,imgUrl,desc);
 
         }
@@ -129,4 +130,10 @@ function clickMore(){
 
 function getDetail(id,list_type){
     window.location.href = webUrl+"page/detail/detail.html?busId="+url_busId+"&userId="+url_userId+"&id="+id+"&list_type="+list_type;
+}
+
+
+//点击分享
+function shareWbPage() {
+    shareWb(titleShare,desc);
 }

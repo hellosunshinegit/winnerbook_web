@@ -1,5 +1,7 @@
 //index首页数据
 var pageIndex = 0;
+var title = "";
+var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
@@ -60,10 +62,10 @@ function initData(index){
             $("#readThoughtList").append(readBookCludStr);
 
             //设置分享内容
-            var title = "我的读后感";
+            title = "我的读后感";
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
-            var desc = "我的读后感";
+            desc = "我的读后感";
             if(readStr.length>0){
                 desc = readStr;
                 imgUrl = result.data.readThoughtList[0].img;
@@ -84,4 +86,13 @@ function clickMore(){
 
 function getDetail(id,list_type){
     window.location.href = webUrl+"page/detail/detail.html?id="+id+"&list_type="+list_type;
+}
+
+//点击分享
+function shareWbPage() {
+    if(desc!=""){
+        shareWb(title+"-"+desc);
+    }else{
+        shareWb(title);
+    }
 }

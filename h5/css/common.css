@@ -84,13 +84,13 @@ a {
 }
 
 .aui-navBar-item {
-    height: 35px;
+    height: 38px;
     min-width: 25%;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 25%;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
-    padding: 0 0.9rem;
+    padding: 0 0.5rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -160,6 +160,9 @@ a {
 
 .icon-return {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAACD0lEQVRoQ+3YPUvDYBAH8Lu0KsVEiqAOjYODu7sgjuKkFByrAUcXZ1e/gpNi4+LgIOoXcHcQxM2pYHyZRGgGtZqTB1oopRpInpdL2pAlhDue3/2T5RAG7MIB88IQnPfEWSdcrlPZxrCOCGtA9B5Z1u5TzfbThMIW3MZeI8JCN7AVFedevVIjKZol+C+sQEaIXpqU2YH/wwpwrhKOw6ZNVwyMTcI6sGzAurAswDqxxsG6sUbBJrDGwKawRsAmsdrBprFawRyw2sBcsFrAnLDKwdywSsEcscrAXLFKwJyx0sHcsVLBWcBKA2cFKwd8RJNuMbxDBBcIxA3YtUeRsZZJuqHsV5d6xeP6zQdEmO80JyFuo7lhpSTsnjSpd2oCHYG187w1fiAzHRm9Uic864dfgDTSexgiuIdveznYxjcZB5XVIzW44jf3EGG/XyOO6NRgMfnKcbhpFegQANgnLQUs0G49XEGLLgFglPPnLQ2cFbRUcBbQ0sHc0UrAnNHKwFzRSsEc0crB3NBawJzQ2sBc0FrBHNDawabRRsAm0cbAptBGwSbQxsG60SzAOtFswLrQrMBxaCC4LZC92PDwI+lSjx04Dk0I1aDmnOcK/C86ovVHb+Iid+AOGjA6Q0RHPBPQTTDlLMEqfuYSLFDTp+HMWIuqBPQSlJwr2MCfpFhRx/IfTgOKqx2C4yaU9fcDl/Av3dy7TBf+hyEAAAAASUVORK5CYII=');
+}
+.icon-return-index {
+    background-image: url(../images/index.png);
 }
 .aui-center {
     -webkit-box-ordinal-group: 3;
@@ -289,4 +292,32 @@ a {
     background: #f5f5f5;
     position: relative;
     overflow: hidden;
+}
+
+
+/*微博分享按钮*/
+.share_btn_inner{
+    font-size: 12px!important;
+    display: inline-block;
+    width: 62px;
+    height: 22px;
+    background: url(../images/share_btn.png) no-repeat;
+}
+
+.ico_share_btn{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 3px 0 0 3px;
+    background: url(../images/share_icon.png) 0 0 no-repeat;
+}
+.share_text{
+    float: left;
+    width: 40px;
+    height: 16px;
+    padding: 3px 0 3px 3px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-style: normal!important;
 }

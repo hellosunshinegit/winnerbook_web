@@ -1,13 +1,21 @@
 <!--微信分享引入jsdk-->
 <script type="text/javascript" src="../../js/jweixin-1.2.0.js"></script>
 <header class="aui-navBar aui-navBar-fixed b-line">
-    <a href="javascript:history.go(-1);" class="aui-navBar-item">
+    <a href="javascript:history.go(-1);" class="aui-navBar-item" id="historyGo">
         <i class="icon icon-return"></i>
+    </a>
+    <a href="javascript:javascript:window.location.href = webUrl+'?busId='+RequestUrl(location.search,'busId')+'&userId='+RequestUrl(location.search,'userId');" class="aui-navBar-item" id="indexPage" style="display: none;">
+        <i class="icon icon-return-index"></i>
     </a>
     <div class="aui-center">
         <span class="aui-center-title" id="center_title">企业读书云平台</span>
     </div>
-    <a href="javascript:login_bus();" class="aui-navBar-item">
-        我的
+    <a href="javascript:shareWbPage();" class="aui-navBar-item" id="shareBtn"><!--login_bus-->
+        <span class="share_btn">
+            <cite class="share_btn_inner">
+                <u class="ico_share_btn"></u>
+                <cite class="share_text">分享</cite>
+            </cite>
+        </span>
     </a>
 </header>

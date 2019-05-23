@@ -1,6 +1,8 @@
 /*导入尾部*/
 var busId = RequestUrl(location.search,"busId");
 var userId = RequestUrl(location.search,"userId");
+var title = "";
+var desc = "";
 $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("书籍详情");
@@ -44,13 +46,13 @@ function initData(){
             $("#bookImg").attr("src",baseUrl+book.bookImg);
 
             //设置分享内容
-            var title = book.bookName;
+            title = book.bookName;
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
             if(book.bookImg!=""){
                 imgUrl = baseUrl+book.bookImg;
             }
-            var desc = "《"+book.bookName+"》"+book.bookAuthor;
+            desc = "《"+book.bookName+"》"+book.bookAuthor;
             if(book.bookContentDes!=undefined && book.bookContentDes!=""){
                 desc = book.bookContentDes;
             }
@@ -59,4 +61,9 @@ function initData(){
         }
 
     });
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

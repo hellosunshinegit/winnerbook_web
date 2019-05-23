@@ -67,6 +67,7 @@ function ajax_fetch(type,url,param,callback) {
                     ,skin: 'msg'
                     ,time: 2 //2秒后自动关闭
                 });
+                clearTimeout(timeout);
             }
         });
     });
@@ -284,4 +285,14 @@ function layerMsg(str) {
         ,skin: 'msg'
         ,time: 3 //3秒后自动关闭
     });
+}
+
+//点击分享微博
+function shareWb(title,desc) {//&pic="+pic+"
+    var url = location.href.split('#')[0];
+    var shareTitle = title;
+    if(desc!=""){
+        shareTitle+="%0A"+desc;
+    }
+    window.open("https://service.weibo.com/share/share.php?url="+webUrl+"&title="+shareTitle+"&type=button&language=zh_cn&appkey=3416615626&searchPic=false&style=simple")
 }

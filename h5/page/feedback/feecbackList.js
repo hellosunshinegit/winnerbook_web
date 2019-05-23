@@ -5,6 +5,7 @@ var url_busId = RequestUrl(location.search,"busId");
 $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("我的反馈");
+        $("#shareBtn").css("display","none");
     });
     if(getSessionBusId()!=""){
         titleBus("我的反馈");

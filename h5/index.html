@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -11,6 +11,10 @@
     <meta content="telephone=no" name="format-detection"/>
     <meta name="keywords" content="总裁读书会,企业读书云平台">
     <meta name="description" itemprop="description" content="总裁读书会，中国首创CEO实战商学院">
+
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+    <script src="https://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
     <link href="css/index.css" rel="stylesheet" type="text/css"/>
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -31,9 +35,17 @@
         <div class="aui-center">
             <span class="aui-center-title">企业读书云平台</span>
         </div>
-        <a href="javascript:login_bus();" class="aui-navBar-item">
-            我的
+        <a class="aui-navBar-item"><!--href="javascript:login_bus();" -->
+            <!--<wb:follow-button uid="2832313182" type="red_1" width="67" height="24" ></wb:follow-button>-->
+            <!--<wb:share-button appkey="3416615626" addition="simple" type="button" ></wb:share-button>-->
+            <span class="share_btn" onclick="shareWbPage()">
+                <cite class="share_btn_inner">
+                    <u class="ico_share_btn"></u>
+                    <cite class="share_text">分享</cite>
+                </cite>
+            </span>
         </a>
+
     </header>
     <section class="aui-scrollView">
         <!--banner图-->
@@ -124,6 +136,11 @@
 
         </div>
         <div class="divHeight"></div>
+
+        <!--<wb:share-button appkey="3163459398" addition="number" type="button"></wb:share-button>-->
+        <!--<a href="http://service.weibo.com/share/share.php?appkey=&title=总裁读书会-企业读书云平台&url=http://ent.winnerbook.cn/mobile/&pic=&searchPic=false&style=simple" target="_blank">
+            分享
+        </a>-->
         <div class="aui-flex" style="padding-bottom:0">
             <div class="aui-flex-box">
                 <span class="flex_box_title">推荐课程</span>

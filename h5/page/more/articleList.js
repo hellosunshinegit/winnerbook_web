@@ -1,14 +1,16 @@
 //index首页数据
 var pageIndex = 0;
+var title = "";
+var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("列表页");
 
-        var title = $("#title_bus").html();
+        title = $("#title_bus").html();
         var link = location.href.split('#')[0];
         var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
-        var desc = "总裁读书会-企业读书云平台-更多信息在这里哦。";
+        desc = "总裁读书会-企业读书云平台-更多信息在这里哦。";
         setWxConfig(title,link,imgUrl,desc);
 
     });
@@ -72,4 +74,9 @@ function clickMore(){
 //点击跳转详情页
 function articleDetail(articleId) {//根据模板查询对应的list
     window.location.href = webUrl+"page/more/articleDetail.html?articleId="+articleId;
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }
