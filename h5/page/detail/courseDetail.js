@@ -5,13 +5,13 @@ var title = "";
 var desc = "";
 $(function(){
     $(".header").load("../common/header.html",function (result) {
-        $("#center_title").html("课程");
+        $("#center_title").html("课程详情");
         $("#indexPage").css("display","");
         $("#historyGo").css("display","none");
     });
-    if(getSessionBusId()!=""){
-        titleBus("课程");
-    }
+
+    titleBus("课程详情");
+
     //$(".footer").load("../common/footer.html");
     $('#tabs').tabulous({
         effect: 'scale'

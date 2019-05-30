@@ -1,15 +1,21 @@
 /*导入尾部*/
+var url_busId = RequestUrl(location.search,"busId");
+var url_userId = RequestUrl(location.search,"userId");
 $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("个人中心-登录");
+        $("#shareBtn").css("display","none");
     });
     $(".footer").load(webUrl +"page/common/footer.html",function (result) {
         selectBottom();
     });
-    if(getSessionBusId()!=""){
-        $("#title_bus").html(getSession().busName!=undefined?getSession().busName+"-"+$("#title_bus").html():$("#title_bus").html());
-    }
 
+    titleBus("登录");
+
+    //键盘收起手动滑到顶部 针对ios的手机
+    document.body.addEventListener('focusout', function () {
+        window.scrollTo(0,0);
+    })
 });
 
 var layer_bus = "";
@@ -22,7 +28,7 @@ function webLogin() {
     var password = $("#password").val();
 
     //选中的checkbox
-    var selectUser = $('input[name="selectUserInput"]:checked').val();
+    var selectUser = $("#selectUserData").val();
     console.log(selectUser);
 
 
@@ -43,8 +49,6 @@ function webLogin() {
         return false;
     }
 
-
-
     //提示同意某些协议后的登录 is_agree
     var agree = $('input[name="is_agree"]:checked').val();
     if(agree!=1){
@@ -54,7 +58,7 @@ function webLogin() {
             ,time: 2 //2秒后自动关闭
         });
     }else{
-        var param = {"username":username,"password":password,"selectUser":selectUser};
+        var param = {"busId":url_busId,"username":username,"password":password,"selectUser":selectUser};
         ajax_fetch("POST",paramMap.getLogin,param,function (result) {
             console.log(result);
             if(result.success){
@@ -63,7 +67,12 @@ function webLogin() {
                 //sessionStorage.setItem("sessionUser",JSON.stringify(result.data));
                 localStorage.setItem("sessionUser",JSON.stringify(result.data));
                 //传值  belongBusUserId  userId都要传递
-                window.location.href = webUrl+"index.html?busId="+result.data.belongBusUserId+"&userId="+result.data.userId;
+                //登陆成功后，返回上一个页面
+                if(document.referrer!=""){
+                    window.location.href = beforeParamValue(document.referrer,result.data.belongBusUserId,result.data.userId);
+                }else{
+                    window.location.href = webUrl+"index.html?busId="+result.data.belongBusUserId+"&userId="+result.data.userId;
+                }
             }else{
                 $("#error_info").html(result.msg);
                 layer.close(layer_bus);
@@ -76,10 +85,10 @@ function webLogin() {
 
                     var str = "";
                     $.each(result.data,function(index,item){
-                        str+="<li style='line-height: 2.5rem;width: 100%;'><a href='javascript:checkRadio(\""+item.busId+"\")'><input type='checkbox' name='selectUserInput' style='width: 16px;height: 16px;' id='bus_"+item.busId+"' value='"+item.userId+"-"+item.busId+"'/>&nbsp;&nbsp;<span>"+item.busName+"</span></a></li>";
+                        str+="<li style='line-height: 2.5rem;width: 100%;text-align: left;'><span onclick='checkRadio(\""+item.busId+"\")' id='a_"+item.busId+"' class='unselect' title='"+item.userId+"-"+item.busId+"'><span>"+item.busName+"</span></span></li>";
                     });
 
-                    var selBusHtml = "<div id='log_window' style='margin: 0;padding: 8px 7px;'>" +
+                    var selBusHtml = "<div id='log_window' style='margin: 0;padding: 8px 7px;'><input type='hidden' id='selectUserData'/>" +
                         "    <div >" +
                         "        <div>" +
                         "            <span>请选择所属企业</span>" +
@@ -96,9 +105,9 @@ function webLogin() {
                         content: selBusHtml
                         ,btn: ['确定', '取消']
                         ,yes: function(index){
-                            var selectUser = $('input[name="selectUserInput"]:checked').val();
+                            var selectUser = $("#selectUserData").val();
                             console.log(selectUser);
-                            if(selectUser!=undefined){
+                            if(selectUser!=undefined && selectUser!=''){
                                 webLogin();
                             }else{
                                 layer.open({
@@ -108,7 +117,9 @@ function webLogin() {
                                 });
                             }
                         },
-                        style: 'bottom:10%; top:30%;left:0; width: 97%;border:none;border-radius: 1.5rem;'
+                        anim: 'up',
+                        style: 'position:fixed; bottom:0; left:0; width: 100%;border:none;border-radius: 1.5rem;z-index:100;',
+                        shadeClose:false
                     });
 
                 }
@@ -119,11 +130,12 @@ function webLogin() {
 
 //点击选中按钮
 function checkRadio(value) {
-    $.each($("[id^=bus_]"),function (index, item) {
-        if("bus_"+value==item.id){
-            item.checked = true;
+    $.each($("[id^=a_]"),function (index, item) {
+        if("a_"+value==item.id){
+            item.className = "select";
+            $("#selectUserData").val(item.title);
         }else{
-            item.checked = false;
+            item.className = "unselect";
         }
     });
 }
@@ -144,4 +156,29 @@ function showAgree() {
 //点击我知道了
 function my_knowFun() {
     layer.close(layer_argee);
+}
+
+//截取参数并重新赋值
+function beforeParamValue(beforeUrl,busId,userId) {
+    var paramMap = beforeUrl.substring(beforeUrl.indexOf("?")+1,beforeUrl.length);
+    var arrayParam = paramMap.split("&");
+    var mapParam = {};
+    $.each(arrayParam,function (index, item) {
+        mapParam[item.split("=")[0]]=item.split("=")[1];
+    });
+    mapParam["busId"] = busId;
+    mapParam["userId"] = userId;
+    var param = "";
+    var mapIndex=0;
+    for(var prop in mapParam){
+        if(mapParam.hasOwnProperty(prop)){
+            mapIndex++;
+            if(mapIndex!=1){
+                param+="&";
+            }
+            param+=prop+"="+mapParam[prop];
+        }
+    }
+    var newUrl = beforeUrl.substring(0,beforeUrl.indexOf("?")+1)+param;
+    return newUrl;
 }

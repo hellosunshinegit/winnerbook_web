@@ -8,9 +8,8 @@ $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("活动报名地址");
     });
-    if(getSessionBusId()!=""){
-        titleBus("活动报名地址");
-    }
+
+    titleBus("活动报名地址");
 
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();

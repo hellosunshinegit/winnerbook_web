@@ -18,9 +18,8 @@ $(function(){
     $(".footer").load("../../../common/footer.html",function (result) {
         selectBottom();
     });
-    if(getSessionBusId()!=""){
-        titleBus("企业排名");
-    }
+
+    titleBus("企业排名");
 
     initData(pageIndex);
 });

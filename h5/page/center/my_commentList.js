@@ -6,9 +6,9 @@ $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("我的评论");
     });
-    if(getSessionBusId()!=""){
-        titleBus("我的评论");
-    }
+
+    titleBus("我的评论");
+
     initData(pageIndex);
 
 });

@@ -9,9 +9,7 @@ $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("学习课程");
 
-        if(getSessionBusId()!=""){
-            titleBus("学习课程");
-        }
+        titleBus("学习课程");
     });
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();

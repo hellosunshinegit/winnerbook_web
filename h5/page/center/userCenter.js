@@ -5,15 +5,20 @@ $(function(){
     $(".footer").load(webUrl +"page/common/footer.html",function (result) {
         selectBottom();
     });
-    if(getSessionBusId()!=""){
-        titleBus("个人中心");
-    }
+
+    console.log(getSession());
+
+    titleBus("个人中心");
     var sessionUser = localStorage.getItem("sessionUser");
     if(sessionUser==null){
         window.location.href = webUrl+"page/center/login.html?busId="+busId+"&userId="+userId;
     }
     $("#sessionUser").html(JSON.parse(sessionUser).userUnitName);
 
+    //如果不是企业管理员，则显示申请企业管理员图标
+    if(getSession().isBusinessAdmin!="1"){
+        $("#applyBusAdmin").css("display","");
+    }
 
 });
 
@@ -67,6 +72,11 @@ function myReport() {
 function myActivitySignup() {
     window.location.href = webUrl+"page/center/signupList.html?busId="+busId+"&userId="+userId;
 
+}
+
+//申请成为企业管理员
+function applyBusAdmin() {
+    window.location.href = webUrl+"page/center/applyBusAdmin.html?busId="+busId+"&userId="+userId;
 }
 
 //退出登录

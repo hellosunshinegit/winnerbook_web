@@ -8,9 +8,8 @@ $(function(){
     $(".footer").load("../../../common/footer.html",function (result) {
         selectBottom();
     });
-    if(getSessionBusId()!=""){
-        titleBus("全局排名");
-    }
+
+    titleBus("全局排名");
 
     initData(pageIndex);
 });

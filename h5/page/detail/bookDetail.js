@@ -10,9 +10,8 @@ $(function(){
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();
     });
-    if(getSessionBusId()!=""){
-        titleBus("书籍详情");
-    }
+
+    titleBus("书籍详情");
     //index首页数据
     initData();
 

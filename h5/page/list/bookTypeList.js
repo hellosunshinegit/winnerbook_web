@@ -11,10 +11,7 @@ $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("浏览书单");
 
-        if(getSessionBusId()!=""){
-            titleBus("浏览书单");
-        }
-
+        titleBus("浏览书单");
     });
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();

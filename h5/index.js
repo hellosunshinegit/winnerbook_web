@@ -3,20 +3,18 @@ var sessionUser = localStorage.getItem("sessionUser");
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
 
-if(sessionUser!=null && url_busId==""){
+/*if(sessionUser!=null && url_busId==""){
     //判断如果已经登录，则登录的数据
     var sessionUserJson = JSON.parse(sessionUser);
     url_busId = sessionUserJson.belongBusUserId;
     url_userId = sessionUserJson.userId;
-}
+}*/
 var title = "";
 var desc = "";
 $(function(){
     $(".footer").load("page/common/footer.html");
 
-    if(getSessionBusId()!=""){
-        $("#title_bus").html(getSession().busName!=undefined?getSession().busName+"-"+$("#title_bus").html():$("#title_bus").html());
-    }
+    titleBus("欢迎来到企业读书云");
     //index首页数据
     initData(function (result) {
         //加载js
@@ -39,7 +37,7 @@ $(function(){
     //保存
     if(localStorage.getItem("isFirst")==null){
         var videoHtml = "<div class='welcome'>" +
-            "<div class='welcome_title'>欢迎来到企业读书云平台</div>" +
+            "<div class='welcome_title'>欢迎来到企业读书云</div>" +
             "<div class='introduce_info'>企业读书云平台是总裁读书会推出的企业版读书学习云平台，旨在通过专业的企业读书服务，为企业提供读书指导和帮助，从<span class='introduce_info_import'>学习计划</span>、<span class='introduce_info_import'>读书书单</span>、<span class='introduce_info_import'>读书展示</span>、<span class='introduce_info_import'>读书互动</span>、<span class='introduce_info_import'>读书感想</span>等多方面促进企业全员阅读，持续提升员工和企业的核心竞争力和科技创新能力！</div>" +
            /* "<div class='content_des'>1.跟大咖一起读 <br/>2.精品课程<br/> 3.读书交流<br/>...<br/>好看的内容等待您去发掘！</div>" +*/
             "</div>";

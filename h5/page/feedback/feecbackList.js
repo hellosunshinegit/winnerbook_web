@@ -7,9 +7,9 @@ $(function(){
         $("#center_title").html("我的反馈");
         $("#shareBtn").css("display","none");
     });
-    if(getSessionBusId()!=""){
-        titleBus("我的反馈");
-    }
+
+    titleBus("我的反馈");
+
     initData(pageIndex);
 
 });

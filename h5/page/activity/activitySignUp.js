@@ -11,9 +11,8 @@ $(function(){
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();
     });
-    if(getSessionBusId()!=""){
-        titleBus("活动报名");
-    }
+
+    titleBus("活动报名");
 
     //如果已经登录，则默认是自己的名字和手机号
     if(getSessionUserId()!=""){

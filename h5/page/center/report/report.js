@@ -8,9 +8,8 @@ $(function(){
     $(".header").load("../../common/header.html",function (result) {
         $("#center_title").html("我的学习报告");
 
-        if(getSessionBusId()!=""){
-            titleBus("我的学习报告");
-        }
+        titleBus("我的学习报告");
+
         //设置分享内容
         title = "我的学习报告";
         var link = location.href.split('#')[0];
@@ -285,7 +284,7 @@ function allBusData(pageIndex) {
 
             var currentBus = result.data.currentBus;
             //获取当前企业的排名  currentUser currentBus.busName
-            $("#currentBus").html("当前企业排名：<span class='rank_title'>"+currentBus.rank+"</span>，分值：<span class='rank_order'>"+currentBus.busScore+"</span>");
+            $("#currentBus").html("当前企业排名：<span class='rank_title'>"+(currentBus.rank!=undefined?currentBus.rank:"")+"</span>，分值：<span class='rank_order'>"+(currentBus.busScore!=undefined?currentBus.busScore:"")+"</span>");
 
             /*var busRankList = result.data.busRanks.allBusRankList;
 

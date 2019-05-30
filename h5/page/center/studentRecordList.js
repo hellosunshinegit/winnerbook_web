@@ -9,9 +9,8 @@ $(function(){
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();
     });
-    if(getSessionBusId()!=""){
-        titleBus("我的学习记录");
-    }
+    titleBus("我的学习记录");
+
     initData(pageIndex);
 
 });

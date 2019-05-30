@@ -8,9 +8,8 @@ $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("我的活动列表");
     });
-    if(getSessionBusId()!=""){
-        titleBus("我的活动列表");
-    }
+
+    titleBus("我的活动列表");
     $(".footer").load("../common/footer.html");
     initData(pageIndex);
 });

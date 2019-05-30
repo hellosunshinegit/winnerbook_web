@@ -1,6 +1,9 @@
 /**
  * 观看视频和音频时，定时监控，观看时间做记录
  */
+
+var url_busId = RequestUrl(location.search,"busId");
+var url_userId = RequestUrl(location.search,"userId");
 //获取播放时间
 var interval_main_play = null;
 function playInterval(main_play_id,courseId,type,fileId){
@@ -49,7 +52,7 @@ function playInterval(main_play_id,courseId,type,fileId){
 				var isLogin = confirm("登录才可以观看视频，确定要登录吗？");
 				if(isLogin){
 					footerClick("me");
-					window.location.href = webUrl+"page/center/login.html";
+					window.location.href = webUrl+"page/center/login.html?busId="+url_busId+"&userId="+url_userId;
 				}else{
 					main_play.webkitExitFullScreen();//退出全屏
 				}
@@ -62,7 +65,7 @@ function playInterval(main_play_id,courseId,type,fileId){
 					,yes: function(index){
 						layer.close(index);
 						footerClick("me");
-						window.location.href = webUrl+"page/center/login.html";
+						window.location.href = webUrl+"page/center/login.html?busId="+url_busId+"&userId="+url_userId;
 					},no:function (index) {
 						$("#"+main_play_id).removeClass("videoHeight");
 					}
@@ -102,7 +105,7 @@ function studentLook(courseId,time,type,isEnd,fileId,totalTime,clickStart){
 	console.log(courseId+","+time+","+type+","+fileId+","+totalTime+","+clickStart);
 	time = time+"";
 	console.log("后台发送请求",time);
-	var param = {"courseId":courseId,"time":time,"type":type,"recordId":recordIdInsert,"isEnd":isEnd,"userId":getSessionUserId(),"fileId":fileId,"totalTime":totalTime,"clickStart":clickStart};
+	var param = {"courseId":courseId,"time":time,"type":type,"recordId":recordIdInsert,"isEnd":isEnd,"userId":url_userId,"fileId":fileId,"totalTime":totalTime,"clickStart":clickStart};
 	ajax_fetch("get",paramMap.addStudentRecord,param,function (result) {
 		console.log(result);
 		if(result.success){

@@ -7,9 +7,7 @@ $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("查看导师");
 
-        if(getSessionBusId()!=""){
-            titleBus("查看导师");
-        }
+        titleBus("查看导师");
     });
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();

@@ -11,9 +11,8 @@ $(function(){
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();
     });
-    if(getSessionBusId()!=""){
-        titleBus("我的读后感");
-    }
+
+    titleBus("我的读后感");
     initData(pageIndex);
 
 });

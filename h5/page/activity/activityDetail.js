@@ -7,9 +7,8 @@ $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("活动详情");
     });
-    if(getSessionBusId()!=""){
-        titleBus("活动");
-    }
+
+    titleBus("活动");
 
     //index首页数据
     initData();

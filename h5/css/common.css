@@ -301,11 +301,11 @@ a {
     display: inline-block;
     width: 62px;
     height: 22px;
-    background: url(../images/share_btn.png) no-repeat;
+    /*background: url(../images/share_btn.png) no-repeat;*/
 }
 
 .ico_share_btn{
-    float: left;
+    float: right;
     width: 16px;
     height: 16px;
     margin: 3px 0 0 3px;

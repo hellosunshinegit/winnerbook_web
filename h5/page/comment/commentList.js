@@ -6,11 +6,11 @@ var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
-        $("#center_title").html("评论");
+        $("#center_title").html("评论列表");
     });
-    if(getSessionBusId()!=""){
-        titleBus("评论");
-    }
+
+    titleBus("评论列表");
+
     initData(pageIndex);
 
 });

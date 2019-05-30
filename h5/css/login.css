@@ -177,3 +177,20 @@ a{
 	float: right;
 	margin-right: 1rem;
 }
+
+.unselect{
+	padding: 6px 8px;
+	border: 1px solid #808080;
+	border-radius: 12px;
+	color:#808080;
+	font-size: 13px;
+}
+
+.select{
+	padding: 8px;
+	border: 1px solid #FF6600;
+	border-radius: 12px;
+	color: #FF6600;
+	background-color: #fff3eb;
+	font-size: 13px;
+}

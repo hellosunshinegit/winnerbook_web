@@ -9,9 +9,7 @@ $(function(){
     $(".header").load("../common/header.html",function (result) {
         $("#center_title").html("随便看看");
 
-        if(getSessionBusId()!=""){
-            titleBus("随便看看");
-        }
+        titleBus("随便看看");
     });
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();

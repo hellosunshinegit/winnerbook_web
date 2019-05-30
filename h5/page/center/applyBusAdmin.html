@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title_bus">企业读书云平台-申请成为企业管理员</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link href="../../css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/applyBusAdmin.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../public/config.js"></script>
+    <script type="text/javascript" src="applyBusAdmin.js"></script>
+    <script type="text/javascript" src="../../js/layer.js"></script>
+    <link href="../../js/layer.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header"></div>
+<div class="sign_up">
+    <div class="sign_up_title">
+        <span id="title">申请成功后，我们会在1-3个工作内给您答复，谢谢！</span>
+        <span id="title_success" style="display: none;">申请成功，我们会在1-3个工作内给您答复，谢谢！</span>
+    </div>
+    <div class="sign_up_info">
+        <table class="table_css">
+            <tr>
+                <td class="tdName">企业名称：</td>
+                <td class="model_css"><input type="text" id="applyBusName" placeholder="请输入企业名称" maxlength="50"/></td>
+            </tr>
+            <tr>
+                <td class="tdName">描述：</td>
+                <td class="model_css"><textarea id="applyBusDes" placeholder="请输入描述" maxlength="300"></textarea></td>
+            </tr>
+            <tbody id="applyInfo" style="display: none;">
+                <tr>
+                    <td class="tdName">审核状态：</td>
+                    <td class="model_css"><span id="status"></span></td>
+                </tr>
+                <tr>
+                    <td class="tdName">申请时间：</td>
+                    <td class="model_css"><span id="applyCreate"></span></td>
+                </tr>
+                <tr id="statusReason_tr" style="display: none;">
+                    <td class="tdName">备注：</td>
+                    <td class="model_css"><textarea id="statusReason" disabled></textarea></td>
+                </tr>
+                <tr id="notice_tr" style="display: none;">
+                    <td class="tdName">注意事项：</td>
+                    <td class="model_css"><textarea disabled>企业管理员登陆账号为您的手机号，密码为手机号后6位</textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="sign_up_submit" id="submitBtn">
+        <input class="button" type="button" value="提交申请" onclick="applySubmitFun()"/>
+    </div>
+</div>
+<div class="footer">
+</div>
+</body>
+</html>
