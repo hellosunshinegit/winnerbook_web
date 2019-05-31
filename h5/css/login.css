@@ -36,15 +36,12 @@ a{
 	position:relative;
 }
 .aui-code-box .aui-code-line-input {
-	padding:0 0;
-	height: 75px;
 	width: 96%;
 	font-size: 14px;
-	line-height:52px;
 	background: none;
 	border: none;
 	color: #333;
-	padding-left: 1rem;
+	padding: 2rem 0rem 0rem 1rem;
 }
 .aui-code-box .aui-code-line-clear span a {
 	text-indent: -999px;
