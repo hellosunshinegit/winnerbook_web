@@ -5,9 +5,9 @@ var url_userId = RequestUrl(location.search,"userId");
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
-        $("#center_title").html("查看导师");
+        $("#center_title").html("大咖领读");
 
-        titleBus("查看导师");
+        titleBus("大咖领读");
     });
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();
@@ -48,7 +48,7 @@ function initData(index){
 
                 //判断是否有百度知道链接，
                 var recommendBookStr = "";
-                if(item.recommendBook!=""){
+                if(item.recommendBook!="" && item.recommendBook!=undefined){
                     if(item.recommendBook.length>7){
                         item.recommendBook = item.recommendBook.substring(0,7)+"...";
                     }

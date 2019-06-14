@@ -9,9 +9,9 @@ var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
-        $("#center_title").html("浏览书单");
+        $("#center_title").html("老板荐书");
 
-        titleBus("浏览书单");
+        titleBus("老板荐书");
     });
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();
@@ -38,13 +38,15 @@ function initData(index){
 
             //显示标签
             var labelStr = "";
+
+            if(url_busId!=""){
+                labelStr += "<li id='li_"+parseInt(result.data.labelList.length)+"'><a href='#tabs-0' title=''>企业书单</a></li>";
+            }
+
             $.each(result.data.labelList,function (index, item) {
                 labelNameMap[item.labelId] = item.labelName;
                 labelStr +="<li id='li_"+index+"'><a href='#tabs-"+(index+1)+"' title='' onclick='bookTypeList(\""+item.labelId+"\",0,\""+(index+1)+"\")'>"+item.labelName+"</a></li>";
             });
-            if(getSessionBusId()!=""){
-                labelStr += "<li id='li_"+parseInt(result.data.labelList.length)+"'><a href='#tabs-0' title=''>我的书单</a></li>";
-            }
 
             $("#labelDiv").html(labelStr);
 
@@ -64,10 +66,15 @@ function initData(index){
                 $.each($("[id^='tabs-']"),function (index, item) {
                     $("#tabs-"+index).css("display","none");
                 });
-                $("#"+$("[id^='tabs-']")[0].id).css("display","");
+                if(url_busId!="") {
+                    $("#"+$("[id^='tabs-']")[0].id).css("display","");
+                }else{
+                    $("#"+$("[id^='tabs-']")[1].id).css("display","");
+
+                }
             }
             //企业自己的书单
-            if(getSessionBusId()!="") {
+            if(url_busId!="") {
                 busBookList(pageIndex_0);
             }
         }
@@ -99,7 +106,7 @@ function bookDetail(bookId,bluId) {
     window.location.href = webUrl+"page/detail/bookDetail.html?busId="+url_busId+"&userId="+url_userId+"&bookId="+bookId+"&bluId="+bluId;
 }
 
-//我的书单分页
+//企业书单分页
 function busBookList(index) {
     var busId;
     var find = RequestUrl(location.search,"find");
@@ -108,66 +115,62 @@ function busBookList(index) {
     }else{
         busId = url_busId;
     }
-    var param = {"pageIndex":index,"busId":busId,"userId":url_userId};
-    ajax_fetch("POST",paramMap.getBusBooks,param,function (result) {
+    var param = {"pageIndex":index,"busId":busId,"userId":url_userId};//查询企业书单
+    ajax_fetch("POST",paramMap.getBusBookTypeLists,param,function (result) {
+        console.log(result.data);
         if (result.success) {
-            //拼接书单列表
-            var bookStr = "";
-            var bookTypeName = "";
-            $.each(result.data.bookList, function (index, item) {
-                item.bookImg = baseUrl + item.bookImg;
-
-                var bookClassStr = item.bookClass;
-                if(bookClassStr.length>15){
-                    bookClassStr = item.bookClass.substring(0,15)+"...";
-                }
-
-                var bookContentDesStr = item.bookContentDes != undefined ? item.bookContentDes : "";
-                if (bookContentDesStr.length > 30) {
-                    bookContentDesStr = item.bookContentDes.substring(0, 30) + "...";
-                }
-
-                var courseStr = "<span class='aui_title_course'></span>";
-                if(item.courseId!=undefined && item.courseId!=null){
-                    var mainGuest = item.mainGuest;
-                    if(item.mainGuest.length>3){
-                        mainGuest = item.mainGuest.substring(0,3)+"..";
+            var bookTypeStr = "";
+            var bookTypeName = "";//分享时使用
+            $.each(result.data.bookBusListType,function (index, item) {
+                if(item.typeImg!="" && item.typeImg!=undefined){
+                    item.typeImg = baseUrl+item.typeImg;
+                }else{
+                    var imgUrl = "1";
+                    if(index%2==0){
+                        imgUrl="0";
                     }
-                    courseStr = "<span class='aui_title_course' onclick='courseDetail(\""+item.courseId+"\")'>"+mainGuest+"<span style='font-size:0.7rem;'>领读</span></span>";
+                    item.typeImg = webUrl+"images/def_img"+imgUrl+".png";
                 }
-
-                bookStr += "<div class='aui-flex b-line' about=''>" +
-                    "<div class='aui-course-img_book' onclick='bookDetail(" + item.bookId + ","+item.bluId+");'><img src='" + item.bookImg + "' alt=''></div>" +
-                    "<div class='aui-flex-box_book'>" +
-                    "<span class='aui_title_book' onclick='bookDetail(" + item.bookId + ","+item.bluId+");'>" + item.bookName + "</span>" +courseStr+
-                    "<span class='aui_author_book' onclick='bookDetail(" + item.bookId + ","+item.bluId+");'>" + bookClassStr + "</span>" +
-                    "<span class='aui_des_book' onclick='bookDetail(" + item.bookId + ","+item.bluId+");'>" + bookContentDesStr +
-                    "</span>" +
-                    "</div></div>";
+                var typeNameStr = item.typeName != undefined ? item.typeName : "";
+                if (typeNameStr.length > 30) {
+                    typeNameStr = item.typeName.substring(0, 30) + "...";
+                }
+                bookTypeStr+="<a href='javascript:bookListFun("+item.typeId+");' class='aui-flex b-line' about=''>" +
+                    "<div class='aui-flex-box'>" +
+                    "<span class='aui_title'>"+typeNameStr+"</span>" +
+                    "</div>" +
+                    "<div class='aui-course-img'>" +
+                    "<img src='"+item.typeImg+"' alt=''>" +
+                    "</div>" +
+                    "</a>";
 
                 //分享时使用
                 if(index!=0){
                     bookTypeName += " | ";
                 }
-                bookTypeName +=item.bookName;
+                bookTypeName += item.typeName;
 
             });
-            if (result.data.bookCount > (pageIndex_0 + 1) * 10) {
-                bookStr += "<span class='more' id='more_01' onclick='clickMore_bus()'>点击更多...</span>";
-            } else if (bookStr.length > 0) {
-                bookStr += "<span class='more_end'>我是有底线的...</span>";
-            } else {
-                bookStr += "<span class='more_end'>暂无数据...</span>";
+
+            if(result.data.bookBusListCount>(pageIndex_0 + 1)*10){
+                bookTypeStr+="<span class='more' id='more_"+index+"' onclick='clickMore_bus()'>点击更多...</span>";
+            }else if(bookTypeStr.length>0){
+                bookTypeStr+="<span class='more_end'>我是有底线的...</span>";
+            }else{
+                bookTypeStr+="<span class='more_end'>暂无数据...</span>";
             }
-            $("#tabs-0").append(bookStr);
+            $("#tabs-0").append(bookTypeStr);
+
 
             //设置分享内容
-            title = "我的书单";
+            title = "企业书单";
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
+            if(result.data.bookBusListType.length>0){
+                imgUrl = result.data.bookBusListType[0].typeImg;
+            }
             desc = bookTypeName;
             setWxConfig(title,link,imgUrl,desc);
-
         }
     });
 
@@ -181,7 +184,6 @@ function bookTypeList(labelId,pageIndex,index,type) {
     //根据labelId查询书单列表
     var param = {"pageIndex":pageIndex,"busId":url_busId,"labelId":labelId};
     ajax_fetch("POST",paramMap.getBookTypeLists,param,function (result) {
-        console.log(result.data);
         var bookTypeStr = "";
         var bookTypeName = "";//分享时使用
         $.each(result.data.bookListType,function (index, item) {

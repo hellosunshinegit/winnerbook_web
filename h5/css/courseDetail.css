@@ -202,16 +202,16 @@ body{
     clear: both;
 }
 
-#tabs-1{
+#tabs-2{
     top:0.5rem !important;
     margin-bottom: 5rem;
 }
 
-#tabs-1 span{
+#tabs-2 span{
     margin-top: 1rem;
 }
 
-#tabs-1 ul li{
+#tabs-2 ul li{
     width: 100%;
     border-bottom:1px solid #dad8d8;
     line-height: 2.3rem;
@@ -221,7 +221,7 @@ body{
     width: 100%;
 }
 
-#tabs-2{
+#tabs-1{
     width: 100%;
 }
 #tabs-3{

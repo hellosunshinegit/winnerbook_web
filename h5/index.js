@@ -3,6 +3,8 @@ var sessionUser = localStorage.getItem("sessionUser");
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
 
+var pageIndex_course = 0;
+var pageIndex_video = 0;
 /*if(sessionUser!=null && url_busId==""){
     //判断如果已经登录，则登录的数据
     var sessionUserJson = JSON.parse(sessionUser);
@@ -12,9 +14,20 @@ var url_userId = RequestUrl(location.search,"userId");
 var title = "";
 var desc = "";
 $(function(){
-    $(".footer").load("page/common/footer.html");
+    $(".footer").load("page/common/footer.html",function (result) {
+    });
 
     titleBus("欢迎来到企业读书云");
+    $("#index_title").html("欢迎来到企业读书会");
+
+    //首页标题  根据busId查询对应企业的短名称
+    getBusInfo(url_busId,function (result) {
+        if(result.mobileBusName!="" && result.mobileBusName!=null){
+            $("#index_title").html("欢迎来到"+result.mobileBusName+"企业读书会");
+        }
+    });
+
+
     //index首页数据
     initData(function (result) {
         //加载js
@@ -24,14 +37,16 @@ $(function(){
                 $this.slider(window.YDUI.util.parseOptions($this.data('ydui-slider')));
             });
         });
+
+        courseList(pageIndex_course);//获取精选课程
+        videoList(pageIndex_video);//获取视频
     });
 
-    //如果登陆信息的企业id不是2，则不现实更多，显示我的
-    console.log(getSession());
-    if(getSessionUserId()=="" || getSessionBusId()==2){
-        $("#more_a").css("display","");
-    }else if(getSessionUserId()!=null){
+    //如果登陆信息的企业id不是2，则不现实更多，显示我的   getSessionUserId()=="" || getSessionBusId()==2
+    if(url_busId!=""){
         $("#me_a").css("display","");
+    }else{
+        $("#more_a").css("display","");
     }
 
     //保存
@@ -72,6 +87,17 @@ $(function(){
     desc = "企业读书学习的云平台，旨在通过专业的企业读书服务，为企业提供读书指导和帮助，从学习计划、读书书单、读书展示、读书互动、读书感想等多方面促进企业全员阅读，进而推动社会全民阅读风尚！";
     setWxConfig(title,link,imgUrl,desc);
 
+
+    //数据加载完成之后运行js  tab的样式
+    $('#tabs').tabulous({
+        effect: 'scale'
+    });
+    $.each($("[id^='tabs-']"),function (index, item) {
+        $("#tabs-"+index).css("display","none");
+    });
+    $("#"+$("[id^='tabs-']")[0].id).css("display","");
+
+
 });
 var linkMap = [];
 function initData(callback){
@@ -80,7 +106,6 @@ function initData(callback){
     ajax_fetch("POST",paramMap.index,param,function (result) {
         if(result.success){
             var bannerList = result.data.bannerList;//banner图
-            var courseList = result.data.course.courseList;//最新课程
 
             if(bannerList.length>0){
                 //拼接banner图
@@ -91,16 +116,27 @@ function initData(callback){
                     if(clickUrl==""){
                         clickUrl = "javascipt:;";
                     }
-                    console.log(clickUrl);
                     linkMap[item.bannerId] = clickUrl;
                     bannerStr+="<div class='slider-item' onclick='openUrl("+item.bannerId+")'><a href='javascript:;'><img alt='' src='"+item.bannerUrl+"'></a></div>";
                 });
                 $("#bannerDiv").html(bannerStr);
             }
 
-            //拼接精品课程  auiCourseList
+            return callback($("#bannerDiv").html());
+        }
+    });
+
+}
+
+
+//获取课程
+function courseList(pageIndex,type){
+    //拼接精品课程  auiCourseList
+    var param = {"pageIndex":pageIndex,"busId":url_busId};
+    ajax_fetch("POST",paramMap.getCourses,param,function (result) {
+        if(result.success){
             var courseStr = "";
-            $.each(courseList,function (index, item) {
+            $.each(result.data.courseList,function (index, item) {
                 item.bookImg = baseUrl+item.bookImg;
                 var titleStr = item.title;
                 if(titleStr.length>13){
@@ -111,34 +147,120 @@ function initData(callback){
                     courseDescStr = item.courseDesc.substring(0,30)+"...";
                 }
 
-                var mainGuestPostStr = "";
-                if(item.mainGuestPost!=""){
-                    mainGuestPostStr = "（"+item.mainGuestPost+"）";
+                var mainGuestStr = "";
+                if(item.mainGuest!=""){
+                    var mainGuestPostStr = "";
+                    if(item.mainGuestPost!=""){
+                        mainGuestPostStr = "（"+item.mainGuestPost+"）";
+                    }
+                    mainGuestStr = "领读者："+item.mainGuest+mainGuestPostStr;
                 }
 
                 courseStr+="<a href='javascript:courseDetail("+item.courseId+",1);' class='aui-flex b-line' about=''>" +
                     "<div class='aui-course-img'><img src='"+item.bookImg+"' alt=''></div>" +
                     "<div class='aui-flex-box'>" +
-                        "<span class='aui_title'>"+titleStr+"</span>" +
-                        "<span class='aui_author'>讲师："+item.mainGuest+mainGuestPostStr+"</span>" +
-                        "<span class='aui_des'>点击数<span class='click_num'>"+item.courseClickNum+"</span>次</span>" +
+                    "<span class='aui_title'>"+titleStr+"</span>" +
+                    "<span class='aui_author'>"+mainGuestStr+"</span>" +
+                    "<span class='aui_des'>点击数<span class='click_num'>"+item.courseClickNum+"</span>次</span>" +
                     "</div></a>";
             });
-            if(result.data.course.courseCount>10){
-                courseStr+="<span class='more'onclick='getCoursesList(url_busId,url_userId)'>点击更多...</span>";
+            if(result.data.courseCount>(pageIndex+1)*10){
+                courseStr+="<span class='more' id='more_course' onclick='getCoursesMore()'>点击更多...</span>";
             }else if(courseStr.length>0){
                 courseStr+="<span class='more_end'>我是有底线的...</span>";
             }else{
                 courseStr+="<span class='more_end'>暂无数据...</span>";
             }
-
-            $("#auiCourseList").append(courseStr);
-
-            return callback($("#bannerDiv").html());
+            if(type=="more"){
+                $("#tabs-0").append(courseStr);
+            }else{
+                $("#tabs-0").html(courseStr);
+            }
         }
     });
-
 }
+
+function getCoursesMore(){
+    window.location.href=webUrl+'page/list/courseList.html?busId='+url_busId+"&userId="+url_userId;
+}
+
+function videoList(pageIndex,type) {
+    var param = {"pageIndex":pageIndex,"busId":url_busId};
+    ajax_fetch("POST",paramMap.getVideos,param,function (result) {
+        if(result.success){
+            //拼接视频列表
+            var videoStr = "";
+            var videoTitle = "";
+            if(result.data.videoList.length>0){
+                var firstVideo = result.data.videoList[0];
+                $("#aui_title").html(firstVideo.fileTitle);// poster="+webUrl+"images/video_def_img.png style='width: 100%; height: 80%; object-fit: fill'  x5-video-player-type='h5' x5-video-player-fullscreen='true'
+                $("#firstVideo").html("<video controls id='first_video' poster="+webUrl+"images/video_default.png x5-video-player-fullscreen='true'><source src='"+baseUrl+firstVideo.fileUrl+"'></video>");
+
+                var video_img = webUrl+"images/video_open.png";
+                result.data.videoList.splice(0,1);
+                if(result.data.videoList.length>0){
+                    $.each(result.data.videoList,function (index, item) {
+                        if(index!=0){
+                            videoTitle +=" | ";
+                        }
+                        videoTitle+=item.fileTitle;
+
+                        //前3个视频免费，后要登录
+                        var isLook = "1";  //1是要登录才可以观看，0可以观看
+                        if(index<4){
+                            isLook="0";
+                        }
+                        item.bookImg = baseUrl+item.bookImg;
+                        item.fileUrl = baseUrl+item.fileUrl;
+                        //autoplay muted  自动播放，pc可以，但是h5手机端不行
+                        videoStr+="<div class='aui-flex b-line' about=''>" +
+                            "<div class='aui-flex-box-video'>" +
+                            "<span class='aui_title'>"+item.fileTitle+"</span>" +
+                            "<a href='javascript:courseDetail(\""+item.courseId+"\");'><span class='aui_des'>"+item.title+"</span></a>" +
+                            "</div>" +
+                            "<a href='javascript:openVideo(\""+item.fileId+"\",\""+item.fileTitle+"\",\""+item.fileUrl+"\",\""+isLook+"\");'>" +
+                            "<div class='aui-course-img'>" +
+                            "<img src='"+video_img+"' alt=''>" +
+                            "</div></a>" +
+                            "</div><div class='divHeight_video'></div>";
+                    });
+                    if(result.data.videoCount>(pageIndex+1)*10){
+                        videoStr+="<span class='more' id='more_video' onclick='getVideoMore()'>点击更多...</span>";
+                    }else if(videoStr.length>0){
+                        videoStr+="<span class='more_end'>我是有底线的...</span>";
+                    }
+                    if(type=="more"){
+                        $("#tabs-1").append(videoStr);
+                    }else{
+                        $("#tabs-1").html(videoStr);
+                    }
+                }else{
+                    videoStr+="<span class='more_end'>我是有底线的...</span>";
+                    if(type=="more"){
+                        $("#tabs-1").append(videoStr);
+                    }else{
+                        $("#tabs-1").html(videoStr);
+                    }
+                }
+            }else{
+                videoStr+="<span class='more_end'>暂无数据...</span>";
+                if(type=="more"){
+                    $("#tabs-1").append(videoStr);
+                }else{
+                    $("#tabs-1").html(videoStr);
+                }
+            }
+        }
+    });
+}
+
+
+function getVideoMore(){
+    $("#more_video").remove();
+    pageIndex = pageIndex_video+1;
+    videoList(pageIndex,"more");
+}
+
 
 //点击更多
 function getMoreInfo() {
@@ -156,12 +278,60 @@ function openUrl(bannerId) {
     window.location.href = linkMap[bannerId];
 }
 
-//活动列表
-function getActivityList() {
-    window.location.href=webUrl+'page/activity/activityList.html?busId='+url_busId+"&userId="+url_userId;
+//活动列表，企业风采，读书会活动
+function getNewBusActivityList() {
+    window.location.href=webUrl+'page/list/newsList.html?busId='+url_busId+"&userId="+url_userId;
+}
+
+//课程超市
+function getAdminCourseList() {
+    window.location.href=webUrl+'page/list/courseSupermarket.html?busId='+url_busId+"&userId="+url_userId;
 }
 
 //点击分享
 function shareWbPage() {
     shareWb(title,desc);
+}
+
+
+//点击观看视频
+function openVideo(fileId,fileTitle,fileUrl,isLook) {
+    if(isLook=="1" && getSessionUserId()==""){
+        var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {//alert的浮层高于视频的浮层 ，不然微信端是全屏的没法提示
+            //在微信中打开
+            var isLogin = confirm("登录才可以观看视频，确定要登录吗？");
+            if(isLogin){
+                footerClick("me");
+                window.location.href = webUrl+"page/center/login.html";
+            }else{
+                main_play.webkitExitFullScreen();//退出全屏
+            }
+        }else{//普通浏览器提示,可以用dom元素
+            //询问框
+            layer.open({
+                content: '登录才可以观看视频，确定要登录吗？'
+                ,btn: ['登录', '不要']
+                ,yes: function(index){
+                    layer.close(index);
+                    footerClick("me");
+                    window.location.href = webUrl+"page/center/login.html";
+                },no:function (index) {
+                }
+            });
+        }
+    }else{
+        var videoHtml = "<div class='open_video'><span>"+fileTitle+"</span><video controls id='video_"+fileId+"'><source  src='"+fileUrl+"'></video></div>";
+        layer_comment = layer.open({
+            type: 1
+            ,content: videoHtml
+            ,anim: 'up'
+            ,style: 'position:fixed; bottom:10%; top:40%;left:0; width: 100%; height: 18em; padding:10px 0; border:none;border-radius: 1.5rem;'
+        });
+        //点开后立即播放
+        document.getElementById("video_"+fileId).play();//浏览器端播放设置
+        document.addEventListener("WeixinJSBridgeReady", function () {//微信端播放设置
+            document.getElementById("video_"+fileId).play();
+        }, false);
+    }
 }

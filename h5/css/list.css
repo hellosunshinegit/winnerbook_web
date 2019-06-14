@@ -129,3 +129,58 @@
     color: #808080;
     float: right;
 }
+.input_thought{
+    width: 92%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background-color: #f1f1f1;
+    border: 0;
+    border-radius: 13px;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: block;
+}
+
+
+/*添加读后感*/
+.textarea_css{
+    width: 98%;
+    height: 190px;
+    border: 0;
+    padding-left: 0.5rem;
+    margin-top: 1rem;
+}
+.button_div{
+    height: 35px;
+    background-color: #f1f1f1;
+}
+.button_css{
+    float: right;
+    border: 0;
+    height: 35px;
+}
+.close_div{
+    float: right;
+}
+.close_div a{
+    padding: 0.5rem;
+}
+
+.bookListName{
+    padding-left: 0.5rem;
+    color: #000;
+}
+
+.isOpen{
+    /*display: block;*/
+    padding-left: 0.5rem;
+    margin-top: 1rem;
+    color: #000;
+}
+
+.openH5{
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+}

@@ -25,7 +25,7 @@ var paramMap = {
     "addStudentRecord":"addStudentRecord.jhtml",//记录学习时长
     "getCourseComments":"getCourseComments.jhtml",//获取评论列表
     "addCourseComments":"addCourseComments.jhtml",//添加评论
-    "getBusBooks":"getBusBooks.jhtml",//获取企业自己的书籍
+    /*"getBusBooks":"getBusBooks.jhtml",//获取企业自己的书籍*/
     "getFeedbacks":"getFeedbacks.jhtml",//反馈列表
     "addFeedback":"addFeedback.jhtml",//添加反馈信息
     "getMyReports":"getMyReports.jhtml",//获取我的报告
@@ -36,6 +36,16 @@ var paramMap = {
     "getActivityDetail":"getActivityDetail.jhtml",//获取活动信息
     "activitySignUpSubmit":"activitySignUpSubmit.jhtml",//报名提交
     "activitySignUps":"activitySignUps.jhtml",//报名列表
+    "getBusInfo":"getBusInfo.jhtml",//根据企业id获取企业信息
+    "isApplyBusAdmin":"isApplyBusAdmin.jhtml",//查询是否已经申请企业管理员
+    "applyBusAdmin":"applyBusAdmin.jhtml",//申请提交
+    "getBusBookTypeLists":"getBusBookTypeLists.jhtml",//获取企业书单
+    "getCourseTypes":"getCourseTypes.jhtml",//获取课程类型
+    "getTopArticles":"getTopArticles.jhtml",//获取发现中的最新文章
+    "getAdminCourseTypes":"getAdminCourseTypes.jhtml",//获取admin课程类型 课程超市
+    "getAdminCourses":"getAdminCourses.jhtml",//获取课程 课程超市
+    "getCourseTypeLabels":"getCourseTypeLabels.jhtml",//获取课程类型的标签 课程超市
+    "addReadThought":"addReadThought.jhtml"//获取课程类型的标签 课程超市
 };
 var layerLoading = null;
 function ajax_fetch(type,url,param,callback) {
@@ -73,6 +83,14 @@ function ajax_fetch(type,url,param,callback) {
     });
 }
 
+cnzzWrite();
+
+//向所有的网站写入统计代码
+//<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1277707952'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1277707952%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+function cnzzWrite() {
+    document.write("<script type=\"text/javascript\">var cnzz_protocol = ((\"https:\" == document.location.protocol) ? \"https://\" : \"http://\");document.write(unescape(\"%3Cspan style='display:none' id='cnzz_stat_icon_1277707952'%3E%3C/span%3E%3Cscript src='\" + cnzz_protocol + \"s23.cnzz.com/z_stat.php%3Fid%3D1277707952%26show%3Dpic' type='text/javascript'%3E%3C/script%3E\"));</script>")
+}
+
 function showLoading() {
     console.log("loading.....");
     layerLoading = layer.open({type: 2,shadeClose: false,content: '加载中...'});
@@ -84,7 +102,6 @@ function clickMore(){
     pageIndex = pageIndex+1;
     initData(pageIndex+1);
 }
-
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
 
@@ -124,14 +141,14 @@ function courseDetail(courseId,type){
     window.location.href=webUrl+"page/detail/courseDetail.html?busId="+url_busId+"&userId="+url_userId+"&courseId="+courseId+"&type="+type;
 }
 
-
 function login_bus(){
     //查询localStorage中是否已经登录，没有登录，则登录
     sessionStorage.setItem("selectClass","me");
     var sessionUser = localStorage.getItem("sessionUser");
     var jsonUser = JSON.parse(sessionUser);
+    console.log(jsonUser);
     if(sessionUser!=null){
-        window.location.href = webUrl+"page/center/userCenter.html?busId="+jsonUser.belongBusUserId+"&userId="+jsonUser.userId;
+        window.location.href = webUrl+"page/center/userCenter.html?busId="+url_busId+"&userId="+url_userId+"&busId_session="+jsonUser.belongBusUserId+"&userId_session="+jsonUser.userId;
     }else{
         window.location.href = webUrl+"page/center/login.html?busId="+url_busId+"&userId="+url_userId;
     }
@@ -218,8 +235,8 @@ function selectBottom() {
     }
 }
 
-function titleBus(modelName) {
-    $("#title_bus").html(getSession().busName!=undefined?getSession().busName+"-"+modelName:$("#title_bus").html());
+function titleBus() {
+    $("#title_bus").html("总裁读书会企业读书云平台");
 }
 
 //通过config接口注入权限验证配置
@@ -295,4 +312,16 @@ function shareWb(title,desc) {//&pic="+pic+"
         shareTitle+="%0A"+desc;
     }
     window.open("https://service.weibo.com/share/share.php?url="+webUrl+"&title="+shareTitle+"&type=button&language=zh_cn&appkey=3416615626&searchPic=false&style=simple")
+}
+
+//根据企业id查询企业信息
+function getBusInfo(busId,callback) {
+    if(busId!="" && busId!=null){
+        ajax_fetch("POST",paramMap.getBusInfo,{"busId":busId},function (result) {
+            var busInfo = result.data;
+            return callback(busInfo);
+        });
+    }else{
+        callback("");
+    }
 }

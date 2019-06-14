@@ -3,18 +3,8 @@ var title = "";
 var desc = "";
 $(function(){
     $(".header").load("../common/header.html",function (result) {
-        $("#center_title").html("更多...");
-
-        if(getSessionBusId()!=""){
-            $("#title_bus").html(getSession().busName+"-"+$("#title_bus").html());
-        }
-
-        title = $("#title_bus").html();
-        var link = location.href.split('#')[0];
-        var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
-        desc = "总裁读书会-企业读书云平台-更多信息在这里哦。";
-        setWxConfig(title,link,imgUrl,desc);
-
+        $("#center_title").html("关于我们");
+        titleBus("更多");
     });
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();
@@ -22,7 +12,7 @@ $(function(){
 
     /*导入尾部*/
     initData(pageIndex);
-
+    newArticles();
 });
 
 var find = RequestUrl(location.search,"find");
@@ -34,7 +24,7 @@ function initData(index){
     ajax_fetch("POST",paramMap.getBlocks,param,function (result) {
             console.log(result);
             if(result.success) {
-
+                var titleStr = "";
                 var bannerList = result.data.bannerList;//banner图
                 //拼接banner图
                 var bannerStr = "";
@@ -65,51 +55,93 @@ function initData(index){
                             "<h2>" + item.blockName + "</h2>" +
                             "</div>" +
                             "</a>";
+
+                        if(index!=0){
+                            titleStr+=" | ";
+                        }
+                        titleStr+=item.blockName;
                     });
                 } else {
                     moreStr = "<span class='more_end'>暂无数据...</span>";
                 }
                 $("#blockDiv").append(moreStr);
+
+
+                title = $("#title_bus").html();
+                var link = location.href.split('#')[0];
+                var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
+                desc = titleStr;
+                setWxConfig(title,link,imgUrl,desc);
+
             }
 
     });
 }
 
+
+//获取最新文章
+function newArticles() {
+    var param = {"pageIndex":0};
+    ajax_fetch("POST",paramMap.getTopArticles,param,function (result) {
+        console.log(result);
+        if(result.success){
+            //拼接书单列表
+            var articleStr = "";
+            $.each(result.data.articleList,function (index, item) {
+                if(item.articleImg!=""){
+                    item.articleImg = baseUrl+getMinImg(item.articleImg);
+                }else{
+                    item.articleImg = webUrl+"images/def_img0.png";
+                }
+                var articleTitleStr = item.articleTitle;
+                if(articleTitleStr.length>18){
+                    articleTitleStr = item.articleTitle.substring(0,18)+"...";
+                }
+
+
+                var blockType = "";
+                if(item.blockId!=undefined && item.blockId.split(",").length>1){
+                     $.each(item.blockId.split(","),function (index1, item1) {
+                         blockType+="<span class='aui_tag_list' onclick='articleList(\""+item1+"\")'>"+item.blockName.split(",")[index1]+"</span>"
+                     });
+                }else if(item.blockId!=undefined){
+                    blockType="<span class='aui_tag_list' onclick='articleList(\""+item.blockId+"\")'>"+item.blockName+"</span>"
+                }
+                articleStr+="<div class='aui-flex b-line' about=''>" +
+                    "<div class='aui-flex-box'>" +
+                    "<span class='aui_title'><a href='javascript:articleDetail("+item.articleId+");'>"+articleTitleStr+"</a></span>" +
+                    blockType+
+                    "<span class='aui_date'><a href='javascript:articleDetail("+item.articleId+");'>"+item.createDate+"</a></span>"+
+                    "</div>" +
+                    "<div class='aui-course-img'>" +
+                    "<a href='javascript:articleDetail("+item.articleId+");'><img src='"+item.articleImg+"' alt=''>" +
+                    "</a></div>" +
+                    "</div>";
+            });
+            if(result.data.articleCount>(pageIndex+1)*10){
+                articleStr+="<span class='more' id='more' onclick='clickMore()'>点击更多...</span>";
+            }else if(articleStr.length>0){
+                articleStr+="<span class='more_end'>我是有底线的...</span>";
+            }else{
+                articleStr+="<span class='more_end'>暂无数据...</span>";
+            }
+            $("#newArticleList").append(articleStr);
+        }
+
+    });
+
+}
+
+
 function articleList(blockId) {//根据模板查询对应的list
     window.location.href=webUrl+"page/more/articleList.html?blockId="+blockId;
 }
 
-
-//点击课程列表
-function getCoursesList_find(){
-    window.location.href=webUrl+'page/list/courseList.html?find=1'
+//点击跳转详情页
+function articleDetail(articleId) {//根据模板查询对应的list
+    window.location.href = webUrl+"page/more/articleDetail.html?articleId="+articleId;
 }
 
-//点击导师
-function getGuestList_find(){
-    window.location.href=webUrl+'page/list/mainGuestList.html?find=1'
-}
-
-//点击书单列表
-function getBookList_find() {
-    window.location.href=webUrl+'page/list/bookTypeList.html?find=1'
-}
-//点击视频列表
-function getVideoList_find() {
-    window.location.href=webUrl+'page/list/videoList.html?find=1'
-}
-//点击看读后感
-function getReadThoughtList_find() {
-    window.location.href=webUrl+'page/list/list.html?list_type=1&find=1';
-}
-//点击企业风采
-function getNewsList_find() {
-    window.location.href=webUrl+'page/list/list.html?list_type=2&find=1'
-}
-//点击读书会
-function getReadClubList_find() {
-    window.location.href=webUrl+'page/list/list.html?list_type=3&find=1';
-}
 
 //点击分享
 function shareWbPage() {

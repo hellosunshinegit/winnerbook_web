@@ -7,7 +7,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="translucent">
 	<meta name="msapplication-tap-highlight" content="no">
 	<meta name="format-detection" content="telphone=no, email=no">
-	<title id="title_bus">企业读书云平台-个人中心</title>
+	<title id="title_bus"></title>
 	<link rel="stylesheet" type="text/css" media="all" href="../../css/common.css">
 	<link rel="stylesheet" type="text/css" media="all" href="../../css/userCenter.css">
 	<script type="text/javascript" src="../../js/jquery.min.js"></script>
@@ -53,6 +53,11 @@
 	</dl>
 
 	<dl>
+		<dd class="myBookshelf">
+			<a href="javascript:myStudentRecord();">
+				<span class="studentLog">我的学习记录</span>
+			</a>
+		</dd>
 		<dd class="myReport">
 			<a href="javascript:myReport();">
 				<span class="report">学习报告</span>
@@ -62,13 +67,7 @@
 	</dl>
 
 	<dl>
-		<dd class="myBookshelf">
-			<a href="javascript:myStudentRecord();">
-				<span class="studentLog">我的学习记录</span>
 
-
-			</a>
-		</dd>
 		<dd class="myBookshelf">
 			<a href="javascript:myReadThoughtFun();">
 				<span class="bookshelf">我的读后感</span>
@@ -88,12 +87,18 @@
 				<span class="tip"></span>
 			</a>
 		</dd>
+		<dd class="myBackBus" id="isBackBus" style="display: none;">
+			<a href="javascript:backMyBus();">
+				<span class="backBus">回到我的企业</span>
+				<span class="tip"></span>
+			</a>
+		</dd>
 	</dl>
 
 	<dl>
 		<dd class="myFeedback" id="applyBusAdmin" style="display: none;">
 			<a href="javascript:applyBusAdmin();">
-				<span class="feedback">申请成为企业管理员</span>
+				<span class="applyBusAdmin">申请成为企业管理员</span>
 				<span class="tip"></span>
 			</a>
 		</dd>
@@ -111,7 +116,7 @@
 	<dl>
 		<dd class="myAgree">
 			<a href="javascript:myAgree();">
-				<span class="agree">查看注册协议</span>
+				<span class="agree">注册协议</span>
 				<span class="tip"></span>
 			</a>
 		</dd>

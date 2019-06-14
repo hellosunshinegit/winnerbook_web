@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title id="title_bus">欢迎来到企业读书云</title>
+    <title id="title_bus"></title>
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
     <meta content="yes" name="apple-mobile-web-app-capable"/>
     <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
@@ -15,25 +15,28 @@
     <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
     <script src="https://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 
-    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="css/index.css?v=10290614" rel="stylesheet" type="text/css"/>
     <link href="css/common.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!--微信分享引入jsdk-->
     <script type="text/javascript" src="js/jweixin-1.2.0.js"></script>
     <script type="text/javascript" src="public/config.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.js?v=10290614"></script>
     <script type="text/javascript" src="js/layer.js"></script>
     <link href="js/layer.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="js/tabulous.js"></script><!--tab切换-->
+
 
 </head>
 <body>
 <section class="aui-flexView">
     <header class="aui-navBar aui-navBar-fixed b-line">
-        <a href="javascript:;" class="aui-navBar-item">
-            <!--<i class="icon icon-return"></i>-->
-        </a>
+        <!--<a href="javascript:;" class="aui-navBar-item">
+            <i class="icon icon-return"></i>
+        </a>-->
         <div class="aui-center">
-            <span class="aui-center-title">企业读书云平台</span>
+            <span class="aui-center-title" id="index_title">企业读书云平台</span>
         </div>
         <a class="aui-navBar-item"><!--href="javascript:login_bus();" -->
             <!--<wb:follow-button uid="2832313182" type="red_1" width="67" height="24" ></wb:follow-button>-->
@@ -60,80 +63,73 @@
             <div class="slider-pagination"></div>
         </div>
         <div class="aui-palace">
-            <a href="javascript:getVideoList();" class="aui-palace-grid">
-                <div class="aui-palace-grid-icon">
-                    <img src="images/icon-course-004.png" alt="">
-                </div>
-                <div class="aui-palace-grid-text">
-                    <h2>碎片时间</h2>
-                </div>
-            </a>
             <a href="javascript:getCoursesList();" class="aui-palace-grid">
                 <div class="aui-palace-grid-icon">
-                    <img src="images/icon-course-001.png" alt="">
+                    <img src="images/icon-course-a.png" alt="">
                 </div>
                 <div class="aui-palace-grid-text">
-                    <h2>学习课程</h2>
+                    <h2>精选课程</h2>
                 </div>
             </a>
             <a href="javascript:getBookList();" class="aui-palace-grid">
                 <div class="aui-palace-grid-icon">
-                    <img src="images/icon-course-003.png" alt="">
+                    <img src="images/icon-book-a.png" alt="">
                 </div>
                 <div class="aui-palace-grid-text">
-                    <h2>浏览书单</h2>
+                    <h2>老板荐书</h2>
                 </div>
             </a>
             <a href="javascript:getGuestList();" class="aui-palace-grid">
-                <div class="aui-palace-grid-icon">
-                    <img src="images/icon-course-002.png" alt="">
+                <div class="aui-palace-grid-icon" style="width:35px;">
+                    <img src="images/icon-daka-a.png" alt="">
                 </div>
                 <div class="aui-palace-grid-text">
                     <h2>大咖领读</h2>
                 </div>
             </a>
-            <a href="javascript:getActivityList();" class="aui-palace-grid">
+            <a href="javascript:getAdminCourseList();" class="aui-palace-grid">
                 <div class="aui-palace-grid-icon">
-                    <img src="images/icon-course-008.png" alt="">
+                    <img src="images/icon-shop-a.png" alt="">
                 </div>
                 <div class="aui-palace-grid-text">
-                    <h2>活动列表</h2>
+                    <h2>课程超市</h2>
                 </div>
             </a>
-
-            <a href="javascript:getNewsList();" class="aui-palace-grid">
+            <a href="javascript:getNewBusActivityList();" class="aui-palace-grid">
                 <div class="aui-palace-grid-icon">
-                    <img src="images/icon-course-005.png" alt="">
+                    <img src="images/icon-notice-a.png" alt="">
                 </div>
                 <div class="aui-palace-grid-text">
-                    <h2>企业风采</h2>
-                </div>
-            </a>
-            <a href="javascript:getReadClubList();" class="aui-palace-grid">
-                <div class="aui-palace-grid-icon">
-                    <img src="images/icon-course-007.png" alt="">
-                </div>
-                <div class="aui-palace-grid-text">
-                    <h2>读书会活动</h2>
+                    <h2>告知栏</h2>
                 </div>
             </a>
             <a href="javascript:getMoreInfo();" class="aui-palace-grid" id="more_a" style="display: none;">
                 <div class="aui-palace-grid-icon">
-                    <img src="images/icon-course-006.png" alt="">
+                    <img src="images/icon-more-a.png" alt="">
                 </div>
                 <div class="aui-palace-grid-text">
-                    <h2>更多...</h2>
+                    <h2>关于我们</h2>
                 </div>
             </a>
             <a href="javascript:getReadThoughtList();" class="aui-palace-grid" id="me_a" style="display: none;">
                 <div class="aui-palace-grid-icon">
-                    <img src="images/icon-course-006.png" alt="">
+                    <img src="images/icon-book_share-a.png" alt="">
                 </div>
                 <div class="aui-palace-grid-text">
-                    <h2>读后感</h2>
+                    <h2>好书共读</h2>
                 </div>
             </a>
 
+        </div>
+        <div class="divHeight"></div>
+        <div>
+            <a href="javascript:;" class="aui-flex b-line" about="" id="first_video">
+                <div class="aui-flex-box-first">
+                    <!--<span class="aui_title" id="aui_title"></span>-->
+                    <span class="aui_video" id="firstVideo">
+                </span>
+                </div>
+            </a>
         </div>
         <div class="divHeight"></div>
 
@@ -141,13 +137,29 @@
         <!--<a href="http://service.weibo.com/share/share.php?appkey=&title=总裁读书会-企业读书云平台&url=http://ent.winnerbook.cn/mobile/&pic=&searchPic=false&style=simple" target="_blank">
             分享
         </a>-->
-        <div class="aui-flex" style="padding-bottom:0">
+
+
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-0" title="" onclick="courseList(0)">推荐课程</a></li>
+                <li><a href="#tabs-1" title="" onclick="videoList(0)">碎片时间</a></li>
+            </ul>
+            <div id="tabs_container">
+                <div id="tabs-0" class="aui-course-list">
+
+                </div>
+                <div id="tabs-1" class="list_video" >
+
+                </div>
+            </div><!--End tabs container-->
+        </div>
+        <!--<div class="aui-flex" style="padding-bottom:0">
             <div class="aui-flex-box">
                 <span class="flex_box_title">推荐课程</span>
             </div>
         </div>
         <div class="aui-course-list" id="auiCourseList">
-            <!--<a href="javascript:;" class="aui-flex b-line" about="">
+            &lt;!&ndash;<a href="javascript:;" class="aui-flex b-line" about="">
                 <div class="aui-course-img">
                     <img src="images/ad-0-002.png" alt="">
                 </div>
@@ -158,8 +170,8 @@
                         史蒂夫·乔布斯传，是一个测试的数据，他给人一种令人憧憬的世界
                     </span>
                 </div>
-            </a>-->
-        </div>
+            </a>&ndash;&gt;
+        </div>-->
     </section>
 </section>
 <div class="footer"></div>

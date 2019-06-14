@@ -3,8 +3,9 @@ var title = "";
 var desc = "";
 $(function(){
     $(".header").load("../common/header.html",function (result) {
-        $("#center_title").html("详情页");
+        titleBus("详情页");
     });
+
     $(".footer").load("../common/footer.html",function (result) {
         selectBottom();
     });
@@ -19,11 +20,14 @@ function initData(){
     ajax_fetch("POST",paramMap.getArticleDetail,param,function (result) {
         console.log(result);
         if(result.success){
+
             var article = result.data;
             $("#title").html(article.articleTitle);
             $("#author").html(article.articleAuthor);
             $("#date").html(article.createDate);
             $("#content").html(article.articleContent);
+
+            $("#center_title").html(article.articleTitle);
 
             //标签
             var articleTags = article.articleTags;
@@ -38,7 +42,7 @@ function initData(){
             }
 
             //微信分享
-            title = $("#title_bus").html();
+            title = article.articleTitle;
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
             desc = article.articleTitle;

@@ -144,19 +144,19 @@ dl dd a span:nth-of-type(1).member {
 }
 
 dl dd a span:nth-of-type(1).bookshelf {
-    background: url(../images/icon3.jpg) no-repeat left center;
+    background: url(../images/thougth.png) no-repeat left center;
     -webkit-background-size: 18px 17px;
     background-size: 18px 17px
 }
 
 dl dd a span:nth-of-type(1).studentLog {
-    background: url(../images/pen01.jpg) no-repeat left center;
+    background: url(../images/student_record.png) no-repeat left center;
     -webkit-background-size: 18px 17px;
     background-size: 18px 17px
 }
 
 dl dd a span:nth-of-type(1).comment {
-    background: url(../images/icon4.jpg) no-repeat left center;
+    background: url(../images/my_comment.png) no-repeat left center;
     -webkit-background-size: 18px 17px;
     background-size: 18px 17px
 }
@@ -182,6 +182,11 @@ dl dd a span:nth-of-type(1).feedback {
     -webkit-background-size: 18px 18px;
     background-size: 18px 18px
 }
+dl dd a span:nth-of-type(1).applyBusAdmin {
+    background: url(../images/bus_admin.png) no-repeat left center;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px
+}
 dl dd a span:nth-of-type(1).report {
     background: url(../images/chars.png) no-repeat left center;
     -webkit-background-size: 18px 18px;
@@ -190,6 +195,11 @@ dl dd a span:nth-of-type(1).report {
 
 dl dd a span:nth-of-type(1).activity {
     background: url(../images/activity.png) no-repeat left center;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px
+}
+dl dd a span:nth-of-type(1).backBus {
+    background: url(../images/back_bus.png) no-repeat left center;
     -webkit-background-size: 18px 18px;
     background-size: 18px 18px
 }
@@ -218,7 +228,7 @@ dl dd:not(:nth-of-type(1)) {
 }
 
 dl:not(:nth-last-of-type(1)) {
-    margin-bottom: 1em
+    margin-bottom: 0.5em
 }
 
 .loginout {

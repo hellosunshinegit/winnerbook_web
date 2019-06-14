@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>总裁读书会企业版-列表</title>
+    <title id="title_bus"></title>
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
     <meta content="yes" name="apple-mobile-web-app-capable"/>
     <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
@@ -10,22 +10,30 @@
     <link href="../../css/common.css" rel="stylesheet" type="text/css"/>
     <link href="../../css/newsList.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../../../public/config.js"></script>
+    <script type="text/javascript" src="../../public/config.js"></script>
+    <script type="text/javascript" src="../../js/tabulous.js"></script><!--tab切换-->
     <script type="text/javascript" src="newsList.js"></script>
 
 </head>
 <body>
     <div class="header"></div>
-    <div class="aui-course-list" id="newsList">
-        <!--<a href="javascript:;" class="aui-flex b-line" about="">
-            <div class="aui-flex-box">
-                <span class="aui_title">创业的国度</span>
-                <span class="aui_source">
-                    <span class="desc_css">水电费的说法是水电费是否水电费的水电费的说法是水电费是否水电费的...</span>
-                    <span class="date_css">2019.08.23</span>
-                </span>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-0" title="" onclick="activityData(0)">活动列表</a></li>
+            <li><a href="#tabs-1" title="" onclick="clubBusList(2)">企业风采</a></li>
+            <li><a href="#tabs-2" title="" onclick="clubBusList(3)">读书会活动</a></li>
+        </ul>
+        <div id="tabs_container">
+            <div id="tabs-0" class="aui-course-list">
+
             </div>
-        </a>-->
+            <div id="tabs-1" class="aui-course-list">
+
+            </div>
+            <div id="tabs-2" class="aui-course-list">
+
+            </div>
+        </div><!--End tabs container-->
     </div>
     <div class="footer"></div>
 </body>

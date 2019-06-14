@@ -25,7 +25,6 @@ function initData(){
     ajax_fetch("POST",paramMap.getBookDetail,param,function (result) {
         if(result.success){
             var book = result.data;
-            console.log(book);
             $("#bookName").html(book.bookName);
             $("#bookAuthor").html(book.bookAuthor);
             $("#bookPublishers").html(book.bookPublishers);

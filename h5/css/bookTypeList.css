@@ -130,6 +130,7 @@ html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, 
     float: left;
     margin-right: 2px;
     width: 49%;
+    padding: 0 15px 0px 15px;
 }
 
 #tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {

@@ -2,6 +2,8 @@
 var pageIndex = 0;
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var busId_session = RequestUrl(location.search,"busId_session");
+var userId_session = RequestUrl(location.search,"userId_session");
 var title = "";
 var desc = "";
 $(function(){
@@ -25,7 +27,7 @@ $(function(){
 });
 
 function initData(pageIndex) {
-    var param = {"pageIndex":pageIndex,"busId":url_busId,"userId":url_userId};
+    var param = {"pageIndex":pageIndex,"busId":busId_session,"userId":userId_session};
     ajax_fetch("POST",paramMap.getBusRanks,param,function (result) {
         if(result.success){
             console.log(result.data);
@@ -65,7 +67,7 @@ function initData(pageIndex) {
 
 
 function pageDate(pageIndex) {
-    var param = {"pageIndex":pageIndex,"busId":url_busId,"userId":url_userId};
+    var param = {"pageIndex":pageIndex,"busId":busId_session,"userId":userId_session};
     ajax_fetch("POST",paramMap.getBusRanks,param,function (result) {
         if(result.success){
             console.log(result.data);

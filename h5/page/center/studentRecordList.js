@@ -1,3 +1,7 @@
+var busId = RequestUrl(location.search,"busId");
+var userId = RequestUrl(location.search,"userId");
+var busId_session = RequestUrl(location.search,"busId_session");
+var userId_session = RequestUrl(location.search,"userId_session");
 var pageIndex = 0;
 var title = "";
 var desc = "";
@@ -16,7 +20,7 @@ $(function(){
 });
 function initData(index){
     //获取首页数据
-    var param = {"pageIndex":index,"busId":RequestUrl(location.search,"busId"),"userId":RequestUrl(location.search,"userId")};
+    var param = {"pageIndex":index,"busId":busId_session,"userId":userId_session};
     ajax_fetch("POST",paramMap.getStudentRecords,param,function (result) {
             if(result.success){
 

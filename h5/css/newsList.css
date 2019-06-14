@@ -1,3 +1,115 @@
+/*去除浏览器样式*/
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+/*tab切换*/
+#tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+#tabs li,#tabs2 li,#tabs3 li,#tabs4 li,#tabs5 li {
+    float: left;
+    margin-right: 2px;
+    width: 32%;
+    padding: 0 15px 0px 15px;
+}
+
+#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    height: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+/*#tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover {
+    background: rgb(78, 74, 99);
+}*/
+
+#tabs_container {
+    padding: 1rem;
+    position: relative;
+    background: white;
+}
+.transition {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    -ms-transition-delay: .3s;
+    transition-delay: .3s;
+}
+
+.make_transist {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.hidescale {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.showscale {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    -ms-transition-delay: .3s;
+    transition-delay: .3s;
+}
+
+
+.tabulous_active {
+    background: white !important;
+    color: #F60 !important;
+    border-bottom:1px solid #F60;
+}
+
+.tabulousclear {
+    display: block;
+    clear: both;
+}
+#tabs-0{
+    width: 100%;
+    padding-bottom: 5rem;
+}
+#tabs-1{
+    top:0.5rem !important;
+    width: 100%;
+}
+#tabs-2{
+    width: 100%;
+}
+
+
 /*
 <列表页
 */
@@ -8,8 +120,10 @@
     -webkit-box-align: center;
     -webkit-align-items: center;
     align-items: center;
-    padding: 15px;
+    padding: 3px;
     position: relative;
+    display: table;
+    width: 100%;
 }
 
 .aui-flex-box {
@@ -19,6 +133,9 @@
     min-width: 0;
     font-size: 14px;
     color: #333;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
 }
 
 /* 必要布局样式css */
@@ -61,12 +178,48 @@
     color: #333333;
 }
 
-.aui_title{
-    width: 100%;
-    font-size: 1rem;
-    color: #323232;
+.aui-course-img {
+    width: 100px;
+    height: 90px;
     float: left;
-    margin-top: 0.2rem;
+    margin: 0.8rem 0rem 0.8rem 0.8rem;
+}
+
+.aui-course-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.aui-flex-box .flex_box_title{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.aui-flex-box .aui_title{
+    width: 95%;
+    font-size: 1.1rem;
+    color: #000000;
+    float: left;
+    margin: 0rem 1rem 1rem 1rem;
+    line-height: 1.5em;
+    font-size: 1rem;
+}
+.aui-flex-box .aui_author{
+    width: 100%;
+    font-style: normal;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    float: left;
+    color: #999;
+}
+
+.aui-flex-box .aui_des {
+    font-style: normal;
+    float: left;
+    font-size: 0.8rem;
+    margin-top: 1rem;
 }
 
 
@@ -74,42 +227,115 @@
     width: 92%;
     left: 15px;
 }
+
 .aui-course-list .aui-flex-box{
-    height: 4em;
+    height: 8em;
 }
 
 .aui-course-list{
     margin-bottom: 5rem;
 }
 
-.aui-flex-box{
-    margin-left:0.5em;
-}
-.aui-flex-box span{
-    height: 1.2em;
-    line-height: 1.2em;
+.aui_date{
+    font-size: 0.8rem;
+    color: #808080;
+    float: right;
 }
 
-.aui_source{
+.aui_address{
+    margin:1rem 1rem 0rem 1rem;
+    width: 95%;
+    display: block;
+    font-size: 1rem;
+    color: #808080;
+}
+.aui_time{
+    margin:1rem 1rem;
+    width: 95%;
+    font-size: 1rem;
+    color: #808080;
+}
+
+.week{
+    color: #808080;
+    padding: 0.5rem;
+}
+
+.invalid{
+    background: #f5f5f5;
+    color: #808080 !important;
+    background: url("../images/invalid.png") no-repeat right;
+    background-size: 6rem;
+}
+
+.invalid-title{
+    color: #808080 !important;
+}
+
+
+.aui-flex-box_new {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    color: #333;
+    display: table-cell;
+    vertical-align: middle;
+    width: 20rem;
+}
+
+.aui-flex-box_new h1 {
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+.aui-course-img_new{
+    width: 65px;
+    height: 60px;
+    float: right;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.aui-course-img_new img {
+    width: 100%;
+    height: 60px;
+    display: block;
+    border: none;
+}
+
+.aui-flex-box_new .flex_box_title{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.aui-flex-box_new .aui_title_new{
+    width: 95%;
+    font-size: 1.1rem;
+    color: #000000;
+    float: left;
+    margin: 0rem 1rem 0rem 1rem;
+    line-height: 1.8em;
+}
+
+.aui-flex-box_new .aui_author{
+    width: 100%;
+    font-style: normal;
     font-size: 0.8rem;
+    margin-top: 0.5rem;
+    float: left;
     color: #999;
 }
 
-.desc_css{
+.aui-flex-box_new .aui_des {
+    font-style: normal;
     float: left;
-    width: 75%;
-    margin-top: 1em;
-}
-
-.date_css{
-    float: right;
-    margin-top: 2em;
+    font-size: 0.8rem;
+    margin-top: 1rem;
 }
 
 
-.point{
-    background: url(../images/point.png) no-repeat;
-    width: 1em;
-    float: right;
-    margin-right: 1em;
+.aui-course-list .aui-flex-box_new{
+    height: 5em;
 }

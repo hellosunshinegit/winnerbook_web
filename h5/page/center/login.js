@@ -15,7 +15,13 @@ $(function(){
     //键盘收起手动滑到顶部 针对ios的手机
     document.body.addEventListener('focusout', function () {
         window.scrollTo(0,0);
-    })
+    });
+
+    //判断如果已经登录上，则直接跳转到个人中心
+    if(getSession()!="" && getSession()!=null){
+        window.location.href = webUrl+"page/center/userCenter.html?busId="+url_busId+"&userId="+url_userId;
+    }
+
 });
 
 var layer_bus = "";
@@ -33,40 +39,35 @@ function webLogin() {
 
 
     if(username==""){
-        $("#error_info").html("手机号不能为空");
+        layerMsg("手机号不能为空");
         return false;
     }
 
     //手机号校验
     var myreg=/^[1]\d{10}$/;
     if (!myreg.test(username)) {
-        $("#error_info").html("手机号格式不正确");
+        layerMsg("手机号格式不正确");
         return false;
     }
 
     if(password==""){
-        $("#error_info").html("密码不可以为空");
+        layerMsg("密码不可以为空");
         return false;
     }
 
     //提示同意某些协议后的登录 is_agree
     var agree = $('input[name="is_agree"]:checked').val();
     if(agree!=1){
-        layer.open({
-            content: '同意此协议后才可以登录'
-            ,skin: 'msg'
-            ,time: 2 //2秒后自动关闭
-        });
+        layerMsg("同意此协议后才可以登录");
     }else{
         var param = {"busId":url_busId,"username":username,"password":password,"selectUser":selectUser};
         ajax_fetch("POST",paramMap.getLogin,param,function (result) {
             console.log(result);
             if(result.success){
                 console.log("验证成功");
+                layerMsg("登录成功，正在跳转...");
                 footerClick("me");
-                //sessionStorage.setItem("sessionUser",JSON.stringify(result.data));
                 localStorage.setItem("sessionUser",JSON.stringify(result.data));
-                //传值  belongBusUserId  userId都要传递
                 //登陆成功后，返回上一个页面
                 if(document.referrer!=""){
                     window.location.href = beforeParamValue(document.referrer,result.data.belongBusUserId,result.data.userId);
@@ -74,7 +75,8 @@ function webLogin() {
                     window.location.href = webUrl+"index.html?busId="+result.data.belongBusUserId+"&userId="+result.data.userId;
                 }
             }else{
-                $("#error_info").html(result.msg);
+                /*$("#error_info").html(result.msg);*/
+                layerMsg(result.msg);
                 layer.close(layer_bus);
 
                 $.each($("[id^=bus_]"),function (index, item) {
@@ -110,11 +112,7 @@ function webLogin() {
                             if(selectUser!=undefined && selectUser!=''){
                                 webLogin();
                             }else{
-                                layer.open({
-                                    content: '请选择企业'
-                                    ,skin: 'msg'
-                                    ,time: 2 //2秒后自动关闭
-                                });
+                                layerMsg("请选择企业");
                             }
                         },
                         anim: 'up',
@@ -164,7 +162,7 @@ function beforeParamValue(beforeUrl,busId,userId) {
     var arrayParam = paramMap.split("&");
     var mapParam = {};
     $.each(arrayParam,function (index, item) {
-        mapParam[item.split("=")[0]]=item.split("=")[1];
+        mapParam[item.split("=")[0]]=item.split("=")[1]==undefined?"":item.split("=")[1];
     });
     mapParam["busId"] = busId;
     mapParam["userId"] = userId;
@@ -176,7 +174,11 @@ function beforeParamValue(beforeUrl,busId,userId) {
             if(mapIndex!=1){
                 param+="&";
             }
-            param+=prop+"="+mapParam[prop];
+            if(mapIndex==1 && mapParam[prop]==""){
+                param+=prop+"?"+mapParam[prop];
+            }else{
+                param+=prop+"="+mapParam[prop];
+            }
         }
     }
     var newUrl = beforeUrl.substring(0,beforeUrl.indexOf("?")+1)+param;

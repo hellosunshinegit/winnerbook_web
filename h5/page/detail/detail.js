@@ -23,9 +23,8 @@ function initData(){
     ajax_fetch("POST",paramMap.getDetail,param,function (result) {
         if(result.success){
             var info = result.data;
-            console.log(info);
             if(list_type=="1"){
-                if(info.title==""){
+                if(info.title=="" || info.title==undefined){
                     $("#title").html("《"+info.bookListName+"》的读后感");
                 }else{
                     $("#title").html(info.title);
@@ -33,6 +32,7 @@ function initData(){
                 $("#course_name").html("<a style='text-decoration: underline;' href='javascript:bookDetail(" + info.bookListId + ")''>"+info.bookListName+"</a>");
             }else{
                 $("#title").html(info.title);
+                $("#course_name").html("总裁读书会");
             }
             $("#date").html(info.createDate);
             $("#content").html(info.detail);

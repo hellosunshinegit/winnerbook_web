@@ -1,6 +1,8 @@
 var pageIndex = 0;
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var busId_session = RequestUrl(location.search,"busId_session");
+var userId_session = RequestUrl(location.search,"userId_session");
 var titleShare = "";
 var desc = "";
 /*导入尾部*/
@@ -15,7 +17,7 @@ $(function(){
 });
 function initData(index){
     //获取首页数据
-    var param = {"pageIndex":index,"userId":url_userId};
+    var param = {"pageIndex":index,"userId":userId_session};
     ajax_fetch("POST",paramMap.activitySignUps,param,function (result) {
             console.log(result);
             if(result.success){

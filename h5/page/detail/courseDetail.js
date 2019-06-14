@@ -85,23 +85,24 @@ function initData(){
             $("#recommendReason").html(course.recommendReason);
             $("#recordingDate").html(course.recordingDate);
             $("#content").html(course.content);
+            $("#dialogGuest").html(course.dialogGuest);
 
 
             if(course.mainVideoUrl!=undefined && course.mainVideoUrl!=""){
-                $("#tabs-2").html("<video controls id='main_video'><source src='"+baseUrl+course.mainVideoUrl+"'</video>");
+                $("#tabs-1").html("<video controls id='main_video' poster="+webUrl+"images/video_default.png x5-video-player-fullscreen='true'><source src='"+baseUrl+course.mainVideoUrl+"'</video>");
                 //定时获取观看时间
-                playInterval("main_video",courseId,1);//type=1 主视频  type=2 主音频  3附件小视频
+                playInterval("main_video",courseId,1,course.isBuy);//type=1 主视频  type=2 主音频  3附件小视频
             }else if(course.mainVideoLink!=""){ //判断主视频链接是否有值
-                $("#tabs-2").html("<video controls id='main_video'><source src='"+course.mainVideoLink+"'</video>");
+                $("#tabs-1").html("<video controls id='main_video' poster="+webUrl+"images/video_default.png x5-video-player-fullscreen='true'><source src='"+course.mainVideoLink+"'</video>");
                 //定时获取观看时间
-                playInterval("main_video",courseId,1);//type=1 主视频  type=2 主音频  3附件小视频
+                playInterval("main_video",courseId,1,course.isBuy);//type=1 主视频  type=2 主音频  3附件小视频
             }else{
-                $("#tabs-2").html("暂无数据...");
+                $("#tabs-1").html("暂无数据...");
             }
 
             if(course.mainAudioUrl!=undefined && course.mainAudioUrl!=""){
                 $("#tabs-3").html("<audio controls id='main_audio'><source src='"+baseUrl+course.mainAudioUrl+"'</audio>");
-                playInterval("main_audio",courseId,2);//type=1 主视频  type=2 主音频  3附件小视频
+                playInterval("main_audio",courseId,2,course.isBuy);//type=1 主视频  type=2 主音频  3附件小视频
             }else{
                 $("#tabs-3").html("暂无数据...");
             }

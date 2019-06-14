@@ -1,6 +1,8 @@
 /*导入尾部*/
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var busId_session = RequestUrl(location.search,"busId_session");
+var userId_session = RequestUrl(location.search,"userId_session");
 var pageIndex = 0;
 var title = "";
 var desc = "";
@@ -38,7 +40,7 @@ $(function(){
 
 //我的报告
 function myReportFun(){
-    var param = {"userId":url_userId,"type":"1"};
+    var param = {"userId":userId_session,"type":"1"};
     ajax_fetch("POST",paramMap.getMyReports,param,function (result) {
         if(result.success){
             console.log(result.data);
@@ -53,7 +55,7 @@ function myReportFun(){
 
 //企业的报告
 function busReportFun() {
-    var param = {"busId":url_busId,"type":"2"};
+    var param = {"busId":busId_session,"type":"2"};
     ajax_fetch("POST",paramMap.getMyReports,param,function (result) {
         if(result.success){
             $("#tabs-1").html(getTab1());
@@ -64,7 +66,7 @@ function busReportFun() {
 
 //点击个人排名
 function clickRankFun() {
-    window.location.href = webUrl+"page/center/report/rank/rankList.html?busId="+url_busId+"&userId="+url_userId;
+    window.location.href = webUrl+"page/center/report/rank/rankList.html?busId="+url_busId+"&userId="+url_userId+"&busId_session="+busId_session+"&userId_session="+userId_session;
 }
 
 //全局报告

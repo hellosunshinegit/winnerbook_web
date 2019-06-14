@@ -5,8 +5,7 @@ var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
-        $("#center_title").html("列表页");
-
+        titleBus("列表页");
         title = $("#title_bus").html();
         var link = location.href.split('#')[0];
         var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
@@ -28,13 +27,15 @@ function initData(index){
             console.log(result);
             if(result.success){
 
+            $("#center_title").html(result.data.blockName!=""?result.data.blockName:"企业读书云平台");
+
             //拼接书单列表
             var articleStr = "";
             $.each(result.data.articleList,function (index, item) {
                 if(item.articleImg!=""){
                     item.articleImg = baseUrl+getMinImg(item.articleImg);
                 }else{
-                    item.articleImg = baseUrl+item.imarticleImgg;
+                    item.articleImg = webUrl+"images/def_img0.png";
                 }
 
                 var articleTitleStr = item.articleTitle;

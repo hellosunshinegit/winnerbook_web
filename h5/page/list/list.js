@@ -10,13 +10,9 @@ $(function(){
     $(".header").load("../common/header.html",function (result) {
         var list_type = RequestUrl(location.search,"list_type");
         if(list_type=="1"){
-            title = "读后感列表";
-            if(getSessionBusId()!="" && getSession().busName!=undefined){
-                $("#typeTitle").html(getSession().busName+"-"+"读后感");
-            }else{
-                $("#typeTitle").html("企业读书云平台-读后感");
-            }
-        }else if(list_type=="2"){
+            title = "好书共读";
+            titleBus();
+        }/*else if(list_type=="2"){
             title = "企业风采列表";
             if(getSessionBusId()!="" && getSession().busName!=undefined){
                 $("#typeTitle").html(getSession().busName+"-"+"企业风采");
@@ -30,7 +26,7 @@ $(function(){
             }else{
                 $("#typeTitle").html("企业读书云平台-读书会活动");
             }
-        }
+        }*/
         $("#center_title").html(title);
 
     });

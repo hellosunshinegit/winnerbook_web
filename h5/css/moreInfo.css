@@ -1,61 +1,3 @@
-/*
-<列表页
-*/
-.aui-flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    padding: 15px;
-    position: relative;
-}
-
-.aui-flex-box {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    min-width: 0;
-    font-size: 14px;
-    color: #333;
-}
-
-/* 必要布局样式css */
-.aui-flexView {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-.aui-scrollView {
-    width: 100%;
-    height: 100%;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
-}
-
-.m-slider {
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
-}
-
 .aui-palace {
     padding: 0.5rem 0;
     position: relative;
@@ -72,8 +14,8 @@
 }
 
 .aui-palace-grid-icon {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     margin: 0 auto;
 }
 
@@ -118,19 +60,6 @@
     margin: 5px 0;
 }
 
-.aui-palace-grid-icon {
-    width: 38px;
-    height: 38px;
-    margin: 0 auto;
-}
-
-.aui-palace-grid-icon img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
 .aui-palace-grid-text {
     display: block;
     text-align: center;
@@ -148,78 +77,164 @@
     color: #666666;
 }
 
-<!--轮播图-->
+.newclass{
+    padding: 0px 0px 1rem 1rem;
+}
+
+/*
+<列表页
+*/
+.aui-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 3px;
+    position: relative;
+    display: table;
+    width: 100%;
+}
+
+.aui-flex-box {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0rem;
+    font-size: 14px;
+    color: #333;
+    display: table-cell;
+    vertical-align: middle;
+    width: 20rem;
+}
+
+/* 必要布局样式css */
+.aui-flexView {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.aui-scrollView {
+    width: 100%;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
 .m-slider {
     overflow-x: hidden;
     width: 100%;
     position: relative;
 }
 
-.slider-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-    position: relative;
-    z-index: 1;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
+.aui-flex-box h1 {
+    font-size: 1.2rem;
+    color: #333333;
 }
 
-.slider-item {
-    width: 100%;
-    height: 100%;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    background: #f6f6f6;
+.aui-course-img {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
 }
 
-.slider-item img {
+.aui-course-img img {
     width: 100%;
-    height: 8rem;
+    height: 50px;
     display: block;
     border: none;
 }
 
-.slider-pagination {
-    text-align: right;
-    position: absolute;
+.aui-flex-box .flex_box_title{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.aui-flex-box .aui_title{
+    width: 95%;
+    font-size: 1rem;
+    color: #000000;
+    float: left;
+    margin: 0rem 1rem 0rem 1rem;
+    line-height: 1.8em;
+    vertical-align:middle;
+}
+
+.aui-flex-box .aui_title a{
+    color: #000000;
+}
+
+.aui-flex-box .aui_author{
     width: 100%;
-    z-index: 2;
-    right: 0;
-    bottom: 10px;
-    pointer-events: none;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    font-style: normal;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    float: left;
+    color: #999;
 }
 
-.slider-pagination > .slider-pagination-item {
-    margin: 0 .25rem;
-    width: 8px;
-    height: 8px;
-    display: inline-block;
-    border-radius: 100%;
-    background-color: rgba(255,255,255,0.4);
+.aui-flex-box .aui_des {
+    font-style: normal;
+    float: left;
+    font-size: 0.8rem;
+    margin-top: 1rem;
 }
 
-.slider-pagination > .slider-pagination-item.slider-pagination-item-active {
-    background-color: #fff;
-    border-radius: 100%;
+
+.aui-course-list .b-line:after {
+    width: 92%;
+    left: 15px;
+}
+.aui-course-list .aui-flex-box{
+    height: 100px;
+}
+
+.aui-course-list .aui-flex-box{
+    height: 5em;
+}
+
+.aui-course-list{
+    margin-bottom: 5rem;
+}
+
+.aui_date{
+    padding-top: 0.5rem;
+    font-size: 0.7rem;
+    /*float: right;*/
+    color: #878d97;
+    margin-left: 1rem;
+}
+
+.aui_tag_list{
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+    margin-left:1rem;
+    background-color: #ecf0f1;
+    color: #878d97;
+    border-radius: 0.3rem;
+    text-decoration: underline;
+}
+
+.divHeight{
+    height: 2px;
+    background: #FF6600;
 }

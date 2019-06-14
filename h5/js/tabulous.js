@@ -30,9 +30,9 @@
             var firstchild = this.$elem.find('li:first-child').find('a');
             var lastchild = this.$elem.find('li:last-child').after('<span class="tabulousclear"></span>');
 
-            if (this.options.effect == 'scale') {
+            /*if (this.options.effect == 'scale') {
              tab_content = this.$elem.find('div').not(':first').not(':nth-child(1)').addClass('hidescale');
-            }
+            }*/
 
             var firstdiv = this.$elem.find('#tabs_container');
             var firstdivheight = firstdiv.find('div:first').height()+50;

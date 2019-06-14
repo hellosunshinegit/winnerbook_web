@@ -1,6 +1,8 @@
 var pageIndex = 0;
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var busId_session = RequestUrl(location.search,"busId_session");
+var userId_session = RequestUrl(location.search,"userId_session");
 var title = "";
 var desc = "";
 /*导入尾部*/
@@ -20,7 +22,7 @@ var addFlash = false;
 function initData(index){
     //获取首页数据
     courseId = RequestUrl(location.search,"courseId");
-    var param = {"courseId":courseId,"pageIndex":index,"busId":url_busId};
+    var param = {"courseId":courseId,"pageIndex":index,"busId":busId_session};
     ajax_fetch("POST",paramMap.getCourseComments,param,function (result) {
             console.log(result);
             if(result.success){
@@ -29,7 +31,9 @@ function initData(index){
             title = $("#title_bus").html();
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
-            desc = result.data.courseCommentList[0].comment;
+            if(result.data.courseCommentList.length>0){
+                desc = result.data.courseCommentList[0].comment;
+            }
             setWxConfig(title,link,imgUrl,desc);
 
             //拼接视频列表
@@ -113,7 +117,7 @@ function addCommentSubmit() {
     }
 
     //提交
-    var param = {"courseId":courseId,"busId":url_busId,"userId":url_userId,"comment":comment};
+    var param = {"courseId":courseId,"busId":busId_session,"userId":userId_session,"comment":comment};
     ajax_fetch("POST",paramMap.addCourseComments,param,function (result) {
         console.log(result);
         if(result.success){

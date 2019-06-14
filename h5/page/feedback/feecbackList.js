@@ -1,6 +1,8 @@
 var pageIndex = 0;
 var url_userId = RequestUrl(location.search,"userId");
 var url_busId = RequestUrl(location.search,"busId");
+var busId_session = RequestUrl(location.search,"busId_session");
+var userId_session = RequestUrl(location.search,"userId_session");
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
@@ -18,7 +20,7 @@ var courseId = "";
 var addFlash = false;
 function initData(index){
     //获取首页数据
-    var param = {"userId":url_userId,"pageIndex":index};
+    var param = {"userId":userId_session,"pageIndex":index};
     ajax_fetch("POST",paramMap.getFeedbacks,param,function (result) {
             console.log(result);
             if(result.success){
@@ -110,7 +112,7 @@ function addFeedbackSubmit() {
     }
 
     //提交
-    var param = {"userId":url_userId,"remarks":remarks};
+    var param = {"userId":userId_session,"remarks":remarks};
     ajax_fetch("POST",paramMap.addFeedback,param,function (result) {
         console.log(result);
         if(result.success){
