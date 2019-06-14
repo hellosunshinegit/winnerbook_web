@@ -117,7 +117,7 @@ function getGuestList(){
 
 //点击书单列表
 function getBookList() {
-    window.location.href=webUrl+'page/list/bookTypeList.html?busId='+url_busId+"&userId="+url_userId;
+    window.location.href=webUrl+'page/list/bookTypeList.html?busId='+url_busId+"&userId="+url_userId+"&v=20190614";
 }
 //点击视频列表
 function getVideoList() {

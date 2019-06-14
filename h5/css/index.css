@@ -248,15 +248,23 @@ html, body{
 .aui-palace {
     padding: 0.5rem 0;
     position: relative;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    /*background: url(../images/arr_right.png) no-repeat right center;
+    background-size: .5em .8em;*/
 }
 .aui-palace-grid {
     position: relative;
     float: left;
     padding: 1px;
-    width: 33%;
+    width: 72px;
     box-sizing: border-box;
     margin: 5px 0;
+    height: 3.5rem;
+/*    padding-right: 1rem;
+    padding-left: 1rem;*/
 }
 
 .aui-palace-grid-icon {
@@ -270,6 +278,7 @@ html, body{
     width: 100%;
     height: 100%;
     border: none;
+    border-radius: 50%;
 }
 
 .aui-palace-grid-text {
@@ -280,11 +289,11 @@ html, body{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    padding-top: 0.2rem;
+    padding-top: 0.7rem;
 }
 
 .aui-palace-grid-text h2 {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: normal;
     color: #666666;
 }

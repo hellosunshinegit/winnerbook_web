@@ -49,10 +49,8 @@ function playInterval(main_play_id,courseId,type,isBuy,fileId){
 				//main_play.webkitExitFullScreen();//退出全屏
 				var isBuy_info = confirm("您暂时没有观看权限，请联系管理员购买此课程包");
 				if(isBuy_info){
-					alert("点击确定");
 					main_play.webkitExitFullScreen();//退出全屏
 				}else{
-					alert("点击取消");
 					main_play.webkitExitFullScreen();//退出全屏
 				}
 			}else{

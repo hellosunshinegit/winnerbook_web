@@ -249,3 +249,7 @@ html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, 
     position: relative;
     overflow: hidden;
 }
+
+.rankInfo{
+    margin-bottom: 3rem;
+}

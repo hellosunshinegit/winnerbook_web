@@ -42,6 +42,7 @@ html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, 
 .rank_list .one_li .rank_name{
     padding: 1rem 1rem 1rem 0.5rem;
     font-size: 1.1rem;
+    text-decoration: underline;
 }
 .rank_list .one_li .rank_score{
     float: right;
@@ -61,6 +62,7 @@ html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, 
 .rank_list .one_li .nomedal_name{
     padding: 1rem 1rem 1rem 1.5rem;
     font-size: 1.1rem;
+    text-decoration: underline;
 }
 
 .rank_list .bus_Rank{

@@ -14,8 +14,8 @@
 }
 
 .aui-palace-grid-icon {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     margin: 0 auto;
 }
 
@@ -47,8 +47,7 @@
     padding: 0.5rem 0;
     position: relative;
     overflow: hidden;
-    border-bottom: 1px dashed #e2e2e2;
-    margin: 0.5rem 1rem 1rem 1rem
+    margin: 0.5rem 0rem 0rem 0rem
 }
 
 .aui-palace-grid {
@@ -237,4 +236,12 @@
 .divHeight{
     height: 2px;
     background: #FF6600;
+}
+
+.divHeight_color{
+    width: 100%;
+    height: 5px;
+    background: #f5f5f5;
+    position: relative;
+    overflow: hidden;
 }

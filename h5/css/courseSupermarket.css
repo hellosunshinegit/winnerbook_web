@@ -113,7 +113,7 @@ a:hover{
 .menu-left ul li.active{background:#fff; position:relative;color: #F60;}
 .menu-left ul li.active:before{content: " "; position: absolute;display: block; width:2px; height:100%; background:#FF6600; top:0; left:0;}
 .menu-right{background:#fff; position:inherit; margin-left:8.6rem; margin-top: 3.5rem; right:0; bottom:0; left: 8.6rem}
-.menu-right h5{font-size:1.4rem; color:#FF6600; margin-top:1rem; margin-bottom:.6rem;}
+.menu-right h5{font-size:1.4rem; color:#FF6600; margin-top:1rem; margin-bottom:.6rem;text-align: center;}
 .menu-right h5:first-child{margin-top:0;}
 .menu-right ul{overflow: hidden;}
 .menu-right ul li{text-align: center;}
@@ -121,7 +121,7 @@ a:hover{
 .menu-right ul li:nth-child(3n+1) a{left:0; right:.7rem;}
 .menu-right ul li:nth-child(3n) a{right:0; left: .7rem;}
 .menu-right ul li span{display:block;height:2.6rem; line-height: 2.6rem; overflow: hidden; text-align: center; font-size:1.2rem}
-.menu-right ul li img{width:5rem; height: auto;	}
+.menu-right ul li img{width:4.5rem; height: auto;	}
 .mune-no-img img{display:none}
 .mune-no-img span{border:1px solid #efefef; color:#555; border-radius: 4px;}
 

@@ -45,9 +45,9 @@ function initData(pageIndex) {
                     colorStr = "rank_score icolor";
                 }
 
-                var rankStr = "<span class='nomedal'>"+item.rank+"</span><span class='nomedal_name'>"+item.userName+"</span>";
+                var rankStr = "<span class='nomedal'>"+item.rank+"</span><span class='nomedal_name'><a href='javascript:myScore(\""+item.userId+"\")'>"+item.userName+"</a></span>";
                 if(item.rank==1 ||item.rank==2 ||item.rank==3){
-                    rankStr = "<span class='rank_number'>"+getMedal(item.rank,item.rank)+"</span><span class='rank_name'>"+item.userName+"</span>";
+                    rankStr = "<span class='rank_number'>"+getMedal(item.rank,item.rank)+"</span><span class='rank_name'><a href='javascript:myScore(\""+item.userId+"\")'>"+item.userName+"</a></span>";
                 }
 
                 resultStr+="<li><div class='one_li bus'>"+rankStr+"<span class='"+colorStr+"'>"+item.sumScore+"</span></div></li>";
@@ -76,7 +76,7 @@ function pageDate(pageIndex) {
             var resultStr = "";
             $.each(busRankList,function (index, item) {
                 var colorStr = "rank_score";
-                var rankStr = "<span class='nomedal'>"+(parseInt(item.rank)+parseInt(pageIndex*10))+"</span><span class='nomedal_name'>"+item.userName+"</span>";
+                var rankStr = "<span class='nomedal'>"+(parseInt(item.rank)+parseInt(pageIndex*10))+"</span><span class='nomedal_name'><a href='javascript:myScore(\""+item.userId+"\")'>"+item.userName+"</a></span>";
                 resultStr+="<li><div class='one_li bus'>"+rankStr+"<span class='"+colorStr+"'>"+item.sumScore+"</span></div></li>";
             });
 
@@ -112,6 +112,10 @@ function getMedal(rankStr,rank) {
     return rankStr;
 }
 
+//点击查看我的分数
+function myScore(userId) {
+    window.location.href = webUrl+"page/center/report/rank_info.html?busId="+url_busId+"&userId="+url_userId+"&busId_session="+busId_session+"&userId_session="+userId_session+"&userId_param="+userId;
+}
 //点击分享
 function shareWbPage() {
     shareWb(title,desc);

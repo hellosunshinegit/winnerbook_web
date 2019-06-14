@@ -313,7 +313,7 @@ function allBusData(pageIndex) {
                 resultStr += "<span class='more_end'>暂无数据...</span>";
             }
             $("#busRankList").html(resultStr);*/
-            $("#busRankList").html("<img src='"+webUrl+"images/login.jpg' width='100%'>");
+            $("#busRankList").html("<img src='"+webUrl+"images/login.png' width='100%'>");
         }
     });
 }
