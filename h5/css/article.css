@@ -88,13 +88,18 @@
 
 .aui-flex-box .aui_title{
     width: 95%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #000000;
     float: left;
     margin: 0rem 1rem 0rem 1rem;
     line-height: 1.8em;
     vertical-align:middle;
 }
+
+.aui-flex-box .aui_title a{
+    color: #000000;
+}
+
 .aui-flex-box .aui_author{
      width: 100%;
      font-style: normal;
@@ -126,4 +131,22 @@
 
 .aui-course-list{
     margin-bottom: 5rem;
+}
+
+.aui_date{
+    padding-top: 0.5rem;
+    font-size: 0.7rem;
+    /*float: right;*/
+    color: #878d97;
+    margin-left: 1rem;
+}
+
+.aui_tag_list{
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+    margin-left:1rem;
+    background-color: #ecf0f1;
+    color: #878d97;
+    border-radius: 0.3rem;
+    text-decoration: underline;
 }

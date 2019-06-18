@@ -39,17 +39,28 @@ function initData(index){
                 }
 
                 var articleTitleStr = item.articleTitle;
-                if(articleTitleStr.length>30){
-                    articleTitleStr = item.articleTitle.substring(0,30)+"...";
+                if(articleTitleStr.length>18){
+                    articleTitleStr = item.articleTitle.substring(0,18)+"...";
                 }
-                articleStr+="<a href='javascript:articleDetail("+item.articleId+");' class='aui-flex b-line' about=''>" +
+
+              /*  var blockType = "";
+                if(item.blockId!=undefined && item.blockId.split(",").length>1){
+                    $.each(item.blockId.split(","),function (index1, item1) {
+                        blockType+="<span class='aui_tag_list' onclick='articleList(\""+item1+"\")'>"+item.blockName.split(",")[index1]+"</span>"
+                    });
+                }else if(item.blockId!=undefined){
+                    blockType="<span class='aui_tag_list' onclick='articleList(\""+item.blockId+"\")'>"+item.blockName+"</span>"
+                }
+*/
+                articleStr+="<div class='aui-flex b-line' about=''>" +
                     "<div class='aui-flex-box'>" +
-                    "<span class='aui_title'>"+articleTitleStr+"</span>" +
+                    "<span class='aui_title'><a href='javascript:articleDetail("+item.articleId+");'>"+articleTitleStr+"</a></span>" +
+                    "<span class='aui_date'><a href='javascript:articleDetail("+item.articleId+");'>"+item.createDate+"</a></span>"+
                     "</div>" +
                     "<div class='aui-course-img'>" +
-                    "<img src='"+item.articleImg+"' alt=''>" +
-                    "</div>" +
-                    "</a>";
+                    "<a href='javascript:articleDetail("+item.articleId+");'><img src='"+item.articleImg+"' alt=''>" +
+                    "</a></div>" +
+                    "</div>";
             });
             if(result.data.articleCount>(pageIndex+1)*10){
                 articleStr+="<span class='more' id='more' onclick='clickMore()'>点击更多...</span>";
@@ -62,6 +73,10 @@ function initData(index){
         }
 
     });
+}
+
+function articleList(blockId) {//根据模板查询对应的list
+    window.location.href=webUrl+"page/more/articleList.html?blockId="+blockId;
 }
 
 //点击更多

@@ -2,45 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="987ba54d-a021-4105-996d-5633ef00fbf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/h5/page/center/report/rank_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h5/page/center/report/rank_info.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/css/courseSupermarket.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/courseSupermarket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/css/article.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/article.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/css/moreInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/moreInfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/css/rankList.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/rankList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/images/about_me.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/about_me.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/images/course_select.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/course_select.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/images/leader_read.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/leader_read.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/images/leader_select.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/leader_select.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/images/notice.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/notice.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/images/share_book.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/share_book.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/images/super.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/super.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/activity/activityList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/activity/activityList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/activity/activityMap.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/activity/activityMap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/activity/activitySignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/activity/activitySignUp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/applyBusAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/applyBusAdmin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/meThoughtList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/meThoughtList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/my_commentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/my_commentList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/report/rank/rankList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/report/rank/rankList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/report/rank/rankList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/report/rank/rankList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/report/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/report/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/report/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/signupList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/signupList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/studentRecordList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/studentRecordList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/center/userCenter.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/center/userCenter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/detail/bookDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/detail/bookDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/detail/courseDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/detail/courseDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/detail/course_play.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/detail/course_play.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/detail/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/detail/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/bookList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/bookList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/bookTypeList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/bookTypeList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/courseList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/courseList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/courseSupermarket.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/courseSupermarket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/courseSupermarketList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/courseSupermarketList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/mainGuestList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/mainGuestList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/newsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/newsList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/videoList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/videoList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/more/articleDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/more/articleDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/page/more/articleList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/more/articleList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/more/moreInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/more/moreInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/page/more/articleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/more/articleList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/public/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/public/config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -55,104 +29,77 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/center/report/report.html">
+        <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="23" column="77" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="77" />
+            <state relative-caret-position="380">
+              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank_info.html">
+        <entry file="file://$PROJECT_DIR$/h5/css/article.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="377">
+              <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/css/report.css">
+        <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="35" column="55" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="332">
-              <caret line="237" column="25" lean-forward="true" selection-start-line="237" selection-start-column="25" selection-end-line="237" selection-end-column="25" />
+              <caret line="135" selection-start-line="135" selection-end-line="137" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/css/moreInfo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="217" selection-start-line="217" selection-end-line="223" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="56" column="134" selection-start-line="56" selection-start-column="134" selection-end-line="56" selection-end-column="134" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/h5/page/center/report/report.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank/rankList.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank/rankList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-262">
-              <caret line="76" column="40" lean-forward="true" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank_info.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/h5/public/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="237" column="9" selection-start-line="237" selection-start-column="9" selection-end-line="237" selection-end-column="9" />
+            <state relative-caret-position="408">
+              <caret line="308" column="22" selection-start-line="308" selection-start-column="22" selection-end-line="308" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/center/userCenter.js">
+        <entry file="file://$PROJECT_DIR$/h5/page/detail/detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="72" column="164" lean-forward="true" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="164" />
+            <state relative-caret-position="513">
+              <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/css/rankList.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -170,11 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>course  TypeList</find>
-      <find>#tabs li, #tabs2 li, #tabs3 li, #tabs4 li, #tabs5 li</find>
-      <find>讲师</find>
-      <find>!=&quot;&quot;</find>
-      <find>mainGuest</find>
       <find>tabs-1</find>
       <find>pageIndex_video</find>
       <find>ubsttabs-1ring</find>
@@ -186,7 +128,6 @@
       <find>.menu-right h5</find>
       <find>bookTypeList.html</find>
       <find>getBookList</find>
-      <find>.aui-palace-grid</find>
       <find>.aui-palace-grid-text</find>
       <find>.divHeight</find>
       <find>.aui-palace</find>
@@ -200,6 +141,12 @@
       <find>clickMore</find>
       <find>busRankList</find>
       <find>企业读书云平台</find>
+      <find>.aui-palace-grid</find>
+      <find>no-cache</find>
+      <find>newArticleList</find>
+      <find>aui_tag_list</find>
+      <find>.aui-flex-box .aui_title</find>
+      <find>articleList</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -213,8 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5/page/center/meThoughtList.js" />
-        <option value="$PROJECT_DIR$/h5/page/center/userCenter.js" />
         <option value="$PROJECT_DIR$/h5/css/userCenter.css" />
         <option value="$PROJECT_DIR$/h5/page/list/courseSupermarket.js" />
         <option value="$PROJECT_DIR$/h5/css/bookTypeList.css" />
@@ -242,18 +187,14 @@
         <option value="$PROJECT_DIR$/h5/page/activity/activityList.html" />
         <option value="$PROJECT_DIR$/h5/page/activity/activityMap.html" />
         <option value="$PROJECT_DIR$/h5/page/activity/activitySignUp.html" />
-        <option value="$PROJECT_DIR$/h5/page/more/articleList.html" />
         <option value="$PROJECT_DIR$/h5/page/more/articleDetail.html" />
         <option value="$PROJECT_DIR$/h5/page/detail/course_play.js" />
         <option value="$PROJECT_DIR$/h5/page/detail/courseDetail.html" />
         <option value="$PROJECT_DIR$/h5/css/courseSupermarket.css" />
         <option value="$PROJECT_DIR$/h5/page/list/courseSupermarket.html" />
         <option value="$PROJECT_DIR$/h5/page/list/bookTypeList.html" />
-        <option value="$PROJECT_DIR$/h5/public/config.js" />
         <option value="$PROJECT_DIR$/h5/page/more/moreInfo.html" />
         <option value="$PROJECT_DIR$/h5/css/moreInfo.css" />
-        <option value="$PROJECT_DIR$/h5/css/index.css" />
-        <option value="$PROJECT_DIR$/h5/index.html" />
         <option value="$PROJECT_DIR$/h5/page/center/report/report.js" />
         <option value="$PROJECT_DIR$/h5/css/rankList.css" />
         <option value="$PROJECT_DIR$/h5/page/center/report/rank/rankList.html" />
@@ -264,6 +205,12 @@
         <option value="$PROJECT_DIR$/h5/css/report.css" />
         <option value="$PROJECT_DIR$/h5/page/center/report/rank/rankList.js" />
         <option value="$PROJECT_DIR$/h5/page/center/report/rank_info.js" />
+        <option value="$PROJECT_DIR$/h5/css/index.css" />
+        <option value="$PROJECT_DIR$/h5/index.html" />
+        <option value="$PROJECT_DIR$/h5/css/article.css" />
+        <option value="$PROJECT_DIR$/h5/page/more/articleList.html" />
+        <option value="$PROJECT_DIR$/h5/page/more/articleList.js" />
+        <option value="$PROJECT_DIR$/h5/public/config.js" />
       </list>
     </option>
   </component>
@@ -283,7 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,59 +254,7 @@
               <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="center" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="center" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="center" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
-              <item name="rank" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="comment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
               <item name="detail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="more" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
@@ -371,14 +266,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560506409744" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560766549466" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../git/jcloud-apply" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -473,12 +368,13 @@
       <workItem from="1560215354854" duration="14252000" />
       <workItem from="1560301298501" duration="22093000" />
       <workItem from="1560387540465" duration="19137000" />
-      <workItem from="1560476181318" duration="16306000" />
+      <workItem from="1560476181318" duration="16307000" />
+      <workItem from="1560733817456" duration="8652000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="800694000" />
+    <option name="totallyTimeSpent" value="809347000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,14 +387,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1494638" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.15348525" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.14128944" />
@@ -561,34 +456,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/page/list/courseList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-551">
-          <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/list/bookList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/list/courseSupermarketList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/list/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/page/list/mainGuestList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -713,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/page/more/articleDetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -806,73 +666,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.html">
+    <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank/rank_info.js" />
+    <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank/rank_info.html" />
+    <entry file="file://$PROJECT_DIR$/h5/page/center/report/report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="437">
+          <caret line="23" column="77" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/css/moreInfo.css">
+    <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank_info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="280" column="23" selection-start-line="280" selection-start-column="23" selection-end-line="280" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="120" column="22" lean-forward="true" selection-start-line="120" selection-start-column="22" selection-end-line="120" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#a#5;n#div#1;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#6;n#div#1;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/css/rankList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/center/userCenter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="72" column="164" lean-forward="true" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="164" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank/rank_info.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank/rank_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="418">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/css/report.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="237" column="25" lean-forward="true" selection-start-line="237" selection-start-column="25" selection-end-line="237" selection-end-column="25" />
+        <state relative-caret-position="4503">
+          <caret line="237" column="25" selection-start-line="237" selection-start-column="25" selection-end-line="237" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -883,55 +696,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/public/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="237" column="9" selection-start-line="237" selection-start-column="9" selection-end-line="237" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank/rankList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-262">
-          <caret line="76" column="40" lean-forward="true" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+        <state relative-caret-position="1444">
+          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank_info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/center/report/report.html">
+    <entry file="file://$PROJECT_DIR$/h5/page/center/userCenter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="23" column="77" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="77" />
+        <state relative-caret-position="1368">
+          <caret line="72" column="164" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="164" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/css/rankList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/page/center/report/report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+        <state relative-caret-position="244">
+          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="273" column="1" lean-forward="true" selection-start-line="273" selection-start-column="1" selection-end-line="273" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="35" column="55" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/css/moreInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="217" selection-start-line="217" selection-end-line="223" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/css/article.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="135" selection-start-line="135" selection-end-line="137" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="56" column="134" selection-start-line="56" selection-start-column="134" selection-end-line="56" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/detail/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/public/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="308" column="22" selection-start-line="308" selection-start-column="22" selection-end-line="308" selection-end-column="22" />
         </state>
       </provider>
     </entry>
