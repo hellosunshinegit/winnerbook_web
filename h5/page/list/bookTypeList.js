@@ -123,7 +123,7 @@ function busBookList(index) {
             var bookTypeName = "";//分享时使用
             $.each(result.data.bookBusListType,function (index, item) {
                 if(item.typeImg!="" && item.typeImg!=undefined){
-                    item.typeImg = baseUrl+item.typeImg;
+                    item.typeImg = baseUrl+getMinImg(item.typeImg);
                 }else{
                     var imgUrl = "1";
                     if(index%2==0){
@@ -188,7 +188,7 @@ function bookTypeList(labelId,pageIndex,index,type) {
         var bookTypeName = "";//分享时使用
         $.each(result.data.bookListType,function (index, item) {
             if(item.typeImg!=""){
-                item.typeImg = baseUrl+item.typeImg;
+                item.typeImg = baseUrl+getMinImg(item.typeImg);
             }else{
                 var imgUrl = "1";
                 if(index%2==0){
