@@ -52,16 +52,18 @@ $(function(){
     //保存
     if(localStorage.getItem("isFirst")==null){
         var videoHtml = "<div class='welcome'>" +
-            "<div class='welcome_title'>欢迎来到企业读书云</div>" +
-            "<div class='introduce_info'>企业读书云平台是总裁读书会推出的企业版读书学习云平台，旨在通过专业的企业读书服务，为企业提供读书指导和帮助，从<span class='introduce_info_import'>学习计划</span>、<span class='introduce_info_import'>读书书单</span>、<span class='introduce_info_import'>读书展示</span>、<span class='introduce_info_import'>读书互动</span>、<span class='introduce_info_import'>读书感想</span>等多方面促进企业全员阅读，持续提升员工和企业的核心竞争力和科技创新能力！</div>" +
+            "<div class='welcome_img'><img src='images/welcome1.png'/></div>" +
+            "<div class='build_img'><img src='images/welcome_img2.png'/></div>" +
+            "<div class='logo_img'><img src='images/welcome_img3.png'/></div>" +
+            "<div class='introduce_info'></div>" +
            /* "<div class='content_des'>1.跟大咖一起读 <br/>2.精品课程<br/> 3.读书交流<br/>...<br/>好看的内容等待您去发掘！</div>" +*/
             "</div>";
         layer_comment = layer.open({
             type: 1
             ,content: videoHtml
             ,anim: 'up'
-            ,style: 'position:fixed; bottom:10%; top:25%;left:5%; width: 90%; height: 22em; padding:10px 0; border:none;border-radius: 2rem;'
-            ,time: 10 //3秒后自动关闭
+            ,style: 'position:fixed; top:0;left:0; width: 100%; height: 100%;border:none;-webkit-animation-duration:.5s;animation-duration:.5s;'
+            ,time: 3 //3秒后自动关闭
         });
         localStorage.setItem("isFirst","1");
     }else{

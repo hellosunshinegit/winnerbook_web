@@ -391,9 +391,44 @@ html, body{
     line-height: 2rem;
 }
 
-.introduce_info_import{
-    font-weight: bold;
+.welcome_img{
+    text-align: center;
+    padding-top: 95px;
 }
+.welcome_img img{
+    width: 90%;
+}
+.logo_img{
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+}
+
+.logo_img img{
+    width: 60%;
+}
+
+.build_img{
+    width: 100%;
+    position: absolute;
+    bottom: 150px;
+    text-align: center;
+    /*filter: grayscale(100%);*/
+}
+
+.build_img img{
+    width: 140px;
+    height: 100px;
+}
+
+.bottom_title{
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    left: 25%;
+}
+
 .aui-center{
     margin-left: 15% !important;
 }

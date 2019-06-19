@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="987ba54d-a021-4105-996d-5633ef00fbf4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/h5/images/welcome1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/images/welcome_img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/images/welcome_img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h5/images/welcome_img3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/css/article.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/article.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h5/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/images/about_me.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/about_me.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/images/course_select.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/course_select.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/images/leader_read.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/leader_read.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/images/leader_select.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/leader_select.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/images/notice.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/notice.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/images/share_book.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/share_book.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/images/super.png" beforeDir="false" afterPath="$PROJECT_DIR$/h5/images/super.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/more/articleList.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/more/articleList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/more/articleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/more/articleList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/public/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/public/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,78 +21,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/css/article.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="35" column="55" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="135" selection-start-line="135" selection-end-line="137" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/css/moreInfo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="217" selection-start-line="217" selection-end-line="223" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="56" column="134" selection-start-line="56" selection-start-column="134" selection-end-line="56" selection-end-column="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/h5/public/config.js">
+        <entry file="file://$PROJECT_DIR$/h5/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="308" column="22" selection-start-line="308" selection-start-column="22" selection-end-line="308" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/h5/page/detail/detail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+            <state relative-caret-position="412">
+              <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="421" column="18" selection-start-line="421" selection-start-column="18" selection-end-line="421" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -117,12 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tabs-1</find>
-      <find>pageIndex_video</find>
-      <find>ubsttabs-1ring</find>
-      <find>clickMore_bus</find>
-      <find>#tabs-1</find>
-      <find>getCoursesMore</find>
       <find>点击</find>
       <find>.menu-right ul li img</find>
       <find>.menu-right h5</find>
@@ -147,6 +88,12 @@
       <find>aui_tag_list</find>
       <find>.aui-flex-box .aui_title</find>
       <find>articleList</find>
+      <find>introduce_info_import</find>
+      <find>welcome_img</find>
+      <find>build_img</find>
+      <find>.welcome_img img</find>
+      <find>.logo_img</find>
+      <find>.build_img img</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -164,10 +111,8 @@
         <option value="$PROJECT_DIR$/h5/page/list/courseSupermarket.js" />
         <option value="$PROJECT_DIR$/h5/css/bookTypeList.css" />
         <option value="$PROJECT_DIR$/h5/css/newsList.css" />
-        <option value="$PROJECT_DIR$/h5/page/list/bookTypeList.js" />
         <option value="$PROJECT_DIR$/h5/page/activity/activityMap.js" />
         <option value="$PROJECT_DIR$/h5/page/list/courseList.js" />
-        <option value="$PROJECT_DIR$/h5/index.js" />
         <option value="$PROJECT_DIR$/h5/page/list/bookList.html" />
         <option value="$PROJECT_DIR$/h5/page/list/courseList.html" />
         <option value="$PROJECT_DIR$/h5/page/list/courseSupermarketList.html" />
@@ -205,12 +150,14 @@
         <option value="$PROJECT_DIR$/h5/css/report.css" />
         <option value="$PROJECT_DIR$/h5/page/center/report/rank/rankList.js" />
         <option value="$PROJECT_DIR$/h5/page/center/report/rank_info.js" />
-        <option value="$PROJECT_DIR$/h5/css/index.css" />
         <option value="$PROJECT_DIR$/h5/index.html" />
         <option value="$PROJECT_DIR$/h5/css/article.css" />
         <option value="$PROJECT_DIR$/h5/page/more/articleList.html" />
         <option value="$PROJECT_DIR$/h5/page/more/articleList.js" />
         <option value="$PROJECT_DIR$/h5/public/config.js" />
+        <option value="$PROJECT_DIR$/h5/page/list/bookTypeList.js" />
+        <option value="$PROJECT_DIR$/h5/css/index.css" />
+        <option value="$PROJECT_DIR$/h5/index.js" />
       </list>
     </option>
   </component>
@@ -230,7 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,33 +194,20 @@
               <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
               <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
-              <item name="detail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
-              <item name="h5" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560766549466" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560926227135" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../git/jcloud-apply" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -289,9 +223,9 @@
       <recent name="D:\workspace\winnerbook_web\h5\page" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\winnerbook_web\h5\images" />
       <recent name="D:\workspace\winnerbook_web\h5\page\center\report" />
       <recent name="D:\workspace\winnerbook_web\h5\page\center\report\rank" />
-      <recent name="D:\workspace\winnerbook_web\h5\images" />
       <recent name="D:\workspace\winnerbook_web\h5\page\list" />
       <recent name="D:\workspace\winnerbook_web\h5\css" />
     </key>
@@ -370,11 +304,13 @@
       <workItem from="1560387540465" duration="19137000" />
       <workItem from="1560476181318" duration="16307000" />
       <workItem from="1560733817456" duration="8652000" />
+      <workItem from="1560821574856" duration="3368000" />
+      <workItem from="1560907053151" duration="6363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="809347000" />
+    <option name="totallyTimeSpent" value="819078000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -387,13 +323,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.15348525" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17493297" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.14128944" />
@@ -423,7 +360,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19571045" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.15549597" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.14128944" />
@@ -456,30 +393,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/page/list/mainGuestList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/list/newsList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/list/thoughtList.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/list/videoList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/page/feedback/feedbackList.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -656,16 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="179" column="7" lean-forward="true" selection-start-line="179" selection-start-column="7" selection-end-line="179" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank/rank_info.js" />
     <entry file="file://$PROJECT_DIR$/h5/page/center/report/rank/rank_info.html" />
     <entry file="file://$PROJECT_DIR$/h5/page/center/report/report.html">
@@ -744,6 +647,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/list/bookList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1245">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/public/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="192" column="9" selection-start-line="192" selection-start-column="9" selection-end-line="192" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/images/index_bg.jpg" />
+    <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/css/article.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="35" column="55" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2565">
+          <caret line="135" selection-start-line="135" selection-end-line="137" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/css/moreInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4123">
+          <caret line="217" selection-start-line="217" selection-end-line="223" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="56" column="134" selection-start-line="56" selection-start-column="134" selection-end-line="56" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/list/bookTypeList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2337">
+          <caret line="123" column="69" selection-start-line="123" selection-start-column="69" selection-end-line="123" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/detail/detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="54" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/images/login.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/h5/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -753,68 +736,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/h5/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="273" column="1" lean-forward="true" selection-start-line="273" selection-start-column="1" selection-end-line="273" selection-end-column="1" />
+        <state relative-caret-position="491">
+          <caret line="421" column="18" selection-start-line="421" selection-start-column="18" selection-end-line="421" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.html">
+    <entry file="file://$PROJECT_DIR$/h5/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="35" column="55" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/css/moreInfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="217" selection-start-line="217" selection-end-line="223" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/css/article.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="99" column="19" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/more/moreInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="135" selection-start-line="135" selection-end-line="137" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/more/articleList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="56" column="134" selection-start-line="56" selection-start-column="134" selection-end-line="56" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/detail/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
+        <state relative-caret-position="412">
+          <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/public/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="308" column="22" selection-start-line="308" selection-start-column="22" selection-end-line="308" selection-end-column="22" />
         </state>
       </provider>
     </entry>
