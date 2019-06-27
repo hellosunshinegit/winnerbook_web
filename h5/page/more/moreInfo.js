@@ -25,22 +25,6 @@ function initData(index){
             console.log(result);
             if(result.success) {
                 var titleStr = "";
-                var bannerList = result.data.bannerList;//banner图
-                //拼接banner图
-                var bannerStr = "";
-                if(bannerList.length>0){
-                    $.each(bannerList,function (index, item) {
-                        item.bannerUrl = baseUrl+item.bannerUrl;
-                        bannerStr+="<div class='slider-item'><a href='javascript:;'><img alt='' src='"+item.bannerUrl+"'></a></div>";
-                    });
-                }else{//设置缺省图片
-                    bannerStr+="<div class='slider-item'><a href='javascript:;'><img src='"+webUrl+"images/banner_def.png'></a></div>";
-                    bannerStr+="<div class='slider-item'><a href='javascript:;'><img src='"+webUrl+"images/banner_def.png'></a></div>";
-                    bannerStr+="<div class='slider-item'><a href='javascript:;'><img src='"+webUrl+"images/banner_def.png'></a></div>";
-                }
-                $("#bannerDiv").html(bannerStr);
-
-
                 //拼接视频列表
                 var moreStr = "";
                 if (result.data.blockList.length > 0) {
@@ -146,4 +130,9 @@ function articleDetail(articleId) {//根据模板查询对应的list
 //点击分享
 function shareWbPage() {
     shareWb(title,desc);
+}
+
+//点击跳转调查问卷
+function lookIntoFun() {
+    window.location.href = webUrl+"page/more/lookInfo.html";
 }

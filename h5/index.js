@@ -141,8 +141,8 @@ function courseList(pageIndex,type){
             $.each(result.data.courseList,function (index, item) {
                 item.bookImg = baseUrl+item.bookImg;
                 var titleStr = item.title;
-                if(titleStr.length>13){
-                    titleStr = item.title.substring(0,13)+"...";
+                if(titleStr.length>10){
+                    titleStr = item.title.substring(0,10)+"...";
                 }
                 var courseDescStr = item.courseDesc;
                 if(courseDescStr.length>30){

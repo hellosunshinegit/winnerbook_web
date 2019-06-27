@@ -260,3 +260,8 @@ dl:not(:nth-last-of-type(1)) {
     float: right;
     margin-right: 1rem;
 }
+
+.is_admin img{
+    width: 20px;
+    height: 20px;
+}

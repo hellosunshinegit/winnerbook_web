@@ -68,7 +68,7 @@ function activityData(index,type){
                     titleInvalid = "invalid-title";
                 }
 
-                activityStr+="<div "+isClick+" onclick='getDetail("+item.id+")'> " +
+                activityStr+="<div "+isClick+" onclick='getActivityDetail("+item.id+")'> " +
                     " <div class='aui-course-img'> " +
                     "  <img src='"+item.img+"' alt=''> " +
                     " </div> " +
@@ -237,7 +237,7 @@ function clickMore_readClub(){
     activityData(pageIndex,"more");
 }
 
-function getDetail(id){
+function getActivityDetail(id){
     window.location.href = webUrl+"page/activity/activityDetail.html?busId="+url_busId+"&userId="+url_userId+"&id="+id;
 }
 

@@ -42,63 +42,70 @@ function playInterval(main_play_id,courseId,type,isBuy,fileId){
 	main_play.onplay = function() {
 		console.log("记录学习");
 		//先判断是否有权限查看此主视频，isBuy=0 可以，isBuy=1需要购买才可以观看
-		if(isBuy=="1"){
+		if(getSessionUserId()==""){
 			main_play.pause();
 			var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
 			if (ua.match(/MicroMessenger/i) == "micromessenger") {//alert的浮层高于视频的浮层 ，不然微信端是全屏的没法提示
-				//main_play.webkitExitFullScreen();//退出全屏
-				var isBuy_info = confirm("您暂时没有观看权限，请联系管理员购买此课程包");
-				if(isBuy_info){
-					main_play.webkitExitFullScreen();//退出全屏
+				//在微信中打开
+				var isLogin = confirm("登录才可以观看视频，确定要登录吗？");
+				if(isLogin){
+					footerClick("me");
+					window.location.href = webUrl+"page/center/login.html?busId="+url_busId+"&userId="+url_userId;
 				}else{
 					main_play.webkitExitFullScreen();//退出全屏
 				}
-			}else{
-				layerMsg("您暂时没有观看权限，请联系管理员购买此课程包");
-			}
-		}else{
-			if(getSessionUserId()==""){
-				main_play.pause();
-				var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
-				if (ua.match(/MicroMessenger/i) == "micromessenger") {//alert的浮层高于视频的浮层 ，不然微信端是全屏的没法提示
-					//在微信中打开
-					var isLogin = confirm("登录才可以观看视频，确定要登录吗？");
-					if(isLogin){
+			}else{//普通浏览器提示,可以用dom元素
+				$("#"+main_play_id).addClass("videoHeight");
+				//询问框
+				layer.open({
+					content: '登录才可以观看视频，确定要登录吗？'
+					,btn: ['登录', '不要']
+					,yes: function(index){
+						layer.close(index);
 						footerClick("me");
 						window.location.href = webUrl+"page/center/login.html?busId="+url_busId+"&userId="+url_userId;
-					}else{
-						main_play.webkitExitFullScreen();//退出全屏
+					},no:function (index) {
+						$("#"+main_play_id).removeClass("videoHeight");
 					}
-				}else{//普通浏览器提示,可以用dom元素
-					$("#"+main_play_id).addClass("videoHeight");
-					//询问框
-					layer.open({
-						content: '登录才可以观看视频，确定要登录吗？'
-						,btn: ['登录', '不要']
-						,yes: function(index){
-							layer.close(index);
-							footerClick("me");
-							window.location.href = webUrl+"page/center/login.html?busId="+url_busId+"&userId="+url_userId;
-						},no:function (index) {
-							$("#"+main_play_id).removeClass("videoHeight");
-						}
-					});
-				}
-			}else{
-				// 定时1分钟一次发送后台
-				interval_main_play = setInterval(function() {
-					timeInterval();
-				}, 1000 * 10);
-
-				studentLook(courseId, main_play.currentTime,type,0,fileId,totalTime,1);
+				});
 			}
+		}else{
+			//先判断是否有权限，如果没有权限，则不可以查看
+			var param = {"courseId":courseId,"userId":getSession().userId,"busId":getSession().belongBusUserId};
+			ajax_fetch("POST",paramMap.getCourseDetail,param,function (result) {
+				if(result.success){
+					var isBuy = result.data.courseInfo.isBuy;
+					if(isBuy=="1"){
+						main_play.pause(isBuy);
+						var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+						if (ua.match(/MicroMessenger/i) == "micromessenger") {//alert的浮层高于视频的浮层 ，不然微信端是全屏的没法提示
+							//main_play.webkitExitFullScreen();//退出全屏
+							var isBuy_info = confirm("对不起，您没有观看权限。");
+							if(isBuy_info){
+								main_play.webkitExitFullScreen();//退出全屏
+							}else{
+								main_play.webkitExitFullScreen();//退出全屏
+							}
+						}else{
+							layerMsg("对不起，您没有观看权限。");
+						}
+					}else{
+						// 定时1分钟一次发送后台
+						interval_main_play = setInterval(function() {
+							timeInterval();
+						}, 1000 * 10);
+
+						studentLook(courseId, main_play.currentTime,type,0,fileId,totalTime,1);
+					}
+				}
+			});
 		}
 	};
 
 	// 暂停 每暂停一次发送一次记录
-	main_play.onpause = function() {
+	main_play.onpause = function(isBuyValue) {
 		console.log("视频暂停");
-		if(getSessionUserId()!="" && isBuy=="0"){
+		if(getSessionUserId()!="" && isBuyValue=="0"){
 			window.clearInterval(interval_main_play);
 			// 发送数据向后台
 			studentLook(courseId, main_play.currentTime,type,0,fileId,totalTime);

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title_bus"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link href="../../css/common.css?v=20190614" rel="stylesheet" type="text/css"/>
+    <link href="../../css/lookInfo.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../public/config.js"></script>
+    <script type="text/javascript" src="lookInfo.js"></script>
+    <script type="text/javascript" src="../../js/layer.js"></script>
+    <link href="../../js/layer.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header"></div>
+<div class="sign_up">
+    <div class="form_main">
+        <div class="page_title_sign">
+            如何成功打造学习型组织，持续提升企业员工知识和业务水平，从而在大变局中保持企业的核心竞争力，对于每家企业都至关重要。<b class="sign">总裁读书会</b>特发起此次调研。
+        </div>
+        <dl>
+            <dt>贵企业名称：</dt>
+            <dd><input type="text" id="busName" maxlength="50" placeholder="请输入企业名称"/></dd>
+        </dl>
+        <div class="page_title">
+            企业书单，为员工营造更好的学习气氛
+        </div>
+        <dl>
+            <dt>企业书单：</dt>
+            <dd><textarea id="bookListName" maxlength="300" placeholder="请输入企业书单  以空格分割。 &#10;例如：人类简史 未来简史"></textarea></dd>
+        </dl>
+        <dl>
+            <dt>课程包：</dt>
+            <dd id="courseListDiv"><!--style="line-height: 30px;"-->
+
+            </dd>
+        </dl>
+        <dl>
+            <dt>读书计划：</dt>
+            <dd id="readBookPlanDiv">
+
+            </dd>
+        </dl>
+        <dl id="readBookPlanOtherDiv" style="display: none;">
+            <dt></dt>
+            <dd>
+                <input type="text" id="readBookPlanOther" maxlength="50" placeholder="其他读书计划..."/>
+            </dd>
+        </dl>
+        <div class="page_title">企业读书计划，加强员工读书的动力</div>
+        <dl>
+            <dt>1年必读：</dt>
+            <dd>
+                <input type="text" name="mustReadNum" id="mustReadNum" maxlength="2" style="width: 50px;"/>&nbsp;&nbsp;本书目
+            </dd>
+        </dl>
+        <dl>
+            <dt>1年选读：</dt>
+            <dd>
+                <input type="text" name="selectReadNum" id="selectReadNum" maxlength="2" style="width: 50px;"/>&nbsp;&nbsp;本书目
+            </dd>
+        </dl>
+        <dl>
+            <dt>写读后感：</dt>
+            <dd style="line-height: 30px;">
+                <input type="radio" class="radio" name="isReadThought" value="1"/>是
+                <input type="radio" class="radio" name="isReadThought" value="2"/>否
+            </dd>
+        </dl>
+        <dl>
+            <dt>召开读书会：</dt>
+            <dd>
+                <input type="radio" class="radio" name="isReadClud" value="1" onclick="readCludFun(1)"/>是
+                <input type="radio" class="radio" name="isReadClud" value="2" onclick="readCludFun(2)"/>否
+            </dd>
+        </dl>
+        <dl id="isReadClud" style="display:none;">
+            <dt></dt>
+            <dd>
+                多久召开一次：<input type="text" name="longReadClud" id="longReadClud" maxlength="10" style="width: 50px;"/>
+            </dd>
+        </dl>
+        <dl>
+            <dt>分享微博：</dt>
+            <dd>
+                <input type="radio" class="radio" name="isShareWb" value="1"/>是
+                <input type="radio" class="radio" name="isShareWb" value="2"/>否
+            </dd>
+        </dl>
+        <div class="page_title">企业家信息，您的企业家是否也在孜孜不倦的读书呢</div>
+        <dl>
+            <dt>是否读书：</dt>
+            <dd>
+                <input type="radio" class="radio" name="isReadBook" value="1"/>是
+                <input type="radio" class="radio" name="isReadBook" value="2"/>否
+            </dd>
+        </dl>
+        <dl>
+            <dt>是否写书：</dt>
+            <dd>
+                <input type="radio" class="radio" name="isWriteBook" value="1"/>是
+                <input type="radio" class="radio" name="isWriteBook" value="2"/>否
+            </dd>
+        </dl>
+        <dl>
+            <dt>是否分享书：</dt>
+            <dd>
+                <input type="radio" class="radio" name="isShareBook" value="1"/>是
+                <input type="radio" class="radio" name="isShareBook" value="2"/>否
+            </dd>
+        </dl>
+        <div class="page_title">企业基本信息</div>
+        <dl>
+            <dt>公众号：</dt>
+            <dd><input type="text" id="publicNum" placeholder="请输入企业公众号名称" maxlength="50"/></dd>
+        </dl>
+        <dl>
+            <dt>企业主页：</dt>
+            <dd><input type="text" id="homepageUrl" placeholder="请输入企业主页地址" maxlength="200"/></dd>
+        </dl>
+        <dl>
+            <dt>人员数量：</dt>
+            <dd><input type="text" id="empNum" placeholder="请输入企业人员数量" maxlength="10"/></dd>
+        </dl>
+        <dl>
+            <dt>地址：</dt>
+            <dd><input type="text" id="companyAddress" placeholder="请输入企业地址" maxlength="200"/></dd>
+        </dl>
+        <dl>
+            <dt>所属行业：</dt>
+            <dd><input type="text" id="companyIndustry" placeholder="请输入企业所属行业" maxlength="200"/></dd>
+        </dl>
+        <div class="page_title">请留下您的联系方式，方便我们做后续的沟通</div>
+        <dl>
+            <dt>联系电话：</dt>
+            <dd>
+                <input type="text" id="telphone" placeholder="请输入您的联系电话" maxlength="11"/>
+            </dd>
+        </dl>
+        <dl>
+            <dt>试用企业读书云：</dt>
+            <dd>
+                <input type="checkbox" class="checkbox" name="isUseBookYun" id="isUseBookYun" value="1" checked placeholder="请输入您的联系方式" maxlength="11"/>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="sign_up_submit" id="submitBtn">
+    <input class="button" type="button" value="提交" onclick="applySubmitFun()"/>
+</div>
+</body>
+</html>

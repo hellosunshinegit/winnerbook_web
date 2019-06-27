@@ -13,12 +13,15 @@ $(function(){
     if(sessionUser==null){
         window.location.href = webUrl+"page/center/login.html?busId="+busId+"&userId="+userId;
     }else{
-        $("#sessionUser").html(JSON.parse(sessionUser).userUnitName);
+        $("#sessionUser").html(JSON.parse(sessionUser).userUnitName+"&nbsp;&nbsp;"+JSON.parse(sessionUser).busName);
     }
 
+    console.log(getSession());
     //如果不是企业管理员，则显示申请企业管理员图标
     if(getSession().isBusinessAdmin!="1"){
         $("#applyBusAdmin").css("display","");
+    }else{
+        $("#is_admin").css("display","");
     }
 
     if(busId!=busId_session){//证明访问的是别人的企业，但是登录的是自己的账号

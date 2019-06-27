@@ -45,7 +45,10 @@ var paramMap = {
     "getAdminCourseTypes":"getAdminCourseTypes.jhtml",//获取admin课程类型 课程超市
     "getAdminCourses":"getAdminCourses.jhtml",//获取课程 课程超市
     "getCourseTypeLabels":"getCourseTypeLabels.jhtml",//获取课程类型的标签 课程超市
-    "addReadThought":"addReadThought.jhtml"//获取课程类型的标签 课程超市
+    "addReadThought":"addReadThought.jhtml",//获取课程类型的标签 课程超市
+    "getCourseType":"getCourseType.jhtml",//企业调研获取课程包
+    "addLookInfo":"addLookInfo.jhtml",//企业调研获取课程包
+    "isLookCourseVideo":"isLookCourseVideo.jhtml"//判断是否有权限查看此视频
 };
 var layerLoading = null;
 function ajax_fetch(type,url,param,callback) {

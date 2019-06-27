@@ -152,6 +152,18 @@ function busBookList(index) {
 
             });
 
+            if(result.data.isDefaultBookList>0){
+                var imgUrl =  webUrl+"images/def_img0.png";
+                bookTypeStr+="<a href='javascript:bookListFun(0);' class='aui-flex b-line' about=''>" +
+                    "<div class='aui-flex-box'>" +
+                    "<span class='aui_title'>企业全员书单</span>" +
+                    "</div>" +
+                    "<div class='aui-course-img'>" +
+                    "<img src='"+imgUrl+"' alt=''>" +
+                    "</div>" +
+                    "</a>";
+            }
+
             if(result.data.bookBusListCount>(pageIndex_0 + 1)*10){
                 bookTypeStr+="<span class='more' id='more_"+index+"' onclick='clickMore_bus()'>点击更多...</span>";
             }else if(bookTypeStr.length>0){

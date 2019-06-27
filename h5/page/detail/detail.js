@@ -49,7 +49,9 @@ function initData(){
                     imgUrl = baseUrl+info.img;
                 }
             }
-            desc = info.detail.replace(/<[^>]+>/g,"");
+            if(info.detail!=undefined){
+                desc = info.detail.replace(/<[^>]+>/g,"");
+            }
             setWxConfig(title,link,imgUrl,desc);
         }
 
