@@ -182,7 +182,7 @@ a {
     -ms-flex-align: center;
     align-items: center;
     height: 35px;
-    width: 70%;
+    width: 71%;
     margin-left: 25%;
 }
 
@@ -193,7 +193,7 @@ a {
     overflow: hidden;
     display: block;
     text-overflow: ellipsis;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     color: #333;
 }
 

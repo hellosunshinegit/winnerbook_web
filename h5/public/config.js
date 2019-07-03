@@ -322,6 +322,7 @@ function getBusInfo(busId,callback) {
     if(busId!="" && busId!=null){
         ajax_fetch("POST",paramMap.getBusInfo,{"busId":busId},function (result) {
             var busInfo = result.data;
+            console.log(busInfo);
             return callback(busInfo);
         });
     }else{

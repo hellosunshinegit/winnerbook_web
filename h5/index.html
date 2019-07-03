@@ -22,11 +22,12 @@
     <!--微信分享引入jsdk-->
     <script type="text/javascript" src="js/jweixin-1.2.0.js"></script>
     <script type="text/javascript" src="public/config.js"></script>
-    <script type="text/javascript" src="index.js?v=10290614"></script>
+    <script type="text/javascript" src="index.js?v=20190702"></script>
     <script type="text/javascript" src="js/layer.js"></script>
     <link href="js/layer.css" rel="stylesheet" type="text/css"/>
 
     <script type="text/javascript" src="js/tabulous.js"></script><!--tab切换-->
+    <script type="text/javascript" src="page/detail/course_play.js"></script><!--视频监控-->
 
 
 </head>
@@ -37,17 +38,20 @@
             <i class="icon icon-return"></i>
         </a>-->
         <div class="aui-center">
-            <span class="aui-center-title" id="index_title">企业读书云平台</span>
+            <span class="aui-center-title" id="index_title"></span>
         </div>
         <a class="aui-navBar-item"><!--href="javascript:login_bus();" -->
             <!--<wb:follow-button uid="2832313182" type="red_1" width="67" height="24" ></wb:follow-button>-->
             <!--<wb:share-button appkey="3416615626" addition="simple" type="button" ></wb:share-button>-->
-            <span class="share_btn" onclick="shareWbPage()">
+            <span class="share_btn" id="bus_logo">
+
+            </span>
+            <!--<span class="share_btn" onclick="shareWbPage()">
                 <cite class="share_btn_inner">
                     <u class="ico_share_btn"></u>
-                    <!--<cite class="share_text">分享</cite>-->
+                    &lt;!&ndash;<cite class="share_text">分享</cite>&ndash;&gt;
                 </cite>
-            </span>
+            </span>-->
         </a>
 
     </header>
@@ -133,7 +137,7 @@
                 </div>
             </a>
         </div>
-        <div class="divHeight"></div>
+        <div class="divHeight" id="video_divHeight" style="display: none;"></div>
 
         <!--<wb:share-button appkey="3163459398" addition="number" type="button"></wb:share-button>-->
         <!--<a href="http://service.weibo.com/share/share.php?appkey=&title=总裁读书会-企业读书云平台&url=http://ent.winnerbook.cn/mobile/&pic=&searchPic=false&style=simple" target="_blank">
@@ -142,15 +146,19 @@
 
 
         <div id="tabs">
-            <ul>
-                <li><a href="#tabs-0" title="" onclick="courseList(0)">推荐课程</a></li>
-                <li><a href="#tabs-1" title="" onclick="videoList(0)">碎片时间</a></li>
+            <ul id="labelDiv_index">
+                <li id="li_0"><a href="#tabs-0" title="" onclick="courseList(0)">推荐课程</a></li>
+                <li id="li_1"><a href="#tabs-1" title="" onclick="videoList(0)">碎片时间</a></li>
+                <li id="li_2" style="display:none;"><a href="#tabs-2" title="" onclick="studentList(0)">学习之路</a></li>
             </ul>
             <div id="tabs_container">
                 <div id="tabs-0" class="aui-course-list">
 
                 </div>
-                <div id="tabs-1" class="list_video" >
+                <div id="tabs-1" class="list_video">
+
+                </div>
+                <div id="tabs-2" class="aui-course-list" style="display: none;">
 
                 </div>
             </div><!--End tabs container-->

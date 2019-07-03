@@ -19,7 +19,7 @@ $(function(){
 });
 
 
-function initData(pageIndex,courseTypeId,typeMore){
+function initData(pageIndex,courseTypeId){
     var param = {"pageIndex":pageIndex,"busId":url_busId,"courseTypeId":courseTypeId};
     ajax_fetch("POST",paramMap.getAdminCourses,param,function (result) {
         if(result.success){
@@ -78,7 +78,7 @@ function initData(pageIndex,courseTypeId,typeMore){
             });
 
             if(result.data.courseAdminCount>(pageIndex+1)*10){
-                courseStr+="<span class='more' id='more' onclick='initData(\""+(pageIndex+1)+"\",\""+courseTypeId+"\",\"more\")'>点击更多...</span>";
+                courseStr+="<span class='more' id='more' onclick='clickMore(\""+(pageIndex+1)+"\",\""+courseTypeId+"\")'>点击更多...</span>";
             }else if(courseStr.length>0){
                 courseStr+="<span class='more_end'>我是有底线的...</span>";
             }else{
@@ -100,6 +100,11 @@ function initData(pageIndex,courseTypeId,typeMore){
         }
 
     });
+}
+
+function clickMore(pageIndex, courseTypeId) {
+    $("#more").remove();
+    initData(pageIndex,courseTypeId);
 }
 
 //点击分享

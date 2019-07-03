@@ -34,7 +34,7 @@ function initData(pageIndex) {
             //当前登录人的排名和分值
             var userRank = result.data.userRank;
 
-            $("#currentUser").html("我的排名：<span class='rank_title'>"+userRank.rank+"</span>，分值<span class='rank_order'>"+userRank.sumScore+"</span>");
+            $("#currentUser").html("我的排名：<span class='rank_title'>"+(userRank.rank!=undefined?userRank.rank:0)+"</span>，分值<span class='rank_order'>"+(userRank.sumScore!=undefined?userRank.sumScore:0)+"</span>");
 
             var busRankList = result.data.busRank.busRankList;
 

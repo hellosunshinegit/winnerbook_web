@@ -23,11 +23,12 @@ header.Nav {
     display: -webkit-box;
     display: -ms-flexbox;
     font-size: 1.5em;
-    line-height: 2.5;
+    line-height: 35px;
+    height: 35px;
     border-bottom: 1px solid #ECECEC;
     overflow: hidden;
-    font-size: 1.2em;
-    background: #fff
+    font-size: 1.3em;
+    background: #fff;
 }
 
 header.Nav a {

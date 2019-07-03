@@ -535,10 +535,11 @@ html, body{
 #tabs-1{
     top:0.5rem !important;
     width: 100%;
-    margin-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 #tabs-2{
     width: 100%;
+    padding-bottom: 5rem;
 }
 
 .list_video{
@@ -605,7 +606,7 @@ html, body{
     overflow: hidden;
 }
 
-#first_video{
+.first_video{
     width: 100%;
     /*height: 11em;*/
     /*margin-top: 5px;*/
@@ -617,4 +618,61 @@ html, body{
     padding: 5px;
     color: #2488b3;
     font-size: 0.9rem;
+}
+
+.share_btn img{
+    height: 20px;
+}
+
+
+/*学习记录*/
+.aui-flex-student{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+}
+.aui-flex-box-student{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.aui_title-student{
+    width: 100%;
+    font-size: 1rem;
+    color: #323232;
+    float: left;
+    margin-top: 0.2rem;
+}
+
+.aui_title-student .status_css-student{
+    background-color: #ecf0f1;
+    color: #878d97;
+    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+}
+.aui_source-student{
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.desc_css-student{
+    float: left;
+    width: 75%;
+    margin-top: 1em;
+}
+
+.date_css-student{
+    float: right;
+    margin-top: 2em;
 }

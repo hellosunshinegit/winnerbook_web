@@ -102,13 +102,13 @@ function newArticles() {
                     "</a></div>" +
                     "</div>";
             });
-            if(result.data.articleCount>(pageIndex+1)*10){
+            /*if(result.data.articleCount>(pageIndex+1)*10){
                 articleStr+="<span class='more' id='more' onclick='clickMore()'>点击更多...</span>";
             }else if(articleStr.length>0){
                 articleStr+="<span class='more_end'>我是有底线的...</span>";
             }else{
                 articleStr+="<span class='more_end'>暂无数据...</span>";
-            }
+            }*/
             $("#newArticleList").append(articleStr);
         }
 

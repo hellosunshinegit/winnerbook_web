@@ -39,11 +39,13 @@ function initData(index){
                 }
 
                 var recordDes = item.recordDes;
-                if(item.recordType==3 && item.courseFileName!=""){
+                console.log(item);
+                if(item.recordType=="3" && item.courseFileName!="" && item.courseFileName!=undefined){
                     recordDes = item.courseFileName+"："+recordDes;
                 }
 
                 var timeStr = "";
+                console.log(item.totalTime);
                 if(item.totalTime!=""){
                     timeStr = "视频时长："+item.totalTime+"；";
                 }

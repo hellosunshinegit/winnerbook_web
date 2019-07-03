@@ -91,18 +91,18 @@ function initData(){
             if(course.mainVideoUrl!=undefined && course.mainVideoUrl!=""){
                 $("#tabs-1").html("<video controls id='main_video' poster="+webUrl+"images/video_default.png x5-video-player-fullscreen='true'><source src='"+baseUrl+course.mainVideoUrl+"'</video>");
                 //定时获取观看时间
-                playInterval("main_video",courseId,1,course.isBuy);//type=1 主视频  type=2 主音频  3附件小视频
+                playInterval("main_video",courseId,1);//type=1 主视频  type=2 主音频  3附件小视频
             }else if(course.mainVideoLink!=""){ //判断主视频链接是否有值
                 $("#tabs-1").html("<video controls id='main_video' poster="+webUrl+"images/video_default.png x5-video-player-fullscreen='true'><source src='"+course.mainVideoLink+"'</video>");
                 //定时获取观看时间
-                playInterval("main_video",courseId,1,course.isBuy);//type=1 主视频  type=2 主音频  3附件小视频
+                playInterval("main_video",courseId,1);//type=1 主视频  type=2 主音频  3附件小视频
             }else{
                 $("#tabs-1").html("暂无数据...");
             }
 
             if(course.mainAudioUrl!=undefined && course.mainAudioUrl!=""){
                 $("#tabs-3").html("<audio controls id='main_audio'><source src='"+baseUrl+course.mainAudioUrl+"'</audio>");
-                playInterval("main_audio",courseId,2,course.isBuy);//type=1 主视频  type=2 主音频  3附件小视频
+                playInterval("main_audio",courseId,2);//type=1 主视频  type=2 主音频  3附件小视频
             }else{
                 $("#tabs-3").html("暂无数据...");
             }
@@ -115,7 +115,7 @@ function initData(){
                     item.fileUrl = baseUrl+item.fileUrl;
                     file_str+="<span>"+item.fileTitle+"</span>";
                     if(item.fileType=='1'){
-                        file_str+="<video controls id='course_video_"+item.fileId+"'><source src='"+item.fileUrl+"'></video>";
+                        file_str+="<video controls id='course_video_"+item.fileId+"' poster="+webUrl+"images/video_default.png><source src='"+item.fileUrl+"'></video>";
                     }else if(item.fileType=='2'){
                         file_str+="<audio controls id='course_audio_"+item.fileId+"'><source src='"+item.fileUrl+"'></audio>";
                     }else{

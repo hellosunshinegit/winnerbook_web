@@ -6,7 +6,7 @@ var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
 //获取播放时间
 var interval_main_play = null;
-function playInterval(main_play_id,courseId,type,isBuy,fileId){
+function playInterval(main_play_id,courseId,type,fileId){
 	var main_play = document.getElementById(main_play_id);// video标签对象
 	var totalTime = "";
 	var isStart=false;
@@ -41,7 +41,6 @@ function playInterval(main_play_id,courseId,type,isBuy,fileId){
 	// 视频播放事件
 	main_play.onplay = function() {
 		console.log("记录学习");
-		//先判断是否有权限查看此主视频，isBuy=0 可以，isBuy=1需要购买才可以观看
 		if(getSessionUserId()==""){
 			main_play.pause();
 			var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
@@ -70,35 +69,46 @@ function playInterval(main_play_id,courseId,type,isBuy,fileId){
 				});
 			}
 		}else{
-			//先判断是否有权限，如果没有权限，则不可以查看
-			var param = {"courseId":courseId,"userId":getSession().userId,"busId":getSession().belongBusUserId};
-			ajax_fetch("POST",paramMap.getCourseDetail,param,function (result) {
-				if(result.success){
-					var isBuy = result.data.courseInfo.isBuy;
-					if(isBuy=="1"){
-						main_play.pause(isBuy);
-						var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
-						if (ua.match(/MicroMessenger/i) == "micromessenger") {//alert的浮层高于视频的浮层 ，不然微信端是全屏的没法提示
-							//main_play.webkitExitFullScreen();//退出全屏
-							var isBuy_info = confirm("对不起，您没有观看权限。");
-							if(isBuy_info){
-								main_play.webkitExitFullScreen();//退出全屏
+			//只有主视频是需要权限控制的，其他的不需要
+			if(type==1){//type=1 主视频  type=2 主音频  3附件小视频
+				//先判断是否有权限，如果没有权限，则不可以查看
+				var param = {"courseId":courseId,"userId":getSession().userId,"busId":getSession().belongBusUserId};
+				ajax_fetch("POST",paramMap.getCourseDetail,param,function (result) {
+					if(result.success){
+						//先判断是否有权限查看此主视频，isBuy=0 可以，isBuy=1需要购买才可以观看
+						var isBuy = result.data.courseInfo.isBuy;
+						if(isBuy=="1"){
+							main_play.pause(isBuy);
+							var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+							if (ua.match(/MicroMessenger/i) == "micromessenger") {//alert的浮层高于视频的浮层 ，不然微信端是全屏的没法提示
+								//main_play.webkitExitFullScreen();//退出全屏
+								var isBuy_info = confirm("对不起，您没有观看权限。");
+								if(isBuy_info){
+									main_play.webkitExitFullScreen();//退出全屏
+								}else{
+									main_play.webkitExitFullScreen();//退出全屏
+								}
 							}else{
-								main_play.webkitExitFullScreen();//退出全屏
+								layerMsg("对不起，您没有观看权限。");
 							}
 						}else{
-							layerMsg("对不起，您没有观看权限。");
-						}
-					}else{
-						// 定时1分钟一次发送后台
-						interval_main_play = setInterval(function() {
-							timeInterval();
-						}, 1000 * 10);
+							// 定时1分钟一次发送后台
+							interval_main_play = setInterval(function() {
+								timeInterval();
+							}, 1000 * 10);
 
-						studentLook(courseId, main_play.currentTime,type,0,fileId,totalTime,1);
+							studentLook(courseId, main_play.currentTime,type,0,fileId,totalTime,1);
+						}
 					}
-				}
-			});
+				});
+			}else{
+				// 定时1分钟一次发送后台
+				interval_main_play = setInterval(function() {
+					timeInterval();
+				}, 1000 * 10);
+
+				studentLook(courseId, main_play.currentTime,type,0,fileId,totalTime,1);
+			}
 		}
 	};
 
@@ -128,7 +138,7 @@ function studentLook(courseId,time,type,isEnd,fileId,totalTime,clickStart){
 	console.log(courseId+","+time+","+type+","+fileId+","+totalTime+","+clickStart);
 	time = time+"";
 	console.log("后台发送请求",time);
-	var param = {"courseId":courseId,"time":time,"type":type,"recordId":recordIdInsert,"isEnd":isEnd,"userId":url_userId,"fileId":fileId,"totalTime":totalTime,"clickStart":clickStart};
+	var param = {"courseId":courseId,"time":time,"type":type,"recordId":recordIdInsert,"isEnd":isEnd,"userId":getSessionUserId(),"fileId":fileId,"totalTime":totalTime,"clickStart":clickStart};
 	ajax_fetch("get",paramMap.addStudentRecord,param,function (result) {
 		console.log(result);
 		if(result.success){
