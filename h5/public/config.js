@@ -311,7 +311,7 @@ function layerMsg(str) {
 function shareWb(title,desc) {//&pic="+pic+"
     var url = location.href.split('#')[0];
     var shareTitle = title;
-    if(desc!=""){
+    if(desc!="" && desc!=undefined){
         shareTitle+="%0A"+desc.substr(0,250);
     }
     window.open("https://service.weibo.com/share/share.php?url="+webUrl+"&title="+shareTitle+"&type=button&language=zh_cn&appkey=3416615626&searchPic=false&style=simple")

@@ -2,6 +2,8 @@
 var pageIndex = 0;
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var title = "";
+var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
@@ -92,13 +94,13 @@ function initData(index){
 
 
             //设置分享内容
-            var title = "导师列表";
+            title = "导师列表";
             var link = location.href.split('#')[0];
             var imgUrl = "http://ent.winnerbook.cn/mobile/images/logo_share.png";
             if(result.data.mainGuestsList.length>0){
                 imgUrl = result.data.mainGuestsList[0].mainGuesImg;
             }
-            var desc = mainGuestStr;
+            desc = mainGuestStr;
             console.log(desc);
             setWxConfig(title,link,imgUrl,desc);
         }
@@ -116,4 +118,9 @@ function clickMore(){
     $("#more").remove();
     pageIndex = pageIndex+1;
     initData(pageIndex);
+}
+
+//点击分享
+function shareWbPage() {
+    shareWb(title,desc);
 }

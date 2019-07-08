@@ -134,7 +134,7 @@ html, body{
     -ms-flex-align: center;
     align-items: center;
     height: 44px;
-    width: 50%;
+    width: 100% !important;
     margin-left: 25%;
 }
 
