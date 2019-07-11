@@ -31,7 +31,7 @@ $(function(){
             $("#bus_logo").html("<img src='"+baseUrl+result.busLogo+"'>");
         }
         if(url_busId==""){
-            $("#bus_logo").html("<img src='"+webUrl+"images/def_img4.png'>");
+            $("#bus_logo").html("<img src='"+webUrl+"images/def_logo.png'>");
         }
     });
 
@@ -215,7 +215,7 @@ function videoList(pageIndex,type) {
                 var num = Math.floor(Math.random() * result.data.videoList.length);
                 var firstVideo = result.data.videoList[num];
                 $("#aui_title").html(firstVideo.fileTitle);// poster="+webUrl+"images/video_def_img.png style='width: 100%; height: 80%; object-fit: fill'  x5-video-player-type='h5' x5-video-player-fullscreen='true'
-                $("#firstVideo").html("<video controls class='first_video' id='first_video_"+firstVideo.fileId+"' poster="+webUrl+"images/video_default.png x5-video-player-fullscreen='true'><source src='"+baseUrl+firstVideo.fileUrl+"'></video>");
+                $("#firstVideo").html("<video controls class='first_video' id='first_video_"+firstVideo.fileId+"' poster="+webUrl+"images/video_default.png x5-video-player-fullscreen='true' controlslist='nodownload'><source src='"+baseUrl+firstVideo.fileUrl+"'></video>");
                 $("#video_divHeight").css("display","");
 
                 var video_img = webUrl+"images/video_open.png";

@@ -17,10 +17,27 @@ $(function(){
         window.scrollTo(0,0);
     });
 
+/*
+    $('#username').on('focus',function(){
+        document.body.scrollTop = document.body.scrollHeight;
+    });
+    $('#username').on('blur',function(){
+        window.scrollTo(0,0);
+    });
+    $('#password').on('focus',function(){
+        document.body.scrollTop = document.body.scrollHeight;
+    });
+    $('#password').on('blur',function(){
+        window.scrollTo(0,0);
+    });
+*/
+
     //判断如果已经登录上，则直接跳转到个人中心
     if(getSession()!="" && getSession()!=null){
         window.location.href = webUrl+"page/center/userCenter.html?busId="+url_busId+"&userId="+url_userId;
     }
+
+
 
 });
 

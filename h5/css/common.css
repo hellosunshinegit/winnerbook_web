@@ -322,3 +322,17 @@ a {
     cursor: pointer;
     font-style: normal!important;
 }
+
+/*禁止下载视频*/
+/*
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 100px);
+}*/

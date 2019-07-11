@@ -134,7 +134,7 @@ html, body{
     -ms-flex-align: center;
     align-items: center;
     height: 44px;
-    width: 100% !important;
+    width: 100%;
     margin-left: 25%;
 }
 
@@ -429,9 +429,11 @@ html, body{
     left: 25%;
 }
 
+/*
 .aui-center{
     margin-left: 15% !important;
 }
+*/
 
 /*切换*/
 /*tab切换*/
@@ -676,3 +678,9 @@ html, body{
     float: right;
     margin-top: 2em;
 }
+
+
+/*
+.aui-navBar-item {
+    -webkit-flex: 0 0 23%!important;
+}*/

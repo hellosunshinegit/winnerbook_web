@@ -82,14 +82,14 @@ function playInterval(main_play_id,courseId,type,fileId){
 							var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
 							if (ua.match(/MicroMessenger/i) == "micromessenger") {//alert的浮层高于视频的浮层 ，不然微信端是全屏的没法提示
 								//main_play.webkitExitFullScreen();//退出全屏
-								var isBuy_info = confirm("对不起，您没有观看权限。");
+								var isBuy_info = confirm("对不起，您没有观看权限。您也可以下载‘总裁读书会APP’查看相关内容");
 								if(isBuy_info){
 									main_play.webkitExitFullScreen();//退出全屏
 								}else{
 									main_play.webkitExitFullScreen();//退出全屏
 								}
 							}else{
-								layerMsg("对不起，您没有观看权限。");
+								layerMsg("对不起，您没有观看权限。您也可以下载‘总裁读书会APP’查看相关内容");
 							}
 						}else{
 							// 定时1分钟一次发送后台
