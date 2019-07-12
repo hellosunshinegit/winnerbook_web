@@ -226,6 +226,7 @@ body{
 }
 #tabs-3{
     width: 100%;
+    margin-bottom: 5rem;
 }
 
 #tabs-3 audio{
@@ -234,10 +235,16 @@ body{
 
 #tabs-4{
     width: 100%;
+    margin-bottom: 5rem;
 }
 #tabs-4 video{
     width: 100%;
 }
+
+#tabs-4 audio{
+    width: 100%;
+}
+
 
 #tabs-4 span{
    line-height: 2rem;
