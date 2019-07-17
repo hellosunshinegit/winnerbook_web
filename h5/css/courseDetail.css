@@ -223,6 +223,18 @@ body{
 
 #tabs-1{
     width: 100%;
+    text-align: center;
+}
+#tabs-1 .tabs1-login{
+    color: #F60;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+#tabs-1 .tabs1_app_name{
+    color: #F60;
+}
+#tabs-1 .tabs1_text{
+
 }
 #tabs-3{
     width: 100%;

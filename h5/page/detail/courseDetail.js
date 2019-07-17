@@ -35,7 +35,7 @@ function initData(){
     courseId = RequestUrl(location.search,"courseId");
     var type = RequestUrl(location.search,"type");
     //获取首页数据
-    var param = {"courseId":courseId,"userId":userId,"busId":busId,"type":type};
+    var param = {"courseId":courseId,"userId":getSession().userId,"busId":getSession().belongBusUserId,"type":type};
     ajax_fetch("POST",paramMap.getCourseDetail,param,function (result) {
         if(result.success){
 
@@ -88,16 +88,29 @@ function initData(){
             $("#dialogGuest").html(course.dialogGuest);
 
 
-            if(course.mainVideoUrl!=undefined && course.mainVideoUrl!=""){
-                $("#tabs-1").html("<video controls controlslist='nofullscreen' id='main_video' poster="+webUrl+"images/video_default.png x5-video-player-fullscreen='true'><source src='"+baseUrl+course.mainVideoUrl+"'</video>");
-                //定时获取观看时间
-                playInterval("main_video",courseId,1);//type=1 主视频  type=2 主音频  3附件小视频
-            }else if(course.mainVideoLink!=""){ //判断主视频链接是否有值
-                $("#tabs-1").html("<video controls id='main_video' controlslist='nofullscreen' poster="+webUrl+"images/video_default.png x5-video-player-fullscreen='true'><source src='"+course.mainVideoLink+"'</video>");
-                //定时获取观看时间
-                playInterval("main_video",courseId,1);//type=1 主视频  type=2 主音频  3附件小视频
+            //首先判断是否登录，是否有权限观看此视频，直接不显示视频就可以，不需要在点击的时候判断
+            if(getSessionUserId()==""){
+                $("#tabs-1").html("您当前未登录，无法观看视频。<br/>点击<a href='"+webUrl+"page/center/login.html?busId="+busId+"&userId="+userId+"'><span class='tabs1-login'>登录</span></a>");
             }else{
-                $("#tabs-1").html("暂无数据...");
+                console.log(course.isBuy);
+                if(course.isBuy=="1"){//需要购买
+                    var imgQrcode = "<img src="+webUrl+"images/zcdsh_app.png height='200'>";
+                    var str = '<span class="tabs1_text">对不起，您没有观看权限。<br/>您可以下载‘<span class="tabs1_app_name">总裁读书会APP</span>’查看相关内容<br/>请识别以下二维码<br/>'+imgQrcode+"</span>";
+                    $("#tabs-1").html(str);
+                }else{
+                    if(course.mainVideoUrl!=undefined && course.mainVideoUrl!=""){
+                        $("#tabs-1").html("<video controls controlslist='nofullscreen' id='main_video' poster="+webUrl+"images/video_default.png ><source src='"+baseUrl+course.mainVideoUrl+"'</video>");
+                        //定时获取观看时间
+                        playInterval("main_video",courseId,1);//type=1 主视频  type=2 主音频  3附件小视频
+                    }else if(course.mainVideoLink!=""){ //判断主视频链接是否有值
+                        $("#tabs-1").html("<video controls id='main_video' controlslist='nofullscreen' poster="+webUrl+"images/video_default.png ><source src='"+course.mainVideoLink+"'</video>");
+                        //定时获取观看时间
+                        playInterval("main_video",courseId,1);//type=1 主视频  type=2 主音频  3附件小视频
+                    }else{
+                        $("#tabs-1").html("暂无数据...");
+                    }
+                }
+
             }
 
             if(course.mainAudioUrl!=undefined && course.mainAudioUrl!=""){
