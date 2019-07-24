@@ -77,11 +77,14 @@ function getCourseType(typeLabelId){
                     if(item.isBuy=="0"){
                         buyStr = "<span class='already_buy_identify'></span>";
                     }
-
+                    if(index%3==0){
+                        courseTypeListStr+="<div style='clear:both;'></div>";
+                    }
                     courseTypeListStr+="<li class='w-3'><a href='javascript:getCourses("+item.typeId+")'></a> <img src='"+item.typeImg+"' /><span>"+item.typeName+"</span>"+buyStr+"</li>";
                 });
-
                 $("#courseTypeList_"+typeLabelId).html(courseTypeListStr);
+            }else{
+                $("#courseTypeList_"+typeLabelId).html("暂无数据");
             }
         }
     });

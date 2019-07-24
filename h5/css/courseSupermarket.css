@@ -83,9 +83,9 @@ a:hover{
 }
 
 /*多个一行三*/
-.w-3{width:33.33%;  float:left; padding:.6rem .4rem; box-sizing: border-box; position: relative;}
-.w-3:nth-child(3n+1){padding-left:0; padding-right:.8rem}
-.w-3:nth-child(3n){ padding-left: .8rem;padding-right:0;}
+.w-3{width:33.33%;  float:left; padding:1rem .4rem; box-sizing: border-box; position: relative;}
+/*.w-3:nth-child(3n+1){padding-left:0; padding-right:.8rem}*/
+/*.w-3:nth-child(3n){ padding-left: .8rem;padding-right:0;}*/
 .xiangqing{
 	padding-bottom: 1rem;
 	line-height: 2rem;
@@ -148,9 +148,10 @@ a:hover{
 }*/
 
 .already_buy_identify{
-	position: relative;
-	bottom: 4.4rem;
-	left: 5.3rem;
+	width: 15px;
+	position: absolute;
+	bottom: 2rem;
+	left: 5.8rem;
 	background: url(../images/already_buy.png) no-repeat;
 	background-size: 1.6rem;
 }
