@@ -225,12 +225,12 @@ body{
     width: 100%;
     text-align: center;
 }
-#tabs-1 .tabs1-login{
+.tabs1-login{
     color: #F60;
     font-size: 1.2rem;
     text-decoration: underline;
 }
-#tabs-1 .tabs1_app_name{
+.tabs1_app_name{
     color: #F60;
 }
 #tabs-1 .tabs1_text{
@@ -239,6 +239,7 @@ body{
 #tabs-3{
     width: 100%;
     margin-bottom: 5rem;
+    text-align: center;
 }
 
 #tabs-3 audio{

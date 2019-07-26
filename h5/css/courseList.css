@@ -70,6 +70,7 @@ html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, 
     width: 100px;
     height: 100px;
     margin-right: 1rem;
+    margin-left: 0.7rem;
 }
 
 .aui-course-img img {
@@ -148,7 +149,7 @@ html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, 
 
 #tabs li,#tabs2 li,#tabs3 li,#tabs4 li,#tabs5 li {
     float: left;
-    width: 70px;
+    width: auto;
     flex-shrink: 0;
     margin: 0px 10px 0px 10px;
 }

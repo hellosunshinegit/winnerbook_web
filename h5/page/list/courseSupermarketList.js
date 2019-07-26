@@ -30,7 +30,11 @@ function initData(pageIndex,courseTypeId){
             var courseStr = "";
             var courseTitleStr = "";
             $.each(result.data.courseAdminList,function (index, item) {
-                item.bookImg = baseUrl+item.bookImg;
+                if(item.bookImg!="" && item.bookImg!=undefined){
+                    item.bookImg = baseUrl+item.bookImg;
+                }else{
+                    item.bookImg = webUrl+"images/logo_share.png";
+                }
 
                 var titleStr = item.title;
                 if(titleStr.length>12){

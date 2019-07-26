@@ -89,14 +89,22 @@ function initData(){
 
 
             //首先判断是否登录，是否有权限观看此视频，直接不显示视频就可以，不需要在点击的时候判断
+            //主视频需要设置观看权限
+            //在是领教的课程时，主音频也要设置收听权限
             if(getSessionUserId()==""){
                 $("#tabs-1").html("您当前未登录，无法观看视频。<br/>点击<a href='"+webUrl+"page/center/login.html?busId="+busId+"&userId="+userId+"'><span class='tabs1-login'>登录</span></a>");
+                if(course.courseType=="2"){//领教的课程
+                    $("#tabs-3").html("您当前未登录，无法观看音频。<br/>点击<a href='"+webUrl+"page/center/login.html?busId="+busId+"&userId="+userId+"'><span class='tabs1-login'>登录</span></a>");
+                }
             }else{
                 console.log(course.isBuy);
                 if(course.isBuy=="1"){//需要购买
                     var imgQrcode = "<img src="+webUrl+"images/zcdsh_app.png height='200'>";
                     var str = '<span class="tabs1_text">对不起，您没有观看权限。<br/>您可以下载‘<span class="tabs1_app_name">总裁读书会APP</span>’查看相关内容<br/>请识别以下二维码<br/>'+imgQrcode+"</span>";
                     $("#tabs-1").html(str);
+                    if(course.courseType=="2"){
+                        $("#tabs-3").html(str);
+                    }
                 }else{
                     if(course.mainVideoUrl!=undefined && course.mainVideoUrl!=""){
                         $("#tabs-1").html("<video controls controlslist='nofullscreen' id='main_video' poster="+webUrl+"images/video_default.png ><source src='"+baseUrl+course.mainVideoUrl+"'</video>");
@@ -109,17 +117,30 @@ function initData(){
                     }else{
                         $("#tabs-1").html("暂无数据...");
                     }
+
+                    if(course.mainAudioUrl!=undefined && course.mainAudioUrl!=""){
+                        $("#tabs-3").html("<audio controls controlslist='nodownload' id='main_audio'><source src='"+baseUrl+course.mainAudioUrl+"'</audio>");
+                        playInterval("main_audio",courseId,2);//type=1 主视频  type=2 主音频  3附件小视频
+                    }else if(course.mainAudioLink!=""){
+                        $("#tabs-3").html("<audio controls controlslist='nodownload' id='main_audio'><source src='"+course.mainAudioLink+"'</audio>");
+                        playInterval("main_audio",courseId,2);//type=1 主视频  type=2 主音频  3附件小视频
+                    }else{
+                        $("#tabs-3").html("暂无数据...");
+                    }
                 }
-
             }
 
-            if(course.mainAudioUrl!=undefined && course.mainAudioUrl!=""){
-                $("#tabs-3").html("<audio controls controlslist='nodownload' id='main_audio'><source src='"+baseUrl+course.mainAudioUrl+"'</audio>");
-                playInterval("main_audio",courseId,2);//type=1 主视频  type=2 主音频  3附件小视频
-            }else{
-                $("#tabs-3").html("暂无数据...");
+            if(course.courseType=="1"){//如果是大咖一起读的课程，直接可以收听，商学院的需要授权
+                if(course.mainAudioUrl!=undefined && course.mainAudioUrl!=""){
+                    $("#tabs-3").html("<audio controls controlslist='nodownload' id='main_audio'><source src='"+baseUrl+course.mainAudioUrl+"'</audio>");
+                    playInterval("main_audio",courseId,2);//type=1 主视频  type=2 主音频  3附件小视频
+                }else if(course.mainAudioLink!=""){
+                    $("#tabs-3").html("<audio controls controlslist='nodownload' id='main_audio'><source src='"+course.mainAudioLink+"'</audio>");
+                    playInterval("main_audio",courseId,2);//type=1 主视频  type=2 主音频  3附件小视频
+                }else{
+                    $("#tabs-3").html("暂无数据...");
+                }
             }
-
 
             var courseFiles = result.data.courseFile;
             var file_str="";
