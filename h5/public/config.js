@@ -6,6 +6,7 @@ var paramMap = {
     "index":"index_h5.jhtml",//首页信息
     "getCourses":"getCourses.jhtml",//课程列表
     "getMainGuests":"getMainGuests.jhtml",//导师列表
+    "getMainGuestsName":"getMainGuestsName.jhtml",//导师列表
     "getBooks":"getBooks.jhtml",//书单列表
     "getVideos":"getVideos.jhtml",//视频清单
     /*"getThoughts":"getThoughts.jhtml",//读后感

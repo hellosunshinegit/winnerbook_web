@@ -2,12 +2,13 @@
 var pageIndex = 0;
 var url_busId = RequestUrl(location.search,"busId");
 var url_userId = RequestUrl(location.search,"userId");
+var mainGuest = RequestUrl(location.search,"mainGuest");
 var title = "";
 var desc = "";
 /*导入尾部*/
 $(function(){
     $(".header").load("../common/header.html",function (result) {
-        $("#center_title").html("大咖领读");
+        $("#center_title").html(mainGuest+"大咖领读");
 
         titleBus("大咖领读");
     });
@@ -28,8 +29,8 @@ function initData(index){
     }else{
         busId = url_busId;
     }
-    var param = {"pageIndex":index,"busId":busId};
-    ajax_fetch("POST",paramMap.getMainGuests,param,function (result) {
+    var param = {"pageIndex":index,"busId":busId,"mainGuest":mainGuest};
+    ajax_fetch("POST",paramMap.getMainGuestsName,param,function (result) {
             console.log(result);
             if(result.success){
 
@@ -54,7 +55,7 @@ function initData(index){
                     if(item.recommendBook.length>7){
                         item.recommendBook = item.recommendBook.substring(0,7)+"...";
                     }
-                    recommendBookStr = "<span class='aui_tag'><a href='javascript:courseDetailName(\""+item.courseId+"\",\""+item.mainGuest+"\",\""+item.mainGuestCount+"\");'>《"+item.recommendBook+"》</a></span>"
+                    recommendBookStr = "<span class='aui_tag'><a href='javascript:courseDetail("+item.courseId+",2);'>《"+item.recommendBook+"》</a></span>"
                 }
 
                 var mainGuestBaiduKnowStr = "";
@@ -65,13 +66,13 @@ function initData(index){
                 }
 
                 courseStr+="<div class='aui-flex b-line'>" +
-                    "<a href='javascript:courseDetailName(\""+item.courseId+"\",\""+item.mainGuest+"\",\""+item.mainGuestCount+"\");'><div class='aui-guest-img'><img src='"+item.mainGuesImg+"' alt=''></div></a>" +
+                    "<a href='javascript:courseDetail("+item.courseId+",2);'><div class='aui-guest-img'><img src='"+item.mainGuesImg+"' alt=''></div></a>" +
                     "<div class='aui-flex-box'>" +
                     "<div>" +
-                        "<a href='javascript:courseDetailName(\""+item.courseId+"\",\""+item.mainGuest+"\",\""+item.mainGuestCount+"\");'><span class='aui_guest_name'>"+mainGuestBaiduKnowStr+"</span></a>" +
+                        "<a href='javascript:courseDetail("+item.courseId+",2);'><span class='aui_guest_name'>"+mainGuestBaiduKnowStr+"</span></a>" +
                         recommendBookStr+
                     "</div>" +
-                    "<a href='javascript:courseDetailName(\""+item.courseId+"\",\""+item.mainGuest+"\",\""+item.mainGuestCount+"\");'><span class='aui_guest_post'>"+item.mainGuestPost+"</span>" +
+                    "<a href='javascript:courseDetail("+item.courseId+",2);'><span class='aui_guest_post'>"+item.mainGuestPost+"</span>" +
                     "<span class='aui_guest_introduce'>" + mainGuestIntroduceStr +
                     "</a></span>" +
                     "</div></div>";
@@ -109,12 +110,9 @@ function initData(index){
 }
 
 //点击链接跳转
-function courseDetailName(courseId,mainGuest,mainGuestCount) {
-    if(mainGuestCount>1){
-        window.location.href=webUrl+"page/list/mainGuestDetailList.html?mainGuest="+mainGuest;
-    }else{
-        courseDetail(courseId,"2");
-    }
+function courseDetailName(mainGuest) {
+    
+    
 }
 
 //点击导师介绍

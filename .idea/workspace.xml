@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="987ba54d-a021-4105-996d-5633ef00fbf4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/css/courseDetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/courseDetail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/css/courseList.css" beforeDir="false" afterPath="$PROJECT_DIR$/h5/css/courseList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/detail/courseDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/detail/courseDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h5/page/list/courseSupermarketList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/courseSupermarketList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/h5/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/page/list/mainGuestList.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/page/list/mainGuestList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5/public/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/h5/public/config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,7 +17,70 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/page/list/mainGuestList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/h5/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="97" column="22" lean-forward="true" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#5;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#6;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#6;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/page/list/newsList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4560">
+              <caret line="240" column="68" selection-start-line="240" selection-start-column="35" selection-end-line="240" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/page/list/mainGuestDetailList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/page/detail/courseDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="722">
+              <caret line="38" column="46" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="46" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/h5/page/list/mainGuestDetailList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,8 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tab</find>
-      <find>bannerDiv</find>
       <find>bookListFun</find>
       <find>tabs-2</find>
       <find>readBookPlan</find>
@@ -61,6 +121,8 @@
       <find>.w-3:nth-child(3n+1)</find>
       <find>clickMore_bus</find>
       <find>.aui-course-img</find>
+      <find>courseDetailName</find>
+      <find>courseDetail</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -74,8 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/h5/page/activity/activityList.html" />
-        <option value="$PROJECT_DIR$/h5/page/activity/activityMap.html" />
         <option value="$PROJECT_DIR$/h5/page/activity/activitySignUp.html" />
         <option value="$PROJECT_DIR$/h5/page/more/articleDetail.html" />
         <option value="$PROJECT_DIR$/h5/page/list/courseSupermarket.html" />
@@ -106,8 +166,6 @@
         <option value="$PROJECT_DIR$/h5/page/more/moreInfo.js" />
         <option value="$PROJECT_DIR$/h5/css/userCenter.css" />
         <option value="$PROJECT_DIR$/h5/page/center/studentRecordList.js" />
-        <option value="$PROJECT_DIR$/h5/page/list/mainGuestList.js" />
-        <option value="$PROJECT_DIR$/h5/index.html" />
         <option value="$PROJECT_DIR$/h5/index.js" />
         <option value="$PROJECT_DIR$/h5/page/center/login.html" />
         <option value="$PROJECT_DIR$/h5/page/center/report/report.js" />
@@ -116,7 +174,6 @@
         <option value="$PROJECT_DIR$/h5/css/index.css" />
         <option value="$PROJECT_DIR$/h5/page/detail/courseDetail.html" />
         <option value="$PROJECT_DIR$/h5/page/detail/course_play.js" />
-        <option value="$PROJECT_DIR$/h5/public/config.js" />
         <option value="$PROJECT_DIR$/h5/css/mainGuestList.css" />
         <option value="$PROJECT_DIR$/h5/page/list/courseSupermarket.js" />
         <option value="$PROJECT_DIR$/h5/css/courseSupermarket.css" />
@@ -125,6 +182,11 @@
         <option value="$PROJECT_DIR$/h5/page/list/courseSupermarketList.js" />
         <option value="$PROJECT_DIR$/h5/css/courseList.css" />
         <option value="$PROJECT_DIR$/h5/css/courseDetail.css" />
+        <option value="$PROJECT_DIR$/h5/page/list/mainGuestDetailList.html" />
+        <option value="$PROJECT_DIR$/h5/public/config.js" />
+        <option value="$PROJECT_DIR$/h5/page/list/mainGuestDetailList.js" />
+        <option value="$PROJECT_DIR$/h5/page/list/mainGuestList.js" />
+        <option value="$PROJECT_DIR$/h5/index.html" />
       </list>
     </option>
   </component>
@@ -146,8 +208,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,6 +228,12 @@
               <item name="h5" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="winnerbook_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="winnerbook_web" type="462c0819:PsiDirectoryNode" />
+              <item name="h5" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -176,7 +244,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563958050808" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564135478086" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../git/jcloud-apply" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -188,15 +256,15 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\winnerbook_web\h5\page" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\winnerbook_web\h5\page\list" />
       <recent name="D:\workspace\winnerbook_web\h5\images" />
       <recent name="D:\workspace\winnerbook_web\h5\js" />
       <recent name="D:\workspace\winnerbook_web\h5\css" />
       <recent name="D:\workspace\winnerbook_web\h5\page\more" />
-      <recent name="D:\workspace\winnerbook_web\h5\page\center\report" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\winnerbook_web\h5\page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -305,12 +373,15 @@
       <workItem from="1563844195814" duration="5642000" />
       <workItem from="1563930974993" duration="3088000" />
       <workItem from="1564016581245" duration="7405000" />
-      <workItem from="1564103236818" duration="1203000" />
+      <workItem from="1564103236818" duration="8921000" />
+      <workItem from="1564362116510" duration="1171000" />
+      <workItem from="1564386086082" duration="1304000" />
+      <workItem from="1564452237686" duration="32000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1006740000" />
+    <option name="totallyTimeSpent" value="1016965000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -323,13 +394,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.22520107" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.08378016" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.14002642" />
@@ -354,6 +426,37 @@
       <window_info anchor="right" id="Ant Build" order="8" weight="0.028150134" />
       <window_info anchor="right" id="SciView" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.21179625" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.14002642" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32893" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32893" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.27741084" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.32893" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Maven" order="2" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" visible="true" weight="0.02010724" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.028150134" />
+      <window_info anchor="right" id="SciView" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -363,40 +466,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/h5/page/detail/detail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/center/userCenter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/center/userCenter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="50" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#dt#0;n#dl#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dd#3;n#dl#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dd#0;n#dl#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/page/list/bookList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -503,13 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/list/mainGuestList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tig" />
     <entry file="file://$PROJECT_DIR$/h5/js/video.min.js" />
     <entry file="file://$PROJECT_DIR$/h5/images/def_img4.png">
@@ -585,25 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#div#5;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#6;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#6;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/h5/public/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5776">
-          <caret line="304" column="20" selection-start-line="304" selection-start-column="20" selection-end-line="304" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/css/mainGuestList.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1596">
@@ -676,16 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h5/page/detail/courseDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2508">
-          <caret line="132" column="68" selection-start-line="132" selection-start-column="68" selection-end-line="132" selection-end-column="68" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/h5/page/list/courseSupermarket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
@@ -711,6 +744,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="219" column="17" lean-forward="true" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/public/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="241" column="9" selection-start-line="241" selection-start-column="9" selection-end-line="241" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/list/mainGuestList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/list/newsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="240" column="68" selection-start-line="240" selection-start-column="35" selection-end-line="240" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/list/mainGuestDetailList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/detail/courseDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/page/list/mainGuestDetailList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="97" column="22" lean-forward="true" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#5;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#6;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#6;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
