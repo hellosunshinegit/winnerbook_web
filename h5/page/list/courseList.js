@@ -54,6 +54,7 @@ function initData(){
 
 
 function getCourses(pageIndex,courseTypeId,tabDiv,typeMore){
+    pageIndex = parseInt(pageIndex);
     //获取首页数据
     var param = {"pageIndex":pageIndex,"busId":url_busId,"courseTypeId":courseTypeId};
     ajax_fetch("POST",paramMap.getCourses,param,function (result) {

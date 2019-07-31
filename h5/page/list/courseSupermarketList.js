@@ -108,7 +108,7 @@ function initData(pageIndex,courseTypeId){
 
 function clickMore(pageIndex, courseTypeId) {
     $("#more").remove();
-    initData(pageIndex,courseTypeId);
+    initData(parseInt(pageIndex),courseTypeId);
 }
 
 //点击分享
